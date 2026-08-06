@@ -1,0 +1,31 @@
+{
+  "name": "f1-stats-backend",
+  "version": "1.0.0",
+  "description": "API REST per il progetto F1 Stats",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node scripts/importaDati.js",
+    "gp": "node scripts/registraGpConcluso.js",
+    "aggiorna-gp": "node scripts/registraGpConcluso.js",
+    "set-current": "node scripts/impostaGaraAttuale.js",
+    "test": "node --test test/*.test.js",
+    "verify-db": "node scripts/verificaDatabase.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.1",
+    "helmet": "^8.3.0",
+    "mongoose": "^9.9.1",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

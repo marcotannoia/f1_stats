@@ -1,0 +1,23 @@
+function convalidaQuery(...parametriPermessi) {
+  const permessi = new Set(parametriPermessi);
+
+  return function convalida(richiesta, risposta, next) {
+    const nonPermessi = Object.keys(richiesta.query).filter(
+      (parametro) => !permessi.has(parametro),
+    );
+
+    if (nonPermessi.length > 0) {
+      return risposta.status(400).json({
+        errore: {
+          codice: "PARAMETRO_QUERY_NON_VALIDO",
+          messaggio: `Parametri non supportati: ${nonPermessi.join(", ")}`,
+          requestId: risposta.locals.requestId,
+        },
+      });
+    }
+
+    next();
+  };
+}
+
+module.exports = convalidaQuery;

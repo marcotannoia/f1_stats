@@ -1,0 +1,487 @@
+{
+  "pronto": false,
+  "stagione": 2026,
+  "garaConclusaSlug": "olanda-zandvoort",
+  "conclusaIl": "",
+  "risultatiPiloti": [
+    {
+      "pilotaSlug": "antonelli",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "hamilton",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "russell",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "leclerc",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "norris",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "max_verstappen",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "piastri",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "hadjar",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "lawson",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "gasly",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "arvid_lindblad",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "colapinto",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "bearman",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "bortoleto",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "sainz",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "albon",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "ocon",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "hulkenberg",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "alonso",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "stroll",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "bottas",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "pilotaSlug": "perez",
+      "posizioneGara": "",
+      "posizioneQualifica": "",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    }
+  ],
+  "risultatiScuderie": [
+    {
+      "scuderiaSlug": "mercedes",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "scuderiaSlug": "ferrari",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "scuderiaSlug": "mclaren",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "scuderiaSlug": "red_bull",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "scuderiaSlug": "rb",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "scuderiaSlug": "alpine",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "scuderiaSlug": "haas",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "scuderiaSlug": "audi",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "scuderiaSlug": "williams",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "scuderiaSlug": "aston_martin",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    },
+    {
+      "scuderiaSlug": "cadillac",
+      "notaRisultato": "",
+      "passoGara": "",
+      "gomme": "",
+      "affidabilita": ""
+    }
+  ],
+  "classificaPiloti": [
+    {
+      "pilotaSlug": "antonelli",
+      "posizione": 1,
+      "punti": 219,
+      "vittorie": 6
+    },
+    {
+      "pilotaSlug": "hamilton",
+      "posizione": 2,
+      "punti": 169,
+      "vittorie": 1
+    },
+    {
+      "pilotaSlug": "russell",
+      "posizione": 3,
+      "punti": 160,
+      "vittorie": 2
+    },
+    {
+      "pilotaSlug": "leclerc",
+      "posizione": 4,
+      "punti": 138,
+      "vittorie": 1
+    },
+    {
+      "pilotaSlug": "norris",
+      "posizione": 5,
+      "punti": 128,
+      "vittorie": 1
+    },
+    {
+      "pilotaSlug": "max_verstappen",
+      "posizione": 6,
+      "punti": 109,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "piastri",
+      "posizione": 7,
+      "punti": 92,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "hadjar",
+      "posizione": 8,
+      "punti": 68,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "lawson",
+      "posizione": 9,
+      "punti": 43,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "gasly",
+      "posizione": 10,
+      "punti": 42,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "arvid_lindblad",
+      "posizione": 11,
+      "punti": 23,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "colapinto",
+      "posizione": 12,
+      "punti": 19,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "bearman",
+      "posizione": 13,
+      "punti": 18,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "bortoleto",
+      "posizione": 14,
+      "punti": 10,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "sainz",
+      "posizione": 15,
+      "punti": 6,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "albon",
+      "posizione": 16,
+      "punti": 5,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "ocon",
+      "posizione": 17,
+      "punti": 3,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "hulkenberg",
+      "posizione": 18,
+      "punti": 2,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "alonso",
+      "posizione": 19,
+      "punti": 1,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "stroll",
+      "posizione": 20,
+      "punti": 0,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "bottas",
+      "posizione": 21,
+      "punti": 0,
+      "vittorie": 0
+    },
+    {
+      "pilotaSlug": "perez",
+      "posizione": 22,
+      "punti": 0,
+      "vittorie": 0
+    }
+  ],
+  "classificaScuderie": [
+    {
+      "scuderiaSlug": "mercedes",
+      "posizione": 1,
+      "punti": 379,
+      "vittorie": 8
+    },
+    {
+      "scuderiaSlug": "ferrari",
+      "posizione": 2,
+      "punti": 307,
+      "vittorie": 2
+    },
+    {
+      "scuderiaSlug": "mclaren",
+      "posizione": 3,
+      "punti": 220,
+      "vittorie": 1
+    },
+    {
+      "scuderiaSlug": "red_bull",
+      "posizione": 4,
+      "punti": 177,
+      "vittorie": 0
+    },
+    {
+      "scuderiaSlug": "rb",
+      "posizione": 5,
+      "punti": 66,
+      "vittorie": 0
+    },
+    {
+      "scuderiaSlug": "alpine",
+      "posizione": 6,
+      "punti": 61,
+      "vittorie": 0
+    },
+    {
+      "scuderiaSlug": "haas",
+      "posizione": 7,
+      "punti": 21,
+      "vittorie": 0
+    },
+    {
+      "scuderiaSlug": "audi",
+      "posizione": 8,
+      "punti": 12,
+      "vittorie": 0
+    },
+    {
+      "scuderiaSlug": "williams",
+      "posizione": 9,
+      "punti": 11,
+      "vittorie": 0
+    },
+    {
+      "scuderiaSlug": "aston_martin",
+      "posizione": 10,
+      "punti": 1,
+      "vittorie": 0
+    },
+    {
+      "scuderiaSlug": "cadillac",
+      "posizione": 11,
+      "punti": 0,
+      "vittorie": 0
+    }
+  ]
+}

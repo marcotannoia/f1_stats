@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+coverage/
+*.log
+*.key
+*.pem
+*.p12
+.DS_Store
+.codex_work/
+DEPLOYMENT.md

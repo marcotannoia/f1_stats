@@ -1,0 +1,99 @@
+const URL_LOCALE = 'http://127.0.0.1:5002'
+const API_URL = (import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '' : URL_LOCALE))
+  .replace(/\/+$/, '')
+
+async function richiesta(percorso) {
+  const controllo = new AbortController()
+  const timeout = window.setTimeout(() => controllo.abort(), 10000)
+
+  let risposta
+
+  try {
+    risposta = await fetch(`${API_URL}${percorso}`, {
+      headers: { Accept: 'application/json' },
+      signal: controllo.signal,
+    })
+  } catch (errore) {
+    if (errore.name === 'AbortError') {
+      throw new Error('Il server sta impiegando troppo tempo a rispondere')
+    }
+
+    throw new Error('Impossibile raggiungere il server')
+  } finally {
+    window.clearTimeout(timeout)
+  }
+
+  if (!risposta.ok) {
+    const errore = await risposta.json().catch(() => null)
+    throw new Error(
+      errore?.errore?.messaggio ||
+        errore?.messaggio ||
+        'Impossibile recuperare i dati',
+    )
+  }
+
+  return risposta.json()
+}
+
+function adattaPilota(pilota) {
+  if (!pilota) return null
+
+  return {
+    ...pilota,
+    classifica2026: pilota.classifica,
+  }
+}
+
+function adattaScuderia(scuderia) {
+  if (!scuderia) return null
+
+  return {
+    ...scuderia,
+    classifica2026: scuderia.classifica,
+  }
+}
+
+function adattaAnalisi(analisi) {
+  if (!analisi) return null
+
+  return {
+    ...analisi,
+    passoGara: analisi.prestazioni.passoGara,
+    gomme: analisi.prestazioni.gestioneGomme,
+    affidabilita: analisi.prestazioni.affidabilita,
+    considerazioni: analisi.considerazioniFinali,
+  }
+}
+
+export function caricaHome() {
+  return Promise.all([
+    richiesta('/api/v1/piloti'),
+    richiesta('/api/v1/scuderie'),
+    richiesta('/api/v1/gare'),
+  ]).then(([piloti, scuderie, gare]) => [
+    { ...piloti, piloti: piloti.piloti.map(adattaPilota) },
+    { ...scuderie, scuderie: scuderie.scuderie.map(adattaScuderia) },
+    gare,
+  ])
+}
+
+export async function caricaPilota(slug) {
+  const dati = await richiesta(`/api/v1/piloti/${encodeURIComponent(slug)}`)
+
+  return {
+    ...dati,
+    pilota: adattaPilota(dati.pilota),
+    analisi: adattaAnalisi(dati.analisi),
+  }
+}
+
+export async function caricaScuderia(slug) {
+  const dati = await richiesta(`/api/v1/scuderie/${encodeURIComponent(slug)}`)
+
+  return {
+    ...dati,
+    scuderia: adattaScuderia(dati.scuderia),
+    piloti: dati.piloti.map(adattaPilota),
+    analisi: adattaAnalisi(dati.analisi),
+  }
+}
