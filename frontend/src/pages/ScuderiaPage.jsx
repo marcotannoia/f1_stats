@@ -55,7 +55,7 @@ function ScuderiaPage({ slug }) {
       <div className="contenitore dettaglio-contenuto">
         <AnalisiCircuito
           analisi={dati.analisi}
-          andamentoUltimoAnno={dati.andamentoUltimoAnno}
+          andamentoStagioneCorrente={dati.andamentoStagioneCorrente}
         />
       </div>
     </>

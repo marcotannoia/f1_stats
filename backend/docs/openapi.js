@@ -82,7 +82,7 @@ const documentoOpenApi = {
         tags: ["Piloti"],
         summary: "Scheda completa di un pilota",
         description:
-          "Restituisce profilo, analisi del Gran Premio attuale e andamento dell'ultima stagione disponibile.",
+          "Restituisce profilo, analisi del Gran Premio attuale e andamento della stagione corrente fino ai GP registrati.",
         parameters: [{ $ref: "#/components/parameters/PilotaSlug" }],
         responses: {
           200: rispostaJson(
@@ -384,7 +384,7 @@ const documentoOpenApi = {
           posizioneQualifica: { type: "string" },
           notaRisultato: { type: "string" },
           passoGara: { type: "string" },
-          gomme: { type: "string" },
+          gestioneGomme: { type: "string" },
           affidabilita: { type: "string" },
         },
       },
@@ -392,9 +392,10 @@ const documentoOpenApi = {
         type: "object",
         required: [
           "gara",
-          "posizioniStoriche",
-          "spiegazionePosizioni",
-          "qualificheStoriche",
+          "risultatiGara",
+          "notaBene",
+          "risultatiQualifica",
+          "andamentoPerAnno",
           "prestazioni",
           "considerazioniFinali",
           "storicoEdizioni",
@@ -402,9 +403,14 @@ const documentoOpenApi = {
         ],
         properties: {
           gara: { $ref: "#/components/schemas/GaraBreve" },
-          posizioniStoriche: { type: "string" },
-          spiegazionePosizioni: { type: "string" },
-          qualificheStoriche: { type: "string" },
+          risultatiGara: { type: "string" },
+          notaBene: { type: "string" },
+          risultatiQualifica: { type: "string" },
+          andamentoPerAnno: {
+            type: "string",
+            description:
+              "Testo editoriale opzionale nel formato 2023: ... 2024: ...; se vuoto viene calcolato dai risultati.",
+          },
           prestazioni: { $ref: "#/components/schemas/Prestazioni" },
           considerazioniFinali: { type: "string" },
           aggiornamentiInArrivo: { type: "string" },
@@ -441,11 +447,21 @@ const documentoOpenApi = {
       },
       Andamento: {
         type: "object",
+        description:
+          "Posizioni della stagione corrente fino all'ultimo GP disponibile. Jolpica e la fonte primaria; il database locale e usato come ripiego.",
         properties: {
           stagione: { type: "integer" },
           etichette: { type: "array", items: { type: "string" } },
           qualifica: { type: "array", items: { type: "object" } },
           gara: { type: "array", items: { type: "object" } },
+          fonte: {
+            type: ["object", "null"],
+            properties: {
+              nome: { type: "string" },
+              url: { type: ["string", "null"], format: "uri" },
+            },
+          },
+          aggiornatoIl: { type: ["string", "null"], format: "date-time" },
         },
       },
       ElencoPiloti: {
@@ -486,7 +502,9 @@ const documentoOpenApi = {
               { type: "null" },
             ],
           },
-          andamentoUltimoAnno: { $ref: "#/components/schemas/Andamento" },
+          andamentoStagioneCorrente: {
+            $ref: "#/components/schemas/Andamento",
+          },
         },
       },
       DettaglioScuderia: {
@@ -500,7 +518,9 @@ const documentoOpenApi = {
               { type: "null" },
             ],
           },
-          andamentoUltimoAnno: { $ref: "#/components/schemas/Andamento" },
+          andamentoStagioneCorrente: {
+            $ref: "#/components/schemas/Andamento",
+          },
         },
       },
       Home: {

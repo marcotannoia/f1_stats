@@ -70,6 +70,7 @@ test("l'analisi raggruppa le prestazioni senza perdere i contenuti", () => {
     posizioniStoriche: "2025: P3",
     spiegazionePosizioni: "Nota",
     qualificheStoriche: "2025: Q2",
+    andamentoPerAnno: "2025: Prestazione solida.",
     passoGara: "Competitivo",
     gomme: "Buona gestione",
     affidabilita: "Alta",
@@ -84,6 +85,31 @@ test("l'analisi raggruppa le prestazioni senza perdere i contenuti", () => {
     gestioneGomme: "Buona gestione",
     affidabilita: "Alta",
   });
+  assert.equal(analisi.risultatiGara, "2025: P3");
+  assert.equal(analisi.notaBene, "Nota");
+  assert.equal(analisi.risultatiQualifica, "2025: Q2");
+  assert.equal(analisi.andamentoPerAnno, "2025: Prestazione solida.");
   assert.equal(analisi.considerazioniFinali, "Favorito");
   assert.equal(analisi.gara.stato, "attuale");
+});
+
+test("l'andamento espone la provenienza dei risultati", () => {
+  const { presentaAndamento } = require("../presenters/apiV1");
+  const andamento = presentaAndamento({
+    stagione: 2026,
+    etichette: ["Melbourne"],
+    qualifica: [{ nome: "LEC", valori: [3] }],
+    gara: [{ nome: "LEC", valori: [2] }],
+    fonte: {
+      nome: "Jolpica F1 API",
+      url: "https://api.jolpi.ca/ergast/f1/",
+    },
+    aggiornatoIl: "2026-08-06T12:00:00.000Z",
+  });
+
+  assert.deepEqual(andamento.fonte, {
+    nome: "Jolpica F1 API",
+    url: "https://api.jolpi.ca/ergast/f1/",
+  });
+  assert.equal(andamento.aggiornatoIl, "2026-08-06T12:00:00.000Z");
 });

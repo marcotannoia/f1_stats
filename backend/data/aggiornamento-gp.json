@@ -10,7 +10,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -19,7 +19,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -28,7 +28,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -37,7 +37,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -46,7 +46,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -55,7 +55,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -64,7 +64,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -73,7 +73,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -82,7 +82,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -91,7 +91,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -100,7 +100,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -109,7 +109,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -118,7 +118,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -127,7 +127,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -136,7 +136,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -145,7 +145,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -154,7 +154,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -163,7 +163,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -172,7 +172,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -181,7 +181,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -190,7 +190,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
@@ -199,7 +199,7 @@
       "posizioneQualifica": "",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     }
   ],
@@ -208,77 +208,77 @@
       "scuderiaSlug": "mercedes",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
       "scuderiaSlug": "ferrari",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
       "scuderiaSlug": "mclaren",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
       "scuderiaSlug": "red_bull",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
       "scuderiaSlug": "rb",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
       "scuderiaSlug": "alpine",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
       "scuderiaSlug": "haas",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
       "scuderiaSlug": "audi",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
       "scuderiaSlug": "williams",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
       "scuderiaSlug": "aston_martin",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     },
     {
       "scuderiaSlug": "cadillac",
       "notaRisultato": "",
       "passoGara": "",
-      "gomme": "",
+      "gestioneGomme": "",
       "affidabilita": ""
     }
   ],

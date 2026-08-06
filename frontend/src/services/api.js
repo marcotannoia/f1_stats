@@ -58,10 +58,22 @@ function adattaAnalisi(analisi) {
 
   return {
     ...analisi,
-    passoGara: analisi.prestazioni.passoGara,
-    gomme: analisi.prestazioni.gestioneGomme,
-    affidabilita: analisi.prestazioni.affidabilita,
-    considerazioni: analisi.considerazioniFinali,
+    risultatiGara: analisi.risultatiGara ?? analisi.posizioniStoriche ?? '',
+    notaBene: analisi.notaBene ?? analisi.spiegazionePosizioni ?? '',
+    risultatiQualifica:
+      analisi.risultatiQualifica ?? analisi.qualificheStoriche ?? '',
+    andamentoPerAnno: analisi.andamentoPerAnno ?? '',
+    passoGara: analisi.prestazioni?.passoGara ?? analisi.passoGara ?? '',
+    gestioneGomme:
+      analisi.prestazioni?.gestioneGomme ?? analisi.gomme ?? '',
+    affidabilita:
+      analisi.prestazioni?.affidabilita ?? analisi.affidabilita ?? '',
+    considerazioniFinali:
+      analisi.considerazioniFinali ?? analisi.considerazioni ?? '',
+    storicoEdizioni: (analisi.storicoEdizioni || []).map((edizione) => ({
+      ...edizione,
+      gestioneGomme: edizione.gestioneGomme ?? edizione.gomme ?? '',
+    })),
   }
 }
 
@@ -84,6 +96,8 @@ export async function caricaPilota(slug) {
     ...dati,
     pilota: adattaPilota(dati.pilota),
     analisi: adattaAnalisi(dati.analisi),
+    andamentoStagioneCorrente:
+      dati.andamentoStagioneCorrente ?? dati.andamentoUltimoAnno,
   }
 }
 
@@ -95,5 +109,7 @@ export async function caricaScuderia(slug) {
     scuderia: adattaScuderia(dati.scuderia),
     piloti: dati.piloti.map(adattaPilota),
     analisi: adattaAnalisi(dati.analisi),
+    andamentoStagioneCorrente:
+      dati.andamentoStagioneCorrente ?? dati.andamentoUltimoAnno,
   }
 }

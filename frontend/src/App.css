@@ -605,6 +605,28 @@ main {
   border-radius: 8px;
 }
 
+.grafici-senza-risultati {
+  margin: 0 0 0 70px;
+  padding: 2rem;
+  border: 1px solid var(--bordo);
+  color: var(--testo-secondario);
+  line-height: 1.7;
+}
+
+.fonte-andamento {
+  margin: 0 0 18px 70px;
+  color: #777;
+  font-size: 0.72rem;
+}
+
+.fonte-andamento a {
+  color: var(--testo-secondario);
+}
+
+.fonte-andamento a:hover {
+  color: #fff;
+}
+
 .grafico-andamento header {
   display: flex;
   align-items: flex-end;
@@ -849,6 +871,8 @@ main {
   .blocchi-performance,
   .righe-finali,
   .griglia-grafici,
+  .grafici-senza-risultati,
+  .fonte-andamento,
   .spazio-aggiornamenti {
     margin-left: 0;
   }

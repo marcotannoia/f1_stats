@@ -115,18 +115,17 @@ async function importaDati() {
         pilota: pilotaPerSlug.get(analisi.pilotaSlug)._id,
         gara: garaPerSlug.get(analisi.garaSlug)._id,
         scuderia: scuderiaPerSlug.get(analisi.scuderiaSlug)._id,
-        posizioniStoriche: analisi.posizioniStoriche,
-        spiegazionePosizioni: analisi.spiegazionePosizioni,
-        qualificheStoriche: analisi.qualificheStoriche,
+        posizioniStoriche: analisi.risultatiGara,
+        spiegazionePosizioni: analisi.notaBene,
+        qualificheStoriche: analisi.risultatiQualifica,
+        andamentoPerAnno: analisi.andamentoPerAnno || "",
         passoGara: analisi.passoGara,
-        gomme: analisi.gomme,
-        considerazioni: analisi.considerazioni,
+        gomme: analisi.gestioneGomme,
+        considerazioni: analisi.considerazioniFinali,
+        affidabilita: analisi.affidabilita || "",
+        aggiornamentiInArrivo: analisi.aggiornamentiInArrivo || "",
         fonti: analisi.fonti,
       };
-
-      if (analisi.affidabilita) {
-        documento.affidabilita = analisi.affidabilita;
-      }
 
       return {
         updateOne: {
@@ -148,16 +147,19 @@ async function importaDati() {
             $set: {
               scuderia: scuderiaId,
               gara: garaId,
-              posizioniStoriche: analisi.posizioniStoriche,
-              spiegazionePosizioni: analisi.spiegazionePosizioni,
-              qualificheStoriche: analisi.qualificheStoriche,
+              posizioniStoriche: analisi.risultatiGara,
+              spiegazionePosizioni: analisi.notaBene,
+              qualificheStoriche: analisi.risultatiQualifica,
+              andamentoPerAnno: analisi.andamentoPerAnno || "",
               passoGara: analisi.passoGara,
-              gomme: analisi.gomme,
-              considerazioni: analisi.considerazioni,
+              gomme: analisi.gestioneGomme,
+              considerazioni: analisi.considerazioniFinali,
+              affidabilita: analisi.affidabilita || "",
+              aggiornamentiInArrivo:
+                analisi.aggiornamentiInArrivo || "",
               fonti: analisi.fonti,
             },
             $setOnInsert: {
-              aggiornamentiInArrivo: analisi.aggiornamentiInArrivo,
               storicoEdizioni: [],
             },
           },

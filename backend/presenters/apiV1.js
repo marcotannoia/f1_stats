@@ -100,7 +100,7 @@ function presentaStoricoEdizioni(storicoEdizioni) {
     posizioneQualifica: edizione.posizioneQualifica,
     notaRisultato: edizione.notaRisultato || "",
     passoGara: edizione.passoGara || "",
-    gomme: edizione.gomme || "",
+    gestioneGomme: edizione.gomme || "",
     affidabilita: edizione.affidabilita || "",
   }));
 }
@@ -110,9 +110,10 @@ function presentaAnalisiBase(analisi) {
 
   return {
     gara: presentaGaraBreve(analisi.gara),
-    posizioniStoriche: analisi.posizioniStoriche,
-    spiegazionePosizioni: analisi.spiegazionePosizioni,
-    qualificheStoriche: analisi.qualificheStoriche,
+    risultatiGara: analisi.posizioniStoriche,
+    notaBene: analisi.spiegazionePosizioni,
+    risultatiQualifica: analisi.qualificheStoriche,
+    andamentoPerAnno: analisi.andamentoPerAnno || "",
     prestazioni: {
       passoGara: analisi.passoGara,
       gestioneGomme: analisi.gomme,
@@ -157,6 +158,13 @@ function presentaAndamento(andamento) {
       nome: serie.nome,
       valori: [...serie.valori],
     })),
+    fonte: andamento.fonte
+      ? {
+          nome: andamento.fonte.nome,
+          url: andamento.fonte.url || null,
+        }
+      : null,
+    aggiornatoIl: dataIso(andamento.aggiornatoIl),
   };
 }
 

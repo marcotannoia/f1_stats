@@ -33,6 +33,7 @@ const analisiGaraSchema = new mongoose.Schema(
     posizioniStoriche: { type: String, required: true },
     spiegazionePosizioni: { type: String, required: true },
     qualificheStoriche: { type: String, required: true },
+    andamentoPerAnno: { type: String, default: "" },
     passoGara: { type: String, required: true },
     gomme: { type: String, required: true },
     considerazioni: { type: String, required: true },

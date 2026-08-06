@@ -65,12 +65,17 @@ function creaEventiPilota(analisi, stagione, codice) {
     const edizione = elemento.storicoEdizioni?.find(
       (storico) => storico.stagione === stagione,
     );
+    const stagioneCorrente = elemento.gara.stagione === stagione;
     const gara = edizione
       ? posizioneDaEdizione(edizione.posizioneGara)
-      : primaPosizione(elemento.posizioniStoriche, stagione, "P");
+      : stagioneCorrente
+        ? null
+        : primaPosizione(elemento.posizioniStoriche, stagione, "P");
     const qualifica = edizione
       ? posizioneDaEdizione(edizione.posizioneQualifica)
-      : primaPosizione(elemento.qualificheStoriche, stagione, "Q");
+      : stagioneCorrente
+        ? null
+        : primaPosizione(elemento.qualificheStoriche, stagione, "Q");
 
     return {
       etichetta: nomiBreviCircuiti[elemento.gara.slug] || elemento.gara.circuito,
@@ -85,15 +90,20 @@ function creaEventiScuderia(analisi, stagione) {
     const edizione = elemento.storicoEdizioni?.find(
       (storico) => storico.stagione === stagione,
     );
+    const stagioneCorrente = elemento.gara.stagione === stagione;
 
     return {
       etichetta: nomiBreviCircuiti[elemento.gara.slug] || elemento.gara.circuito,
       gara: edizione
         ? posizioniEdizionePerCodice(edizione.posizioneGara)
-        : posizioniPerCodice(elemento.posizioniStoriche, stagione, "P"),
+        : stagioneCorrente
+          ? new Map()
+          : posizioniPerCodice(elemento.posizioniStoriche, stagione, "P"),
       qualifica: edizione
         ? posizioniEdizionePerCodice(edizione.posizioneQualifica)
-        : posizioniPerCodice(elemento.qualificheStoriche, stagione, "Q"),
+        : stagioneCorrente
+          ? new Map()
+          : posizioniPerCodice(elemento.qualificheStoriche, stagione, "Q"),
     };
   });
 }
@@ -105,36 +115,6 @@ function creaSerie(eventi, codici, tipo) {
   }));
 }
 
-function trovaStagionePiuRecente(analisi, stagioneMassima) {
-  const stagioni = new Set();
-
-  analisi.forEach((elemento) => {
-    (elemento.storicoEdizioni || []).forEach((edizione) => {
-      if (Number.isInteger(edizione.stagione)) {
-        stagioni.add(edizione.stagione);
-      }
-    });
-
-    for (const testo of [
-      elemento.posizioniStoriche,
-      elemento.qualificheStoriche,
-    ]) {
-      const espressioneStagione = /(?:^|\n)(\d{4})\s*:/g;
-      for (const corrispondenza of String(testo || "").matchAll(
-        espressioneStagione,
-      )) {
-        stagioni.add(Number(corrispondenza[1]));
-      }
-    }
-  });
-
-  const disponibili = [...stagioni]
-    .filter((stagione) => stagione <= stagioneMassima)
-    .sort((prima, seconda) => seconda - prima);
-
-  return disponibili[0] || stagioneMassima - 1;
-}
-
 function creaAndamentoAnnuale({ analisi, stagione, codicePilota = null }) {
   const analisiOrdinate = [...analisi].sort(
     (prima, seconda) => prima.gara.ordineAnalisi - seconda.gara.ordineAnalisi,
@@ -144,8 +124,9 @@ function creaAndamentoAnnuale({ analisi, stagione, codicePilota = null }) {
     : creaEventiScuderia(analisiOrdinate, stagione);
   const eventi = eventiCompleti.filter(
     (evento) =>
-      evento.gara.size > 0 &&
-      [...evento.gara.values()].some(Number.isFinite),
+      [...evento.gara.values(), ...evento.qualifica.values()].some(
+        Number.isFinite,
+      ),
   );
   const codici = codicePilota
     ? [codicePilota]
@@ -163,8 +144,12 @@ function creaAndamentoAnnuale({ analisi, stagione, codicePilota = null }) {
     etichette: eventi.map((evento) => evento.etichetta),
     qualifica: creaSerie(eventi, codici, "qualifica"),
     gara: creaSerie(eventi, codici, "gara"),
+    fonte: {
+      nome: "Database F1 Stats",
+      url: null,
+    },
+    aggiornatoIl: null,
   };
 }
 
 module.exports = creaAndamentoAnnuale;
-module.exports.trovaStagionePiuRecente = trovaStagionePiuRecente;

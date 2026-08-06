@@ -71,10 +71,10 @@ function leggiTestiAnnuali(testo) {
 }
 
 function creaNoteAnnuali(analisi, anni) {
-  const notePerAnno = leggiTestiAnnuali(analisi.spiegazionePosizioni)
+  const notePerAnno = leggiTestiAnnuali(analisi.notaBene)
   const notaGenerale = notePerAnno.size
     ? ''
-    : pulisciProsa(analisi.spiegazionePosizioni)
+    : pulisciProsa(analisi.notaBene)
   const storicoEdizioni = analisi.storicoEdizioni || []
 
   storicoEdizioni.forEach((edizione) => {
@@ -112,6 +112,19 @@ function creaAndamentoAnnuale(storicoGara, storicoQualifica, noteAnnuali) {
       testo: `${andamento} ${notePerAnno.get(gara.anno) || ''}`.trim(),
     }
   })
+}
+
+function creaAndamentoVisualizzato(analisi, storicoGara, storicoQualifica, noteAnnuali) {
+  const andamentoPersonalizzato = leggiTestiAnnuali(analisi.andamentoPerAnno)
+
+  if (andamentoPersonalizzato.size) {
+    return [...andamentoPersonalizzato].map(([anno, testo]) => ({
+      etichetta: String(anno),
+      testo,
+    }))
+  }
+
+  return creaAndamentoAnnuale(storicoGara, storicoQualifica, noteAnnuali)
 }
 
 function aggiungiRiga(righe, etichetta, testo) {
@@ -170,8 +183,12 @@ function segmentaGestioneGomme(testo, edizioni = []) {
   }
 
   edizioni.forEach((edizione) => {
-    if (edizione.gomme) {
-      aggiungiRiga(righe, String(edizione.stagione), edizione.gomme)
+    if (edizione.gestioneGomme) {
+      aggiungiRiga(
+        righe,
+        String(edizione.stagione),
+        edizione.gestioneGomme,
+      )
     }
   })
 
@@ -193,7 +210,7 @@ function trovaAffidabilita(analisi) {
     return `I dati della stagione indicano ${ritiri[1]} ritiri o mancate partenze, quindi l'affidabilità resta un fattore da considerare.`
   }
 
-  if (/\britir(?:o|i|ato|ata)\b|\bDNS\b/i.test(analisi.spiegazionePosizioni || '')) {
+  if (/\britir(?:o|i|ato|ata)\b|\bDNS\b/i.test(analisi.notaBene || '')) {
     return 'Lo storico del circuito comprende ritiri o gare non completate; questi episodi devono essere separati dal passo prestazionale puro.'
   }
 
@@ -202,7 +219,7 @@ function trovaAffidabilita(analisi) {
 
 function segmentaConsiderazioni(analisi) {
   const righe = []
-  const frasi = pulisciProsa(analisi.considerazioni)
+  const frasi = pulisciProsa(analisi.considerazioniFinali)
     .split(/(?<=[.!?])\s+/)
     .filter(Boolean)
 
@@ -308,7 +325,7 @@ function RighePassoGara({ righe }) {
   )
 }
 
-function AnalisiCircuito({ analisi, andamentoUltimoAnno }) {
+function AnalisiCircuito({ analisi, andamentoStagioneCorrente }) {
   if (!analisi) {
     return (
       <section className="analisi-non-disponibile">
@@ -320,18 +337,19 @@ function AnalisiCircuito({ analisi, andamentoUltimoAnno }) {
   }
 
   const storicoGara = leggiStorico(
-    analisi.posizioniStoriche,
+    analisi.risultatiGara,
     'gara',
     analisi.storicoEdizioni,
   )
   const storicoQualifica = leggiStorico(
-    analisi.qualificheStoriche,
+    analisi.risultatiQualifica,
     'qualifica',
     analisi.storicoEdizioni,
   )
   const anni = [...new Set([...storicoGara, ...storicoQualifica].map((riga) => riga.anno))]
   const noteAnnuali = creaNoteAnnuali(analisi, anni)
-  const andamentoAnnuale = creaAndamentoAnnuale(
+  const andamentoAnnuale = creaAndamentoVisualizzato(
+    analisi,
     storicoGara,
     storicoQualifica,
     noteAnnuali,
@@ -386,7 +404,7 @@ function AnalisiCircuito({ analisi, andamentoUltimoAnno }) {
             <h3>Gestione gomme</h3>
             <RigheEtichettate
               righe={segmentaGestioneGomme(
-                analisi.gomme,
+                analisi.gestioneGomme,
                 analisi.storicoEdizioni,
               )}
             />
@@ -431,30 +449,55 @@ function AnalisiCircuito({ analisi, andamentoUltimoAnno }) {
         </div>
       </section>
 
-      {andamentoUltimoAnno?.etichette?.length > 0 && (
+      {andamentoStagioneCorrente && (
         <section id="andamento" className="sezione-analisi sezione-grafici">
           <div className="intestazione-sezione">
             <span>05</span>
             <div>
               <p>Gran Premio dopo Gran Premio</p>
-              <h2>Andamento {andamentoUltimoAnno.stagione}</h2>
+              <h2>Andamento {andamentoStagioneCorrente.stagione}</h2>
             </div>
           </div>
 
-          <div className="griglia-grafici">
-            <GraficoAndamento
-              titolo="Andamento in qualifica"
-              descrizione="Posizione ottenuta nelle qualifiche dell’ultima stagione disponibile."
-              etichette={andamentoUltimoAnno.etichette}
-              serie={andamentoUltimoAnno.qualifica}
-            />
-            <GraficoAndamento
-              titolo="Andamento in gara"
-              descrizione="Posizione finale registrata in ogni Gran Premio disputato."
-              etichette={andamentoUltimoAnno.etichette}
-              serie={andamentoUltimoAnno.gara}
-            />
-          </div>
+          {andamentoStagioneCorrente.fonte && (
+            <p className="fonte-andamento">
+              Dati gara e qualifica:{' '}
+              {andamentoStagioneCorrente.fonte.url ? (
+                <a
+                  href={andamentoStagioneCorrente.fonte.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {andamentoStagioneCorrente.fonte.nome}
+                </a>
+              ) : (
+                andamentoStagioneCorrente.fonte.nome
+              )}
+            </p>
+          )}
+
+          {andamentoStagioneCorrente.etichette.length > 0 ? (
+            <div className="griglia-grafici">
+              <GraficoAndamento
+                titolo="Andamento in qualifica"
+                descrizione="Posizione ottenuta nei GP registrati della stagione corrente."
+                etichette={andamentoStagioneCorrente.etichette}
+                serie={andamentoStagioneCorrente.qualifica}
+              />
+              <GraficoAndamento
+                titolo="Andamento in gara"
+                descrizione="Posizione finale nei GP registrati fino al Gran Premio corrente."
+                etichette={andamentoStagioneCorrente.etichette}
+                serie={andamentoStagioneCorrente.gara}
+              />
+            </div>
+          ) : (
+            <p className="grafici-senza-risultati">
+              Nessun risultato {andamentoStagioneCorrente.stagione} è stato
+              ancora registrato. I grafici si aggiorneranno dopo la chiusura
+              del primo GP tramite il comando di aggiornamento.
+            </p>
+          )}
         </section>
       )}
 

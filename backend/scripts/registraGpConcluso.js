@@ -181,7 +181,7 @@ function creaEdizione(stagione, risultato) {
     posizioneQualifica: campoTestuale(risultato.posizioneQualifica),
     notaRisultato: campoTestuale(risultato.notaRisultato),
     passoGara: campoTestuale(risultato.passoGara),
-    gomme: campoTestuale(risultato.gomme),
+    gomme: campoTestuale(risultato.gestioneGomme),
     affidabilita: campoTestuale(risultato.affidabilita),
   };
 }
@@ -237,9 +237,13 @@ function creaRisultatiScuderie(
       passoGara:
         campoTestuale(dettaglio.passoGara) ||
         combinaTestiPiloti(pilotiScuderia, risultatiPerPilota, "passoGara"),
-      gomme:
-        campoTestuale(dettaglio.gomme) ||
-        combinaTestiPiloti(pilotiScuderia, risultatiPerPilota, "gomme"),
+      gestioneGomme:
+        campoTestuale(dettaglio.gestioneGomme) ||
+        combinaTestiPiloti(
+          pilotiScuderia,
+          risultatiPerPilota,
+          "gestioneGomme",
+        ),
       affidabilita:
         campoTestuale(dettaglio.affidabilita) ||
         combinaTestiPiloti(pilotiScuderia, risultatiPerPilota, "affidabilita"),
@@ -310,14 +314,14 @@ function creaTemplate(garaCorrente, piloti, scuderie) {
       posizioneQualifica: "",
       notaRisultato: "",
       passoGara: "",
-      gomme: "",
+      gestioneGomme: "",
       affidabilita: "",
     })),
     risultatiScuderie: [...scuderie].sort(ordinaClassifica).map((scuderia) => ({
       scuderiaSlug: scuderia.slug,
       notaRisultato: "",
       passoGara: "",
-      gomme: "",
+      gestioneGomme: "",
       affidabilita: "",
     })),
     classificaPiloti: [...piloti].sort(ordinaClassifica).map((pilota) => ({
