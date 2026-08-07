@@ -15,9 +15,11 @@ export function ErrorePagina({ messaggio }) {
       <span className="etichetta">Connessione non disponibile</span>
       <h1>Non riesco a leggere i dati.</h1>
       <p>{messaggio}</p>
-      <p className="testo-secondario">
-        Verifica che il backend sia avviato sulla porta 5002.
-      </p>
+      {import.meta.env.DEV && (
+        <p className="testo-secondario">
+          Verifica che il backend locale sia avviato.
+        </p>
+      )}
       <Collegamento a="/" className="bottone bottone-rosso">
         Torna alla home
       </Collegamento>

@@ -1,6 +1,20 @@
 const URL_LOCALE = 'http://127.0.0.1:5002'
-const API_URL = (import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '' : URL_LOCALE))
-  .replace(/\/+$/, '')
+const URL_PRODUZIONE = 'https://f1-stats-5v93.onrender.com'
+const URL_PREDEFINITO = import.meta.env.PROD ? URL_PRODUZIONE : URL_LOCALE
+const API_URL = (import.meta.env.VITE_API_URL || URL_PREDEFINITO).replace(
+  /\/+$/,
+  '',
+)
+
+function rispostaJson(risposta) {
+  const tipoContenuto = risposta.headers.get('content-type') || ''
+
+  if (!tipoContenuto.toLowerCase().includes('application/json')) {
+    throw new Error('Risposta del servizio non valida')
+  }
+
+  return risposta.json()
+}
 
 async function richiesta(percorso) {
   const controllo = new AbortController()
@@ -10,7 +24,10 @@ async function richiesta(percorso) {
 
   try {
     risposta = await fetch(`${API_URL}${percorso}`, {
+      method: 'GET',
+      credentials: 'omit',
       headers: { Accept: 'application/json' },
+      referrerPolicy: 'no-referrer',
       signal: controllo.signal,
     })
   } catch (errore) {
@@ -24,7 +41,7 @@ async function richiesta(percorso) {
   }
 
   if (!risposta.ok) {
-    const errore = await risposta.json().catch(() => null)
+    const errore = await rispostaJson(risposta).catch(() => null)
     throw new Error(
       errore?.errore?.messaggio ||
         errore?.messaggio ||
@@ -32,7 +49,7 @@ async function richiesta(percorso) {
     )
   }
 
-  return risposta.json()
+  return rispostaJson(risposta)
 }
 
 function adattaPilota(pilota) {

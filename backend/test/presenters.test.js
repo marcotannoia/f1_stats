@@ -143,3 +143,30 @@ test("l'andamento espone la provenienza dei risultati", () => {
   });
   assert.equal(andamento.aggiornatoIl, "2026-08-06T12:00:00.000Z");
 });
+
+test("le fonti pubbliche accettano esclusivamente URL HTTPS validi", () => {
+  const gara = presentaGara({
+    slug: "olanda-zandvoort",
+    fonti: [
+      "https://example.com/fonte",
+      "http://example.com/non-sicura",
+      "javascript:alert(1)",
+      "non-e-un-url",
+    ],
+  });
+
+  assert.deepEqual(gara.fonti, ["https://example.com/fonte"]);
+});
+
+test("la fonte dell'andamento rimuove URL non HTTPS", () => {
+  const { presentaAndamento } = require("../presenters/apiV1");
+  const andamento = presentaAndamento({
+    stagione: 2026,
+    fonte: { nome: "Fonte non sicura", url: "javascript:alert(1)" },
+  });
+
+  assert.deepEqual(andamento.fonte, {
+    nome: "Fonte non sicura",
+    url: null,
+  });
+});

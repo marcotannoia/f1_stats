@@ -5,6 +5,21 @@ function dataIso(valore) {
   return Number.isNaN(data.getTime()) ? null : data.toISOString();
 }
 
+function normalizzaUrlHttps(valore) {
+  if (typeof valore !== "string") return null;
+
+  try {
+    const url = new URL(valore);
+    return url.protocol === "https:" ? url.toString() : null;
+  } catch {
+    return null;
+  }
+}
+
+function presentaFonti(fonti) {
+  return (fonti || []).map(normalizzaUrlHttps).filter(Boolean);
+}
+
 function presentaClassifica(classifica) {
   if (!classifica) return null;
 
@@ -88,7 +103,7 @@ function presentaGara(gara) {
     gommeStrategia: gara.gommeStrategia,
     rischi: gara.rischi,
     confidenza: gara.confidenza,
-    fonti: [...(gara.fonti || [])],
+    fonti: presentaFonti(gara.fonti),
     aggiornatoIl: dataIso(gara.updatedAt),
   };
 }
@@ -122,7 +137,7 @@ function presentaAnalisiBase(analisi) {
     considerazioniFinali: analisi.considerazioni,
     aggiornamentiInArrivo: analisi.aggiornamentiInArrivo || "",
     storicoEdizioni: presentaStoricoEdizioni(analisi.storicoEdizioni),
-    fonti: [...(analisi.fonti || [])],
+    fonti: presentaFonti(analisi.fonti),
     aggiornatoIl: dataIso(analisi.updatedAt),
   };
 }
@@ -162,7 +177,7 @@ function presentaAndamento(andamento) {
     fonte: andamento.fonte
       ? {
           nome: andamento.fonte.nome,
-          url: andamento.fonte.url || null,
+          url: normalizzaUrlHttps(andamento.fonte.url),
         }
       : null,
     aggiornatoIl: dataIso(andamento.aggiornatoIl),
