@@ -4,7 +4,7 @@ services:
     runtime: node
     region: frankfurt
     plan: free
-    buildCommand: npm ci --prefix frontend && npm run build --prefix frontend && npm ci --omit=dev --prefix backend
+    buildCommand: npm ci --include=dev --prefix frontend && npm run build --prefix frontend && npm ci --omit=dev --prefix backend
     startCommand: npm --prefix backend start
     healthCheckPath: /api/health
     autoDeployTrigger: commit
