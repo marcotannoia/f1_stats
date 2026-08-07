@@ -532,34 +532,6 @@ main {
   line-height: 1.8;
 }
 
-.elenco-notazioni {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, max-content));
-  gap: 10px 24px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.elenco-notazioni li {
-  position: relative;
-  padding-left: 14px;
-  color: #c5c5c5;
-  font-size: 0.9rem;
-  line-height: 1.55;
-}
-
-.elenco-notazioni li::before {
-  position: absolute;
-  top: 0.64em;
-  left: 0;
-  width: 4px;
-  height: 4px;
-  background: var(--rosso);
-  border-radius: 50%;
-  content: '';
-}
-
 .blocchi-performance {
   margin-left: 70px;
 }
@@ -889,10 +861,6 @@ main {
     justify-self: start;
   }
 
-  .elenco-notazioni {
-    grid-template-columns: 1fr;
-  }
-
   .grafico-andamento header,
   .footer-contenuto {
     align-items: flex-start;
@@ -991,15 +959,6 @@ main {
   .righe-finali .riga-etichettata p {
     font-size: 0.9rem;
     line-height: 1.65;
-  }
-
-  .elenco-notazioni {
-    grid-template-columns: 1fr;
-    gap: 7px;
-  }
-
-  .elenco-notazioni li {
-    font-size: 0.86rem;
   }
 
   .grafico-andamento {

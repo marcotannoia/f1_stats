@@ -72,9 +72,6 @@ function leggiTestiAnnuali(testo) {
 
 function creaNoteAnnuali(analisi, anni) {
   const notePerAnno = leggiTestiAnnuali(analisi.notaBene)
-  const notaGenerale = notePerAnno.size
-    ? ''
-    : pulisciProsa(analisi.notaBene)
   const storicoEdizioni = analisi.storicoEdizioni || []
 
   storicoEdizioni.forEach((edizione) => {
@@ -85,10 +82,7 @@ function creaNoteAnnuali(analisi, anni) {
 
   return anni.map((anno) => ({
     etichetta: String(anno),
-    testo:
-      notePerAnno.get(anno) ||
-      notaGenerale ||
-      'Nessun elemento atipico specifico è indicato nei dati disponibili.',
+    testo: notePerAnno.get(anno) || 'Nessun evento particolare da trattare',
   }))
 }
 
@@ -137,62 +131,24 @@ function aggiungiRiga(righe, etichetta, testo) {
   else righe.push({ etichetta, testo: contenuto })
 }
 
-function segmentaPassoGara(testo, edizioni = []) {
-  const righe = []
-  const frasi = pulisciProsa(testo).split(/(?<=[.!?])\s+/).filter(Boolean)
-
-  frasi.forEach((frase) => {
-    const etichettaEsplicita = frase.match(
-      /^(Storico|Lettura|Riferimento\s+20\d{2}|20\d{2})\s*:\s*(.*)$/i,
-    )
-
-    if (etichettaEsplicita) {
-      aggiungiRiga(righe, etichettaEsplicita[1], etichettaEsplicita[2])
-      return
-    }
-
-    const anno = frase.match(/\b(20\d{2})\b/)?.[1]
-    if (anno) aggiungiRiga(righe, anno, frase)
-    else if (righe.length) righe[righe.length - 1].testo += ` ${frase}`
-    else aggiungiRiga(righe, 'Lettura', frase)
-  })
+function creaRighePrestazioneAnnuali(testo, edizioni = [], campoEdizione) {
+  const testiPerAnno = leggiTestiAnnuali(testo)
 
   edizioni.forEach((edizione) => {
-    if (edizione.passoGara) {
-      aggiungiRiga(righe, String(edizione.stagione), edizione.passoGara)
-    }
-  })
-
-  return righe
-}
-
-function segmentaGestioneGomme(testo, edizioni = []) {
-  const righe = []
-  const contenuto = pulisciProsa(testo)
-  const indicatore2026 = contenuto.match(/Contesto 2026(?: della scuderia)?\s*:/i)
-
-  if (indicatore2026) {
-    aggiungiRiga(righe, 'Lettura', contenuto.slice(0, indicatore2026.index))
-    aggiungiRiga(
-      righe,
-      '2026',
-      contenuto.slice(indicatore2026.index + indicatore2026[0].length),
-    )
-  } else {
-    aggiungiRiga(righe, 'Lettura', contenuto)
-  }
-
-  edizioni.forEach((edizione) => {
-    if (edizione.gestioneGomme) {
-      aggiungiRiga(
-        righe,
-        String(edizione.stagione),
-        edizione.gestioneGomme,
+    if (edizione[campoEdizione]) {
+      testiPerAnno.set(
+        edizione.stagione,
+        pulisciProsa(edizione[campoEdizione]),
       )
     }
   })
 
-  return righe
+  return [...testiPerAnno]
+    .sort(([primoAnno], [secondoAnno]) => primoAnno - secondoAnno)
+    .map(([anno, contenuto]) => ({
+      etichetta: String(anno),
+      testo: contenuto,
+    }))
 }
 
 function trovaAffidabilita(analisi) {
@@ -254,6 +210,7 @@ function segmentaConsiderazioni(analisi) {
   })
 
   aggiungiRiga(righe, 'Affidabilità', trovaAffidabilita(analisi))
+  aggiungiRiga(righe, 'Penalità', analisi.penalita)
 
   return righe
 }
@@ -286,41 +243,6 @@ function RigheEtichettate({ righe, classe = '' }) {
           <p>{riga.testo}</p>
         </div>
       ))}
-    </div>
-  )
-}
-
-function separaNotazioni(testo) {
-  return String(testo || '')
-    .split(/[;,](?=\s)/)
-    .map((voce) => voce.trim().replace(/[.;]+$/, ''))
-    .filter(Boolean)
-}
-
-function RighePassoGara({ righe }) {
-  return (
-    <div className="righe-etichettate righe-passo-gara">
-      {righe.map((riga, indice) => {
-        const notazioni = separaNotazioni(riga.testo)
-
-        return (
-          <div
-            className="riga-etichettata"
-            key={`${riga.etichetta}-${indice}`}
-          >
-            <span>{riga.etichetta}</span>
-            {notazioni.length > 1 ? (
-              <ul className="elenco-notazioni">
-                {notazioni.map((notazione) => (
-                  <li key={notazione}>{notazione}</li>
-                ))}
-              </ul>
-            ) : (
-              <p>{riga.testo}</p>
-            )}
-          </div>
-        )
-      })}
     </div>
   )
 }
@@ -403,19 +325,21 @@ function AnalisiCircuito({ analisi, andamentoStagioneCorrente }) {
           <article className="blocco-performance">
             <h3>Gestione gomme</h3>
             <RigheEtichettate
-              righe={segmentaGestioneGomme(
+              righe={creaRighePrestazioneAnnuali(
                 analisi.gestioneGomme,
                 analisi.storicoEdizioni,
+                'gestioneGomme',
               )}
             />
           </article>
 
           <article className="blocco-performance">
             <h3>Passo gara</h3>
-            <RighePassoGara
-              righe={segmentaPassoGara(
+            <RigheEtichettate
+              righe={creaRighePrestazioneAnnuali(
                 analisi.passoGara,
                 analisi.storicoEdizioni,
+                'passoGara',
               )}
             />
           </article>

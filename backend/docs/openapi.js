@@ -413,6 +413,11 @@ const documentoOpenApi = {
           },
           prestazioni: { $ref: "#/components/schemas/Prestazioni" },
           considerazioniFinali: { type: "string" },
+          penalita: {
+            type: "string",
+            description:
+              "Situazione editoriale delle eventuali penalità del pilota per il Gran Premio attuale.",
+          },
           aggiornamentiInArrivo: { type: "string" },
           storicoEdizioni: {
             type: "array",

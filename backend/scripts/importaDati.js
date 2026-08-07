@@ -10,6 +10,10 @@ const Scuderia = require("../models/Scuderia");
 const Gara = require("../models/Gara");
 const AnalisiGara = require("../models/AnalisiGara");
 const AnalisiScuderia = require("../models/AnalisiScuderia");
+const {
+  normalizzaNotaBene,
+  normalizzaTestiAnnuali,
+} = require("../utils/normalizzaNotaBene");
 const dati = require("../data/dati-iniziali.json");
 
 async function salvaDocumentiPerSlug(Modello, documenti) {
@@ -116,12 +120,13 @@ async function importaDati() {
         gara: garaPerSlug.get(analisi.garaSlug)._id,
         scuderia: scuderiaPerSlug.get(analisi.scuderiaSlug)._id,
         posizioniStoriche: analisi.risultatiGara,
-        spiegazionePosizioni: analisi.notaBene,
+        spiegazionePosizioni: normalizzaNotaBene(analisi.notaBene),
         qualificheStoriche: analisi.risultatiQualifica,
         andamentoPerAnno: analisi.andamentoPerAnno || "",
-        passoGara: analisi.passoGara,
-        gomme: analisi.gestioneGomme,
+        passoGara: normalizzaTestiAnnuali(analisi.passoGara),
+        gomme: normalizzaTestiAnnuali(analisi.gestioneGomme),
         considerazioni: analisi.considerazioniFinali,
+        penalita: analisi.penalita || "",
         affidabilita: analisi.affidabilita || "",
         aggiornamentiInArrivo: analisi.aggiornamentiInArrivo || "",
         fonti: analisi.fonti,
@@ -148,11 +153,11 @@ async function importaDati() {
               scuderia: scuderiaId,
               gara: garaId,
               posizioniStoriche: analisi.risultatiGara,
-              spiegazionePosizioni: analisi.notaBene,
+              spiegazionePosizioni: normalizzaNotaBene(analisi.notaBene),
               qualificheStoriche: analisi.risultatiQualifica,
               andamentoPerAnno: analisi.andamentoPerAnno || "",
-              passoGara: analisi.passoGara,
-              gomme: analisi.gestioneGomme,
+              passoGara: normalizzaTestiAnnuali(analisi.passoGara),
+              gomme: normalizzaTestiAnnuali(analisi.gestioneGomme),
               considerazioni: analisi.considerazioniFinali,
               affidabilita: analisi.affidabilita || "",
               aggiornamentiInArrivo:

@@ -120,6 +120,7 @@ function presentaAnalisiBase(analisi) {
       affidabilita: analisi.affidabilita || "",
     },
     considerazioniFinali: analisi.considerazioni,
+    penalita: analisi.penalita || "",
     aggiornamentiInArrivo: analisi.aggiornamentiInArrivo || "",
     storicoEdizioni: presentaStoricoEdizioni(analisi.storicoEdizioni),
     fonti: [...(analisi.fonti || [])],

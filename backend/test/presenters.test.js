@@ -75,6 +75,7 @@ test("l'analisi raggruppa le prestazioni senza perdere i contenuti", () => {
     gomme: "Buona gestione",
     affidabilita: "Alta",
     considerazioni: "Favorito",
+    penalita: "Nessuna penalita confermata.",
     aggiornamentiInArrivo: "",
     storicoEdizioni: [],
     fonti: ["https://example.com"],
@@ -90,6 +91,7 @@ test("l'analisi raggruppa le prestazioni senza perdere i contenuti", () => {
   assert.equal(analisi.risultatiQualifica, "2025: Q2");
   assert.equal(analisi.andamentoPerAnno, "2025: Prestazione solida.");
   assert.equal(analisi.considerazioniFinali, "Favorito");
+  assert.equal(analisi.penalita, "Nessuna penalita confermata.");
   assert.equal(analisi.gara.stato, "attuale");
 });
 

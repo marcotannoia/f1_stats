@@ -70,6 +70,7 @@ function adattaAnalisi(analisi) {
       analisi.prestazioni?.affidabilita ?? analisi.affidabilita ?? '',
     considerazioniFinali:
       analisi.considerazioniFinali ?? analisi.considerazioni ?? '',
+    penalita: analisi.penalita ?? '',
     storicoEdizioni: (analisi.storicoEdizioni || []).map((edizione) => ({
       ...edizione,
       gestioneGomme: edizione.gestioneGomme ?? edizione.gomme ?? '',

@@ -748,440 +748,811 @@
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "mercedes",
       "risultatiGara": "2023: NON CORSO F1 — FRECA (P2/P1 e titolo) sul circuito\n2024: NON CORSO\n2025: P16 (Mercedes)",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": "Il risultato di gara è stato condizionato dal contatto con Leclerc, per il quale Antonelli ha ricevuto dieci secondi di penalità, e da altri cinque secondi per eccesso di velocità in pit lane. Il sedicesimo posto non rappresenta quindi il passo mostrato prima degli episodi."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: NON CORSO F1 — FRECA (P2/P1 e titolo) sul circuito\n2024: NON CORSO\n2025: Q11 (Mercedes)",
-      "passoGara": "Storico: 1 partenze, 1 arrivi; media griglia 11,0, media arrivo 16,0, Δ medio -5,0; miglior P16. Lettura: rendimento variabile o difficile. 2026: P1, 219 punti, media Q 1,9, 1 ritiri/DNS.",
-      "gestioneGomme": "Risultati indicano difficoltà o perdita di posizione, ma incidenti e vettura impediscono di isolarne la causa nelle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Gestione gomme, sospensioni e raffreddamento sono punti di forza; favorita quasi ovunque.",
-      "considerazioniFinali": "FAVORITO — ranking previsionale 1/22. Forma 2026: P1 con 219 punti; miglior risultato recente P16. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-bassa: regolamento e gomme 2026 riducono la qualità dello storico.",
+      "passoGara": {
+        "2023": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2024": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2025": "Prima del contatto ha mostrato un passo convincente e sufficiente per tentare l’undercut. La rimonta è stata però interrotta dagli errori e dalle penalità, che hanno trasformato una gara promettente in un risultato molto arretrato."
+      },
+      "gestioneGomme": {
+        "2023": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2024": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2025": "Ha portato rapidamente in temperatura le mescole e ha trovato ritmo anche dopo la sosta. La gestione non è stata il limite principale: il risultato è dipeso soprattutto dal contatto e dalle penalità successive."
+      },
+      "considerazioniFinali": "FAVORITO — la forma mostrata nel 2026 lo colloca tra i riferimenti, ma a Zandvoort deve ancora costruire uno storico pulito in Formula 1. Il potenziale è alto, mentre la previsione resta meno solida rispetto a piloti già efficaci qui in più edizioni.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Mercedes ha annunciato un aggiornamento più consistente per la ripresa dopo la pausa estiva, con Zandvoort indicata come prima occasione utile. I componenti non sono ancora stati descritti ufficialmente: se miglioreranno stabilità aerodinamica e qualità del carico, saranno particolarmente utili nelle curve lunghe, veloci e sopraelevate del circuito; l’effetto reale dovrà però essere verificato in pista.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/something-more-sizeable-mercedes-target-major-upgrade-after-f1-summer-break.4dxqU3SkbY2BFaecTvbTsR.4dxqU3SkbY2BFaecTvbTsR"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Andrea Kimi Antonelli a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "hamilton",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "ferrari",
       "risultatiGara": "2023: P6 (Mercedes)\n2024: P8 (Mercedes)\n2025: P20 — ritiro (Ferrari)",
-      "notaBene": "2023: rimonta di 7 posizioni; Pioggia intermittente e bandiera rossa alterarono strategie e classifica; Gasly ereditò il podio anche per la penalità a Pérez.\n2025: ritiro, classificato P20.",
+      "notaBene": {
+        "2023": "La rimonta dal tredicesimo al sesto posto è stata favorita dalla capacità di adattarsi alle ripetute variazioni di aderenza e da una gara più efficace della qualifica.",
+        "2024": "",
+        "2025": "Il ritiro è arrivato dopo una perdita di controllo alla curva 3, dove la parte verniciata era ancora umida. Il ventesimo posto non descrive il ritmo della Ferrari prima dell’incidente."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q13 (Mercedes)\n2024: Q11 (Mercedes)\n2025: Q7 (Ferrari)",
-      "passoGara": "Storico: 3 partenze, 2 arrivi; media griglia 11,3, media arrivo 7,0, Δ medio +6,5; miglior P6. Lettura: passo generalmente solido. 2026: P2, 169 punti, media Q 4,2, 0 ritiri/DNS.",
-      "gestioneGomme": "Tenuta della posizione e recupero suggeriscono una gestione complessivamente efficace, senza attribuire tutto alle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Può soffrire degrado nelle condizioni molto calde; attenzione alle piste di potenza pura.",
-      "considerazioniFinali": "FAVORITO — ranking previsionale 2/22. Forma 2026: P2 con 169 punti; miglior risultato recente P6. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Dopo una qualifica difficile ha recuperato con un ritmo solido e una buona lettura delle condizioni mutevoli. Non aveva il passo dei primi, ma la gara è stata nettamente migliore del sabato.",
+        "2024": "La Mercedes scivolava e consumava le gomme più del previsto. Hamilton ha recuperato terreno, ma il ritmo non gli ha permesso di entrare nella lotta per il podio.",
+        "2025": "La Ferrari sembrava avere velocità sufficiente per restare nel gruppo di testa, ma l’incidente nelle prime fasi ha impedito di trasformare quel potenziale in una gara completa."
+      },
+      "gestioneGomme": {
+        "2023": "Ha gestito bene i passaggi tra asciutto, intermedie e nuove fasi di pioggia, evitando di perdere il controllo in una gara caotica.",
+        "2024": "La vettura tendeva a scivolare e questo rendeva difficile conservare le gomme. La strategia su due soste ha aiutato la rimonta, senza però risolvere il limite di fondo.",
+        "2025": "La gara è terminata troppo presto per una valutazione completa. Nei giri percorsi le gomme non erano il problema principale: è stato decisivo l’errore sulla pista ancora umida."
+      },
+      "considerazioniFinali": "MOLTO COMPETITIVO — lo storico comprende una rimonta efficace e Ferrari ha mostrato buon passo nelle ultime edizioni. Per diventare un vero favorito deve però ritrovare un fine settimana pulito dopo il ritiro del 2025.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Ferrari non ha annunciato un pacchetto specifico per Zandvoort. La vettura è ancora in sviluppo, ma senza una scheda tecnica ufficiale non è corretto attribuirle componenti precisi: su questa pista sarebbero soprattutto utili maggiore stabilità nei cambi di appoggio e carico efficiente nelle curve sopraelevate.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/why-the-2026-development-race-shows-f1-teams-are-operating-at-a-level-never-seen-before.3z4PkgtUazOWrJ8ESuzsmo.3z4PkgtUazOWrJ8ESuzsmo"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Lewis Hamilton a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "russell",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "mercedes",
       "risultatiGara": "2023: P17 (Mercedes)\n2024: P7 (Mercedes)\n2025: P4 (Mercedes)",
-      "notaBene": "2023: perse 14 posizioni; Pioggia intermittente e bandiera rossa alterarono strategie e classifica; Gasly ereditò il podio anche per la penalità a Pérez.",
+      "notaBene": {
+        "2023": "Il diciassettesimo posto è anomalo rispetto alla terza posizione in qualifica: le decisioni nel meteo variabile lo hanno arretrato e un contatto con Norris gli ha poi causato una foratura.",
+        "2024": "Il settimo posto è stato inferiore alla quarta posizione in qualifica perché la Mercedes ha sofferto più degrado del previsto ed è passata a una strategia su due soste.",
+        "2025": "Il quarto posto è arrivato nonostante un danno al fondo causato dal contatto con Leclerc, che ha limitato il potenziale nella seconda parte di gara."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q3 (Mercedes)\n2024: Q4 (Mercedes)\n2025: Q5 (Mercedes)",
-      "passoGara": "Storico: 3 partenze, 3 arrivi; media griglia 4,0, media arrivo 9,3, Δ medio -5,3; miglior P4. Lettura: passo generalmente solido. 2026: P3, 160 punti, media Q 3,1, 2 ritiri/DNS.",
-      "gestioneGomme": "Risultati indicano difficoltà o perdita di posizione, ma incidenti e vettura impediscono di isolarne la causa nelle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Gestione gomme, sospensioni e raffreddamento sono punti di forza; favorita quasi ovunque.",
-      "considerazioniFinali": "PODIO — ranking previsionale 5/22. Forma 2026: P3 con 160 punti; miglior risultato recente P4. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "La velocità iniziale era promettente, ma il vantaggio della qualifica è stato perso nelle fasi caotiche e la foratura ha cancellato ogni possibilità di recupero.",
+        "2024": "Il ritmo è stato discreto ma poco costante: la vettura scivolava e Russell non riusciva a mantenere la stessa efficacia dei migliori sullo stint lungo.",
+        "2025": "Ha tenuto un passo competitivo anche con il fondo danneggiato e ha portato a casa un risultato forte. Senza il contatto avrebbe potuto difendere meglio la posizione nel gruppo di testa."
+      },
+      "gestioneGomme": {
+        "2023": "La successione di pioggia e pista asciutta ha reso secondaria una lettura lineare delle gomme. La foratura finale è dipesa dal contatto, non da usura naturale.",
+        "2024": "La Mercedes ha consumato più del previsto e Russell ha dovuto fermarsi una seconda volta. La gestione è stata condizionata soprattutto dallo scivolamento della vettura.",
+        "2025": "Ha mantenuto le gomme in una finestra utilizzabile nonostante il danno aerodinamico. Il limite principale non è stato il degrado, ma la perdita di prestazione causata dal fondo compromesso."
+      },
+      "considerazioniFinali": "FAVORITO — ha raggiunto la parte alta della griglia in tutte le ultime qualifiche e nel 2025 è stato competitivo anche con una vettura danneggiata. Un weekend lineare lo rende un candidato concreto al podio.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Mercedes ha annunciato un aggiornamento più consistente per la ripresa dopo la pausa estiva, con Zandvoort indicata come prima occasione utile. I componenti non sono ancora stati descritti ufficialmente: se miglioreranno stabilità aerodinamica e qualità del carico, saranno particolarmente utili nelle curve lunghe, veloci e sopraelevate del circuito; l’effetto reale dovrà però essere verificato in pista.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/something-more-sizeable-mercedes-target-major-upgrade-after-f1-summer-break.4dxqU3SkbY2BFaecTvbTsR.4dxqU3SkbY2BFaecTvbTsR"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per George Russell a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "leclerc",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "ferrari",
       "risultatiGara": "2023: P19 — danno al fondo (Ferrari)\n2024: P3 (Ferrari)\n2025: P19 — ritiro (Ferrari)",
-      "notaBene": "2023: danno al fondo, classificato P19.\n2024: podio atipico da P6; Gara asciutta a una sosta: Norris vinse con passo netto; Leclerc salì sul podio con undercut e difesa.\n2025: ritiro, classificato P19.",
+      "notaBene": {
+        "2023": "Il diciannovesimo posto è stato causato dal contatto iniziale con Piastri, che ha danneggiato pesantemente il fondo e portato al ritiro.",
+        "2024": "Il podio è atipico rispetto alla sesta posizione in qualifica: Ferrari ha trovato un passo gara molto migliore e Leclerc ha sfruttato l’undercut prima di difendersi nel finale.",
+        "2025": "Il ritiro è stato causato dal contatto con Antonelli. La posizione finale non rappresenta il buon passo mostrato prima dell’incidente."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q9 (Ferrari)\n2024: Q6 (Ferrari)\n2025: Q6 (Ferrari)",
-      "passoGara": "Storico: 3 partenze, 1 arrivi; media griglia 7,0, media arrivo 3,0, Δ medio +3,0; miglior P3. Lettura: feeling storicamente molto positivo. 2026: P4, 138 punti, media Q 4,5, 2 ritiri/DNS.",
-      "gestioneGomme": "Tenuta della posizione e recupero suggeriscono una gestione complessivamente efficace, senza attribuire tutto alle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Può soffrire degrado nelle condizioni molto calde; attenzione alle piste di potenza pura.",
-      "considerazioniFinali": "FAVORITO — ranking previsionale 3/22. Forma 2026: P4 con 138 punti; miglior risultato recente P3. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-bassa: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Il danno al fondo ha tolto carico e ritmo quasi subito, quindi la posizione finale non offre una misura attendibile del potenziale Ferrari.",
+        "2024": "Ha trovato una vettura molto più efficace in gara che in qualifica. L’undercut e un ritmo costante gli hanno permesso di conquistare e difendere il podio.",
+        "2025": "Prima del contatto con Antonelli stava correndo con un passo forte e aveva recuperato terreno. Il ritiro ha interrotto una prestazione che poteva produrre punti importanti."
+      },
+      "gestioneGomme": {
+        "2023": "Il fondo danneggiato faceva scivolare la vettura e impediva una gestione normale. La gara è terminata prima che potesse emergere un quadro utile.",
+        "2024": "Ha allungato la vita delle gomme senza perdere il ritmo necessario per tenere dietro Piastri. La gestione è stata uno dei punti forti della sua gara.",
+        "2025": "Le gomme erano state mantenute in buone condizioni e il ritmo restava competitivo. Il risultato è stato deciso dal contatto, non da un crollo della mescola."
+      },
+      "considerazioniFinali": "MOLTO COMPETITIVO — il podio del 2024 e il passo mostrato prima del ritiro del 2025 indicano un buon adattamento al circuito. Resta però importante evitare episodi che hanno cancellato due delle ultime tre gare.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Ferrari non ha annunciato un pacchetto specifico per Zandvoort. La vettura è ancora in sviluppo, ma senza una scheda tecnica ufficiale non è corretto attribuirle componenti precisi: su questa pista sarebbero soprattutto utili maggiore stabilità nei cambi di appoggio e carico efficiente nelle curve sopraelevate.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/why-the-2026-development-race-shows-f1-teams-are-operating-at-a-level-never-seen-before.3z4PkgtUazOWrJ8ESuzsmo.3z4PkgtUazOWrJ8ESuzsmo"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Charles Leclerc a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "norris",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "mclaren",
       "risultatiGara": "2023: P7 (McLaren)\n2024: P1 (McLaren)\n2025: P18 — ritiro (McLaren)",
-      "notaBene": "2025: ritiro, classificato P18.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": "Il ritiro è stato provocato da un problema al telaio mentre era in seconda posizione. Il diciottesimo posto non riflette una gara corsa stabilmente alle spalle del compagno."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q2 (McLaren)\n2024: Q1 (McLaren)\n2025: Q2 (McLaren)",
-      "passoGara": "Storico: 3 partenze, 2 arrivi; media griglia 1,7, media arrivo 4,0, Δ medio -2,5; miglior P1. Lettura: feeling storicamente molto positivo. 2026: P5, 128 punti, media Q 4,7, 3 ritiri/DNS.",
-      "gestioneGomme": "Risultati indicano difficoltà o perdita di posizione, ma incidenti e vettura impediscono di isolarne la causa nelle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Buon degrado recente, ma restano sensibilità al vento e alla finestra di utilizzo.",
-      "considerazioniFinali": "PODIO — ranking previsionale 6/22. Forma 2026: P5 con 128 punti; miglior risultato recente P1. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "La McLaren era competitiva ma non ancora dominante; Norris ha mantenuto un ritmo da zona punti senza riuscire a trasformare la prima fila in un podio.",
+        "2024": "Dopo aver ripreso la testa ha imposto il passo migliore della gara e ha costruito il vantaggio con continuità, senza dover forzare in ogni fase.",
+        "2025": "Ha seguito Piastri con un ritmo molto simile per gran parte della gara. Il guasto ha fermato una prestazione da podio certo e una possibile lotta per la vittoria."
+      },
+      "gestioneGomme": {
+        "2023": "Ha attraversato le diverse condizioni senza errori gravi, ma la gara frammentata non ha permesso alla McLaren di sfruttare pienamente la posizione di partenza.",
+        "2024": "La vettura ha mantenuto le gomme vive per tutto lo stint e Norris ha potuto aumentare il ritmo dopo aver superato Verstappen. La gestione è stata controllata e molto efficace.",
+        "2025": "Ha alternato fasi di pressione e conservazione restando vicino a Piastri. Le gomme non hanno mostrato un calo decisivo prima del problema tecnico."
+      },
+      "considerazioniFinali": "FAVORITO — una vittoria dominante e una prestazione da podio interrotta da un guasto mostrano un’affinità molto forte con Zandvoort. Se l’affidabilità regge, è uno dei riferimenti naturali.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "McLaren ha già introdotto un pacchetto importante in Ungheria, ma al 7 agosto 2026 non ha confermato un secondo pacchetto specifico per Zandvoort. Il lavoro già portato sulla vettura può essere utile perché il circuito premia il carico stabile e una macchina prevedibile nelle curve in appoggio; eventuali ulteriori novità saranno confermabili solo durante il weekend.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.mclaren.com/racing/formula-1/2026/belgian-grand-prix/oscar-and-lando-reflect-on-upcoming-changes/",
+        "https://www.formula1.com/en/latest/article/official-grid-who-starts-where-for-the-belgian-grand-prix-2026.2Pyth6t2ZEYNSqVWC295C7"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Lando Norris a Zandvoort. Ha già scontato a Spa una penalità legata a nuovi elementi della power unit: quella sanzione non si trasferisce automaticamente, ma un’ulteriore sostituzione fuori quota potrebbe generarne un’altra."
     },
     {
       "pilotaSlug": "max_verstappen",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "red_bull",
       "risultatiGara": "2023: P1 (Red Bull)\n2024: P2 (Red Bull)\n2025: P2 (Red Bull)",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": "Il secondo posto è arrivato dopo il ritiro di Norris, ma Verstappen era già stabilmente in zona podio. Il risultato è quindi in parte favorito dall’episodio, senza essere estraneo al ritmo mostrato."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q1 (Red Bull)\n2024: Q2 (Red Bull)\n2025: Q3 (Red Bull)",
-      "passoGara": "Storico: 3 partenze, 3 arrivi; media griglia 2,0, media arrivo 1,7, Δ medio +0,3; miglior P1. Lettura: feeling storicamente molto positivo. 2026: P6, 109 punti, media Q 5,4, 3 ritiri/DNS.",
-      "gestioneGomme": "Quadro individuale neutro/variabile: i risultati non mostrano un limite gomme persistente. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Gestione del pilota buona, ma finestra di bilanciamento e affidabilità PU restano rischi.",
-      "considerazioniFinali": "PODIO — ranking previsionale 4/22. Forma 2026: P6 con 109 punti; miglior risultato recente P1. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Ha controllato una gara estremamente variabile, mantenendo velocità e lucidità in ogni ripartenza fino alla vittoria.",
+        "2024": "Ha sfruttato bene la partenza, ma sul passo lungo non ha potuto rispondere a Norris. Il secondo posto rappresenta il massimo realistico di quella domenica.",
+        "2025": "La scelta aggressiva iniziale gli ha permesso di attaccare, ma la Red Bull soffriva nelle curve lente e sugli stint lunghi. Ha comunque difeso un ritmo da podio."
+      },
+      "gestioneGomme": {
+        "2023": "Ha adattato bene le gomme ai continui cambi di pista e ha gestito le ripartenze senza esporle a un calo decisivo.",
+        "2024": "La gestione è stata ordinata su una gara a una sosta, ma non sufficiente a compensare il vantaggio McLaren. Non ha avuto un cedimento, semplicemente meno ritmo.",
+        "2025": "Ha fatto funzionare la mescola più morbida nelle prime fasi e poi ha amministrato senza perdere il podio. Il limite era la prestazione complessiva della vettura, non un degrado improvviso."
+      },
+      "considerazioniFinali": "FAVORITO — tre podi consecutivi, compresa una vittoria, fanno di Zandvoort uno dei suoi riferimenti più solidi. Anche quando la vettura non era la migliore ha saputo massimizzare il risultato.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Red Bull non ha comunicato un pacchetto specifico per Zandvoort. Gli sviluppi aerodinamici introdotti nelle gare precedenti restano pertinenti a una pista che richiede precisione nei tratti veloci e buona trazione nelle curve lente, ma non è possibile promettere un vantaggio prima delle prove libere.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/why-the-2026-development-race-shows-f1-teams-are-operating-at-a-level-never-seen-before.3z4PkgtUazOWrJ8ESuzsmo.3z4PkgtUazOWrJ8ESuzsmo"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Max Verstappen a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "piastri",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "mclaren",
       "risultatiGara": "2023: P9 (McLaren)\n2024: P4 (McLaren)\n2025: P1 (McLaren)",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "",
+        "2024": "Il quarto posto, appena fuori dal podio, è dipeso anche dall’undercut subito da Leclerc e dal tempo perso in aria sporca, non da un crollo netto di passo.",
+        "2025": ""
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q8 (McLaren)\n2024: Q3 (McLaren)\n2025: Q1 (McLaren)",
-      "passoGara": "Storico: 3 partenze, 3 arrivi; media griglia 4,0, media arrivo 4,7, Δ medio -0,7; miglior P1. Lettura: feeling storicamente molto positivo. 2026: P7, 92 punti, media Q 5,9, 3 ritiri/DNS.",
-      "gestioneGomme": "Quadro individuale neutro/variabile: i risultati non mostrano un limite gomme persistente. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Buon degrado recente, ma restano sensibilità al vento e alla finestra di utilizzo.",
-      "considerazioniFinali": "OUTSIDER — ranking previsionale 7/22. Forma 2026: P7 con 92 punti; miglior risultato recente P1. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Nella sua prima gara di Formula 1 a Zandvoort ha mantenuto un ritmo regolare in zona punti, pur senza la stessa efficacia del compagno.",
+        "2024": "Aveva velocità da podio, ma l’undercut di Leclerc e il traffico gli hanno impedito di sfruttarla pienamente. Il passo puro era migliore del risultato finale.",
+        "2025": "Ha gestito la testa della gara con grande controllo, rispondendo quando serviva e lasciando margine nelle fasi in cui era più utile proteggere la vettura."
+      },
+      "gestioneGomme": {
+        "2023": "Ha portato a termine una gara spezzata dal meteo senza danneggiare eccessivamente le mescole, costruendo un riferimento utile per un debuttante.",
+        "2024": "In aria pulita la gestione era buona, mentre dietro Leclerc le gomme soffrivano di più e i tentativi di attacco diventavano difficili. Non è riuscito a trasformare il passo in sorpasso.",
+        "2025": "Ha alternato risparmio e accelerazione mantenendo sempre la gara sotto controllo. La gestione delle gomme è stata coerente con una vittoria costruita senza rischi inutili."
+      },
+      "considerazioniFinali": "FAVORITO — la progressione fino alla vittoria del 2025 e il passo da podio del 2024 mostrano un adattamento ormai completo. È uno dei piloti con il riferimento recente più forte sul circuito.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "McLaren ha già introdotto un pacchetto importante in Ungheria, ma al 7 agosto 2026 non ha confermato un secondo pacchetto specifico per Zandvoort. Il lavoro già portato sulla vettura può essere utile perché il circuito premia il carico stabile e una macchina prevedibile nelle curve in appoggio; eventuali ulteriori novità saranno confermabili solo durante il weekend.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.mclaren.com/racing/formula-1/2026/belgian-grand-prix/oscar-and-lando-reflect-on-upcoming-changes/"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Oscar Piastri a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "hadjar",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "red_bull",
       "risultatiGara": "2023: NON CORSO F1 — Formula 2 sul circuito\n2024: NON CORSO\n2025: P3 (RB F1 Team)",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": "Il podio è arrivato anche grazie al ritiro di Norris, ma nasce da una quarta posizione in qualifica e da una gara corsa con merito davanti a vetture più accreditate."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: NON CORSO F1 — Formula 2 sul circuito\n2024: NON CORSO\n2025: Q4 (RB F1 Team)",
-      "passoGara": "Storico: 1 partenze, 1 arrivi; media griglia 4,0, media arrivo 3,0, Δ medio +1,0; miglior P3. Lettura: feeling storicamente molto positivo. 2026: P8, 68 punti, media Q 8,3, 2 ritiri/DNS.",
-      "gestioneGomme": "Quadro individuale neutro/variabile: i risultati non mostrano un limite gomme persistente. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Gestione del pilota buona, ma finestra di bilanciamento e affidabilità PU restano rischi.",
-      "considerazioniFinali": "OUTSIDER — ranking previsionale 8/22. Forma 2026: P8 con 68 punti; miglior risultato recente P3. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-bassa: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2024": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2025": "Ha mantenuto un ritmo sorprendentemente solido per tutta la gara e ha protetto la posizione senza commettere errori. Il podio non è stato soltanto un effetto del caos, perché la prestazione era già da vertice del gruppo inseguitore."
+      },
+      "gestioneGomme": {
+        "2023": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2024": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2025": "Ha gestito gli stint con calma, evitando il calo che avrebbe esposto la posizione agli inseguitori. La vettura è rimasta equilibrata e gli ha permesso di guidare con fiducia."
+      },
+      "considerazioniFinali": "MOLTO COMPETITIVO — il podio ottenuto al debutto in Formula 1 sul circuito è un segnale forte. Il passaggio a Red Bull cambia il riferimento tecnico, ma la confidenza personale con Zandvoort è già dimostrata.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Red Bull non ha comunicato un pacchetto specifico per Zandvoort. Gli sviluppi aerodinamici introdotti nelle gare precedenti restano pertinenti a una pista che richiede precisione nei tratti veloci e buona trazione nelle curve lente, ma non è possibile promettere un vantaggio prima delle prove libere.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/why-the-2026-development-race-shows-f1-teams-are-operating-at-a-level-never-seen-before.3z4PkgtUazOWrJ8ESuzsmo.3z4PkgtUazOWrJ8ESuzsmo",
+        "https://www.formula1.com/en/latest/article/official-grid-who-starts-where-for-the-belgian-grand-prix-2026.2Pyth6t2ZEYNSqVWC295C7"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Isack Hadjar a Zandvoort. Ha già scontato a Spa una penalità legata a nuovi elementi della power unit: quella sanzione non si trasferisce automaticamente, ma un’ulteriore sostituzione fuori quota potrebbe generarne un’altra."
     },
     {
       "pilotaSlug": "lawson",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "rb",
       "risultatiGara": "2023: P13 (AlphaTauri)\n2024: NON CORSO\n2025: P12 (RB F1 Team)",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "Il salto dalla ventesima posizione al tredicesimo posto va letto nel contesto del debutto improvviso in Formula 1 e di una gara con meteo molto variabile. Una penalità per impeding in pit lane ha complicato ulteriormente il fine settimana.",
+        "2024": "",
+        "2025": "Il dodicesimo posto è peggiore dell’ottava posizione in qualifica perché il contatto con Sainz ha provocato una foratura e lo ha estromesso dalla lotta per i punti."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q20 (AlphaTauri)\n2024: NON CORSO\n2025: Q8 (RB F1 Team)",
-      "passoGara": "Storico: 2 partenze, 2 arrivi; media griglia 13,5, media arrivo 12,5, Δ medio +1,0; miglior P12. Lettura: rendimento variabile o difficile. 2026: P9, 43 punti, media Q 10,7, 1 ritiri/DNS.",
-      "gestioneGomme": "Quadro individuale neutro/variabile: i risultati non mostrano un limite gomme persistente. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Quadro neutro; partenza, affidabilità PU e posizione di qualifica incidono più del degrado.",
-      "considerazioniFinali": "TOP 6 — ranking previsionale 10/22. Forma 2026: P9 con 43 punti; miglior risultato recente P12. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Al debutto ha aumentato gradualmente il ritmo e ha evitato gli errori più pesanti in condizioni difficili, trasformando una partenza dal fondo in un risultato dignitoso.",
+        "2024": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2025": "Aveva il ritmo per difendere la zona punti, ma il contatto con Sainz e la foratura hanno cambiato la gara. Dopo l’episodio ha recuperato quanto possibile senza tornare nella posizione iniziale."
+      },
+      "gestioneGomme": {
+        "2023": "Ha affrontato per la prima volta le procedure e i cambi di mescola in una gara caotica, riuscendo comunque a portare la vettura al traguardo.",
+        "2024": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2025": "Prima del contatto la gestione era regolare e permetteva di seguire il gruppo dei punti. La foratura è stata conseguenza dell’urto, non di un’usura fuori controllo."
+      },
+      "considerazioniFinali": "OUTSIDER — ha già mostrato capacità di adattamento nel 2023 e velocità in qualifica nel 2025. Per trasformare il potenziale in punti serve però una gara senza contatti.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Racing Bulls non ha annunciato aggiornamenti specifici per Zandvoort. Un intervento che rendesse il carico più stabile sarebbe utile nelle curve sopraelevate e con il vento costiero, ma fino alla presentazione tecnica FIA del weekend non ci sono componenti nuovi da indicare come certi.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Liam Lawson a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "gasly",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "alpine",
       "risultatiGara": "2023: P3 (Alpine F1 Team)\n2024: P9 (Alpine F1 Team)\n2025: P17 (Alpine F1 Team)",
-      "notaBene": "2023: podio atipico da P12; Pioggia intermittente e bandiera rossa alterarono strategie e classifica; Gasly ereditò il podio anche per la penalità a Pérez.",
+      "notaBene": {
+        "2023": "Il podio dalla dodicesima posizione è stato costruito con il passaggio immediato alle intermedie ed è diventato terzo dopo la penalità assegnata a Perez. Gasly aveva a sua volta ricevuto cinque secondi per velocità in pit lane.",
+        "2024": "",
+        "2025": "Il diciassettesimo posto è stato condizionato dalla scelta di restare a lungo su gomme dure usurate nella speranza di un’interruzione favorevole; la strategia non ha prodotto il vantaggio atteso."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q12 (Alpine F1 Team)\n2024: Q9 (Alpine F1 Team)\n2025: Q14 (Alpine F1 Team)",
-      "passoGara": "Storico: 3 partenze, 3 arrivi; media griglia 11,7, media arrivo 9,7, Δ medio +2,0; miglior P3. Lettura: passo generalmente solido. 2026: P10, 42 punti, media Q 11,0, 1 ritiri/DNS.",
-      "gestioneGomme": "Tenuta della posizione e recupero suggeriscono una gestione complessivamente efficace, senza attribuire tutto alle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Nessun difetto gomme unico; la prestazione complessiva resta il limite principale.",
-      "considerazioniFinali": "OUTSIDER — ranking previsionale 9/22. Forma 2026: P10 con 42 punti; miglior risultato recente P3. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Ha letto subito la pioggia, ha trovato un ritmo efficace sul bagnato e ha mantenuto la vettura in posizione utile fino al podio.",
+        "2024": "Ha corso con un passo solido nel gruppo di centrocampo e ha difeso il nono posto con una gara pulita, senza disporre della velocità per avvicinare i primi.",
+        "2025": "Il ritmo della Alpine era limitato e la scelta strategica estrema lo ha lasciato esposto nel finale. Il risultato riflette sia la vettura sia una scommessa non riuscita."
+      },
+      "gestioneGomme": {
+        "2023": "La scelta tempestiva delle intermedie è stata decisiva e Gasly ha poi amministrato bene ogni nuova fase di pista, pur commettendo l’errore di velocità in pit lane.",
+        "2024": "Ha conservato le gomme abbastanza da completare efficacemente la strategia prevista e restare nei punti. La gestione è stata più forte del passo assoluto della vettura.",
+        "2025": "Ha prolungato troppo lo stint sulle dure per cercare un’opportunità strategica. Quando l’occasione non si è materializzata, le gomme non avevano più prestazione per difendersi."
+      },
+      "considerazioniFinali": "OUTSIDER — il podio del 2023 dimostra quanto sappia sfruttare meteo e strategia, mentre il 2025 mostra i limiti quando la vettura manca di passo. Può emergere soprattutto in una gara variabile.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Alpine non ha confermato ufficialmente un pacchetto dedicato a Zandvoort. La pista richiederebbe soprattutto più stabilità aerodinamica e fiducia nelle curve medio-veloci; qualsiasi novità e la sua reale utilità potranno essere valutate soltanto dopo le specifiche presentate nel weekend.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Pierre Gasly a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "arvid_lindblad",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "rb",
       "risultatiGara": "2023: NON CORSO\n2024: NON CORSO\n2025: NON CORSO",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": ""
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: NON CORSO\n2024: NON CORSO\n2025: NON CORSO",
-      "passoGara": "Storico F1 2023-25 non disponibile. Forma 2026: P11, 23 punti; media qualifica 11,0, media arrivo 10,0.",
-      "gestioneGomme": "Nessun campione F1 recente sul tracciato: valutazione non individualizzabile. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Quadro neutro; partenza, affidabilità PU e posizione di qualifica incidono più del degrado.",
-      "considerazioniFinali": "PUNTI — ranking previsionale 13/22. Forma 2026: P11 con 23 punti; nessun risultato F1 2023-25 comparabile. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-bassa: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2024": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2025": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara."
+      },
+      "gestioneGomme": {
+        "2023": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2024": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2025": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito."
+      },
+      "considerazioniFinali": "DA VALUTARE — non ha ancora disputato un Gran Premio di Formula 1 a Zandvoort. La previsione dipende quindi dalla capacità di apprendere rapidamente una pista stretta, veloce e sensibile al vento.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Racing Bulls non ha annunciato aggiornamenti specifici per Zandvoort. Un intervento che rendesse il carico più stabile sarebbe utile nelle curve sopraelevate e con il vento costiero, ma fino alla presentazione tecnica FIA del weekend non ci sono componenti nuovi da indicare come certi.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Arvid Lindblad a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "colapinto",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "alpine",
       "risultatiGara": "2023: NON CORSO\n2024: NON CORSO\n2025: P11 (Alpine F1 Team)",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": "Il passaggio dalla sedicesima posizione in qualifica all’undicesimo posto è stato favorito da una gara movimentata e dalle neutralizzazioni, ma anche da una rimonta condotta senza errori gravi."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: NON CORSO\n2024: NON CORSO\n2025: Q16 (Alpine F1 Team)",
-      "passoGara": "Storico: 1 partenze, 1 arrivi; media griglia 16,0, media arrivo 11,0, Δ medio +5,0; miglior P11. Lettura: ritmo gara migliore della posizione di partenza. 2026: P12, 19 punti, media Q 13,5, 0 ritiri/DNS.",
-      "gestioneGomme": "Tenuta della posizione e recupero suggeriscono una gestione complessivamente efficace, senza attribuire tutto alle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Nessun difetto gomme unico; la prestazione complessiva resta il limite principale.",
-      "considerazioniFinali": "PUNTI — ranking previsionale 11/22. Forma 2026: P12 con 19 punti; miglior risultato recente P11. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-bassa: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2024": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2025": "Ha recuperato nel gruppo di centrocampo con un ritmo più efficace di quello mostrato in qualifica. Nel finale è rimasto vicino alla zona punti, senza avere margine sufficiente per completare la rimonta."
+      },
+      "gestioneGomme": {
+        "2023": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2024": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2025": "Ha usato la mescola più morbida per attaccare e ha sfruttato le neutralizzazioni per restare in gara. La gestione è stata aggressiva ma complessivamente ordinata."
+      },
+      "considerazioniFinali": "OUTSIDER — il debutto sul circuito si è chiuso appena fuori dai punti dopo una rimonta concreta. Per alzare l’aspettativa serve però una qualifica migliore e una Alpine più competitiva.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Alpine non ha confermato ufficialmente un pacchetto dedicato a Zandvoort. La pista richiederebbe soprattutto più stabilità aerodinamica e fiducia nelle curve medio-veloci; qualsiasi novità e la sua reale utilità potranno essere valutate soltanto dopo le specifiche presentate nel weekend.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Franco Colapinto a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "bearman",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "haas",
       "risultatiGara": "2023: NON CORSO F1 — Formula 2 sul circuito\n2024: NON CORSO\n2025: P6 (Haas F1 Team)",
-      "notaBene": "2025: rimonta di 14 posizioni; Tre Safety Car; il ritiro di Norris dal P2 promosse Hadjar sul podio, comunque qualificato P4 e molto solido.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": "Il sesto posto è eccezionale rispetto alla diciannovesima posizione in qualifica: Bearman è partito dalla pit lane dopo modifiche alla power unit, ha allungato il primo stint e ha sfruttato le neutralizzazioni e la penalità di Antonelli."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: NON CORSO F1 — Formula 2 sul circuito\n2024: NON CORSO\n2025: Q19 (Haas F1 Team)",
-      "passoGara": "Storico: 1 partenze, 1 arrivi; media griglia 20,0, media arrivo 6,0, Δ medio +14,0; miglior P6. Lettura: passo generalmente solido. 2026: P13, 18 punti, media Q 14,7, 3 ritiri/DNS.",
-      "gestioneGomme": "Tenuta della posizione e recupero suggeriscono una gestione complessivamente efficace, senza attribuire tutto alle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Affidabilità, incidenti e sviluppo limitano la continuità più delle gomme.",
-      "considerazioniFinali": "PUNTI — ranking previsionale 12/22. Forma 2026: P13 con 18 punti; miglior risultato recente P6. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-bassa: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2024": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2025": "Dal fondo ha tenuto un ritmo costante e ha rimontato senza consumare subito il potenziale della vettura. La gara è stata costruita con pazienza e finalizzata con decisione nelle ripartenze."
+      },
+      "gestioneGomme": {
+        "2023": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2024": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2025": "Ha fatto durare a lungo le gomme dure, mantenendole utilizzabili fino a quando le neutralizzazioni hanno aperto l’opportunità strategica. La gestione è stata uno degli elementi centrali del risultato."
+      },
+      "considerazioniFinali": "OUTSIDER — il sesto posto del 2025 mostra una buona capacità di leggere gare movimentate. Non è ancora un riferimento di passo puro sul circuito, ma può sfruttare strategia e opportunità.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Haas non ha comunicato aggiornamenti specifici per Zandvoort. La squadra avrebbe beneficio da un comportamento più costante nelle curve lunghe e da una migliore protezione delle gomme anteriori, ma non va attribuito alla vettura un pacchetto non ancora annunciato.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Oliver Bearman a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "bortoleto",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "audi",
       "risultatiGara": "2023: NON CORSO\n2024: NON CORSO\n2025: P15 (Sauber)",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": "Il quindicesimo posto, peggiore della tredicesima posizione in qualifica, è stato condizionato da un problema alla frizione in partenza e da danni alla vettura durante la gara."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: NON CORSO\n2024: NON CORSO\n2025: Q13 (Sauber)",
-      "passoGara": "Storico: 1 partenze, 1 arrivi; media griglia 13,0, media arrivo 15,0, Δ medio -2,0; miglior P15. Lettura: rendimento variabile o difficile. 2026: P14, 10 punti, media Q 13,0, 1 ritiri/DNS.",
-      "gestioneGomme": "Quadro individuale neutro/variabile: i risultati non mostrano un limite gomme persistente. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Partenze e affidabilità sono aree critiche; comportamento gomme senza trend netto.",
-      "considerazioniFinali": "PUNTI — ranking previsionale 15/22. Forma 2026: P14 con 10 punti; miglior risultato recente P15. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-bassa: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2024": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara.",
+        "2025": "Dopo una partenza difficile ha corso con una vettura danneggiata e non è riuscito a esprimere il ritmo mostrato in qualifica. La posizione finale non è quindi una misura pulita del suo potenziale."
+      },
+      "gestioneGomme": {
+        "2023": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2024": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito.",
+        "2025": "La strategia finale sulle dure non ha prodotto il recupero sperato, anche perché il danno rendeva la vettura meno efficace. La gestione va letta insieme ai problemi tecnici della gara."
+      },
+      "considerazioniFinali": "DA VALUTARE — la prima esperienza è stata compromessa da partenza e danni. La qualifica offre un segnale migliore del risultato, ma serve un weekend pulito per capire il suo vero livello a Zandvoort.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Audi non ha annunciato un pacchetto specifico per Zandvoort. Su questo tracciato sarebbero utili più carico utilizzabile nelle curve in appoggio e una vettura meno sensibile al vento; l’eventuale presenza di novità sarà verificabile con la documentazione tecnica del weekend.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Gabriel Bortoleto a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "sainz",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "williams",
       "risultatiGara": "2023: P5 (Ferrari)\n2024: P5 (Ferrari)\n2025: P13 (Williams)",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "",
+        "2024": "Il quinto posto dalla decima posizione in qualifica è arrivato grazie a un passo gara Ferrari molto più efficace e a una rimonta costruita soprattutto sullo stint con gomme dure.",
+        "2025": "Il tredicesimo posto è stato condizionato dal contatto con Lawson e dai dieci secondi inizialmente assegnati a Sainz. La decisione è stata poi annullata in revisione perché l’episodio è stato riconosciuto come incidente di gara, ma il tempo già scontato non poteva più essere restituito."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q6 (Ferrari)\n2024: Q10 (Ferrari)\n2025: Q9 (Williams)",
-      "passoGara": "Storico: 3 partenze, 3 arrivi; media griglia 8,3, media arrivo 7,7, Δ medio +0,7; miglior P5. Lettura: passo generalmente solido. 2026: P15, 6 punti, media Q 15,4, 2 ritiri/DNS.",
-      "gestioneGomme": "Quadro individuale neutro/variabile: i risultati non mostrano un limite gomme persistente. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Soffre curve lunghe e cambi di direzione; il problema è soprattutto aerodinamico.",
-      "considerazioniFinali": "PUNTI — ranking previsionale 14/22. Forma 2026: P15 con 6 punti; miglior risultato recente P5. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Ha mantenuto un buon ritmo e ha difeso il quinto posto, pur riconoscendo che l’Alpine di Gasly aveva più velocità nelle fasi decisive.",
+        "2024": "Ha rimontato con decisione e sullo stint lungo ha mostrato uno dei passi più solidi del gruppo inseguitore, trasformando una qualifica difficile in un risultato forte.",
+        "2025": "La Williams aveva velocità sufficiente per puntare ai primi posti del centrocampo, ma il contatto con Lawson e il tempo perso per la decisione poi annullata hanno cancellato la gara. Il tredicesimo posto sottovaluta il passo reale."
+      },
+      "gestioneGomme": {
+        "2023": "Ha protetto le gomme abbastanza da restare davanti al gruppo alle sue spalle in condizioni mutevoli. La gestione è stata pulita, senza consentirgli però di rispondere al ritmo di Gasly.",
+        "2024": "Ha fatto funzionare molto bene le gomme dure e ha mantenuto prestazione durante la rimonta. La gestione ha sostenuto il risultato invece di limitarlo.",
+        "2025": "Prima del contatto le gomme erano sotto controllo e la strategia lo teneva in lotta per punti importanti. Il danno e la penalità hanno reso irrilevante la lettura del finale."
+      },
+      "considerazioniFinali": "MOLTO COMPETITIVO — due quinti posti con Ferrari e il buon potenziale Williams del 2025 mostrano un rapporto positivo con il circuito. Deve però evitare che un contatto trasformi una gara forte in un risultato anonimo.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Williams ha anticipato cambiamenti importanti nella parte finale della stagione, senza però confermare componenti e data esatta per Zandvoort. Se il pacchetto debuttasse qui, un miglior equilibrio aerodinamico sarebbe utile nelle curve lunghe e sopraelevate, mentre il circuito offre meno spazio per sfruttare soltanto la velocità massima.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/youll-see-quite-a-major-change-vowles-gives-update-on-planned-williams-upgrades-for-rest-of-2026.JrsALnnCpdhssdGf0SybD.JrsALnnCpdhssdGf0SybD",
+        "https://www.formula1.com/en/latest/article/official-grid-who-starts-where-for-the-belgian-grand-prix-2026.2Pyth6t2ZEYNSqVWC295C7",
+        "https://www.formula1.com/en/latest/article/williams-right-of-review-over-sainzs-dutch-gp-penalty-successful.4hYP7mRN2miF9flHjYfiDw"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Carlos Sainz a Zandvoort. Ha già scontato a Spa una penalità legata a nuovi elementi della power unit: quella sanzione non si trasferisce automaticamente, ma un’ulteriore sostituzione fuori quota potrebbe generarne un’altra."
     },
     {
       "pilotaSlug": "albon",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "williams",
       "risultatiGara": "2023: P8 (Williams)\n2024: P14 (Williams)\n2025: P5 (Williams)",
-      "notaBene": "2025: rimonta di 10 posizioni; Tre Safety Car; il ritiro di Norris dal P2 promosse Hadjar sul podio, comunque qualificato P4 e molto solido.",
+      "notaBene": {
+        "2023": "L’ottavo posto dalla quarta posizione è dipeso soprattutto dal momento delle soste nelle fasi di pioggia; Williams riteneva possibile un risultato ancora migliore.",
+        "2024": "Aveva ottenuto l’ottavo tempo, ma è stato squalificato dalla qualifica perché il fondo non rispettava il volume regolamentare ed è partito dal fondo. La rimonta si è fermata al quattordicesimo posto.",
+        "2025": "Il quinto posto dalla quindicesima posizione è stato favorito da una partenza molto efficace e da una strategia ben eseguita in una gara ricca di episodi."
+      },
       "andamentoPerAnno": "",
-      "risultatiQualifica": "2023: Q4 (Williams)\n2024: Q10 (Williams)\n2025: Q15 (Williams)",
-      "passoGara": "Storico: 3 partenze, 3 arrivi; media griglia 12,7, media arrivo 9,0, Δ medio +3,7; miglior P5. Lettura: passo generalmente solido. 2026: P16, 5 punti, media Q 16,5, 3 ritiri/DNS.",
-      "gestioneGomme": "Tenuta della posizione e recupero suggeriscono una gestione complessivamente efficace, senza attribuire tutto alle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Soffre curve lunghe e cambi di direzione; il problema è soprattutto aerodinamico.",
-      "considerazioniFinali": "DIFFICILE — ranking previsionale 16/22. Forma 2026: P16 con 5 punti; miglior risultato recente P5. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "risultatiQualifica": "2023: Q4 (Williams)\n2024: DSQ — tempo da Q8 (Williams)\n2025: Q15 (Williams)",
+      "passoGara": {
+        "2023": "La Williams era molto efficace a Zandvoort e Albon ha tenuto un ritmo da punti per tutta la gara. Le chiamate nel meteo variabile gli hanno però fatto perdere la possibilità di chiudere più avanti.",
+        "2024": "Partendo dal fondo ha recuperato fino alla zona punti provvisoria, ma la strategia su due soste lo ha poi riportato indietro. Il ritmo confermava comunque i progressi del pacchetto.",
+        "2025": "Ha risalito rapidamente il gruppo e ha mantenuto un passo solido fino al quinto posto. La gara ha mostrato che la Williams era competitiva anche oltre la velocità sul dritto."
+      },
+      "gestioneGomme": {
+        "2023": "Ha tenuto le gomme in condizioni utili durante una gara interrotta più volte, ma le finestre di sosta hanno pesato più dell’usura naturale.",
+        "2024": "La rimonta ha richiesto di spingere nel traffico e la strategia su due soste non gli ha permesso di conservare la posizione in zona punti. Non si è trattato di un crollo improvviso.",
+        "2025": "Ha gestito gli stint senza perdere l’equilibrio della vettura e ha potuto attaccare nelle fasi decisive. Le gomme sono rimaste un supporto alla rimonta."
+      },
+      "considerazioniFinali": "MOLTO COMPETITIVO — Zandvoort ha premiato più volte il carico e la precisione della Williams guidata da Albon. Le qualifiche del 2023 e la rimonta del 2025 lo rendono un candidato credibile ai punti importanti.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Williams ha anticipato cambiamenti importanti nella parte finale della stagione, senza però confermare componenti e data esatta per Zandvoort. Se il pacchetto debuttasse qui, un miglior equilibrio aerodinamico sarebbe utile nelle curve lunghe e sopraelevate, mentre il circuito offre meno spazio per sfruttare soltanto la velocità massima.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/youll-see-quite-a-major-change-vowles-gives-update-on-planned-williams-upgrades-for-rest-of-2026.JrsALnnCpdhssdGf0SybD.JrsALnnCpdhssdGf0SybD",
+        "https://www.formula1.com/en/latest/article/breaking-albon-disqualified-from-dutch-gp-qualifying-over-illegal-williams.5vOsTexc4Nsdw38EQO98sr"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Alexander Albon a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "ocon",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "haas",
       "risultatiGara": "2023: P10 (Alpine F1 Team)\n2024: P15 (Alpine F1 Team)\n2025: P10 (Haas F1 Team)",
-      "notaBene": "2025: rimonta di 8 posizioni; Tre Safety Car; il ritiro di Norris dal P2 promosse Hadjar sul podio, comunque qualificato P4 e molto solido.",
+      "notaBene": {
+        "2023": "Il decimo posto dalla diciassettesima posizione è stato favorito dalle condizioni mutevoli, ma Ocon ha anche evitato errori e sfruttato le opportunità fino all’ultimo punto disponibile.",
+        "2024": "",
+        "2025": "Il decimo posto dalla diciottesima posizione nasce da una gara ordinata e da una buona lettura delle neutralizzazioni, che gli hanno permesso di avanzare nel gruppo."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q17 (Alpine F1 Team)\n2024: Q16 (Alpine F1 Team)\n2025: Q18 (Haas F1 Team)",
-      "passoGara": "Storico: 3 partenze, 3 arrivi; media griglia 16,3, media arrivo 11,7, Δ medio +4,7; miglior P10. Lettura: ritmo gara migliore della posizione di partenza. 2026: P17, 3 punti, media Q 15,3, 0 ritiri/DNS.",
-      "gestioneGomme": "Tenuta della posizione e recupero suggeriscono una gestione complessivamente efficace, senza attribuire tutto alle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Affidabilità, incidenti e sviluppo limitano la continuità più delle gomme.",
-      "considerazioniFinali": "DIFFICILE — ranking previsionale 17/22. Forma 2026: P17 con 3 punti; miglior risultato recente P10. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Non aveva il ritmo di Gasly, ma ha costruito una rimonta paziente e ha trasformato una qualifica negativa in un punto.",
+        "2024": "È rimasto intrappolato nel traffico e nei trenini con DRS, senza velocità sufficiente per risalire. Il passo è stato coerente con una gara di centrocampo arretrato.",
+        "2025": "Ha mantenuto un ritmo regolare e ha sfruttato gli episodi senza commettere errori. La prestazione è stata più efficace del risultato in qualifica."
+      },
+      "gestioneGomme": {
+        "2023": "Ha adattato bene le gomme ai cambiamenti di pista e ha mantenuto la vettura competitiva fino alla zona punti.",
+        "2024": "Nel traffico non è riuscito a liberare il potenziale delle gomme e la strategia non ha aperto spazio per attaccare. La gestione è rimasta ordinata ma poco redditizia.",
+        "2025": "Ha preservato le mescole abbastanza da restare pronto alle ripartenze e difendere il decimo posto. Non ha avuto un calo evidente nel finale."
+      },
+      "considerazioniFinali": "OUTSIDER — ha già rimontato due volte fino ai punti partendo molto indietro. Il suo valore a Zandvoort emerge soprattutto nella gestione di gare movimentate, più che nel passo da qualifica.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Haas non ha comunicato aggiornamenti specifici per Zandvoort. La squadra avrebbe beneficio da un comportamento più costante nelle curve lunghe e da una migliore protezione delle gomme anteriori, ma non va attribuito alla vettura un pacchetto non ancora annunciato.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Esteban Ocon a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "hulkenberg",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "audi",
       "risultatiGara": "2023: P12 (Haas F1 Team)\n2024: P11 (Haas F1 Team)\n2025: P14 (Sauber)",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": ""
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q15 (Haas F1 Team)\n2024: Q13 (Haas F1 Team)\n2025: Q17 (Sauber)",
-      "passoGara": "Storico: 3 partenze, 3 arrivi; media griglia 14,3, media arrivo 12,3, Δ medio +2,0; miglior P11. Lettura: ritmo gara migliore della posizione di partenza. 2026: P18, 2 punti, media Q 11,7, 4 ritiri/DNS.",
-      "gestioneGomme": "Tenuta della posizione e recupero suggeriscono una gestione complessivamente efficace, senza attribuire tutto alle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Partenze e affidabilità sono aree critiche; comportamento gomme senza trend netto.",
-      "considerazioniFinali": "DIFFICILE — ranking previsionale 19/22. Forma 2026: P18 con 2 punti; miglior risultato recente P11. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Ha tenuto un ritmo discreto ma insufficiente per entrare nei punti, soprattutto quando la pista si è stabilizzata e sono emersi i limiti della Haas.",
+        "2024": "È rimasto a lungo vicino alla zona punti, ma la sosta anticipata lo ha costretto a difendersi con gomme ormai stanche e ha chiuso appena fuori.",
+        "2025": "Con la Sauber non ha trovato il passo per risalire stabilmente. Il momento delle neutralizzazioni e il traffico hanno limitato ulteriormente la gara."
+      },
+      "gestioneGomme": {
+        "2023": "Ha attraversato senza errori decisivi le condizioni variabili, ma la vettura non aveva prestazione sufficiente per trasformare la gestione in punti.",
+        "2024": "Lo stint finale è diventato troppo lungo dopo la sosta anticipata. Ha provato a difendersi, ma le gomme non offrivano più la stessa risposta negli ultimi giri.",
+        "2025": "La strategia non ha ricevuto l’aiuto sperato dalle neutralizzazioni e nel traffico le gomme erano difficili da sfruttare. La gestione non è bastata a compensare il passo limitato."
+      },
+      "considerazioniFinali": "DA VALUTARE — ha spesso sfiorato i punti senza trovare un fine settimana davvero competitivo. L’esperienza può aiutarlo, ma serve un’Audi più efficace negli appoggi lunghi.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Audi non ha annunciato un pacchetto specifico per Zandvoort. Su questo tracciato sarebbero utili più carico utilizzabile nelle curve in appoggio e una vettura meno sensibile al vento; l’eventuale presenza di novità sarà verificabile con la documentazione tecnica del weekend.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Nico Hülkenberg a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "alonso",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "aston_martin",
       "risultatiGara": "2023: P2 (Aston Martin)\n2024: P10 (Aston Martin)\n2025: P8 (Aston Martin)",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "Il secondo posto dalla quinta posizione è stato costruito con il passaggio molto rapido alle intermedie e con un passo eccellente sia sul bagnato sia sull’asciutto.",
+        "2024": "",
+        "2025": ""
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q5 (Aston Martin)\n2024: Q7 (Aston Martin)\n2025: Q10 (Aston Martin)",
-      "passoGara": "Storico: 3 partenze, 3 arrivi; media griglia 7,3, media arrivo 6,7, Δ medio +0,7; miglior P2. Lettura: passo generalmente solido. 2026: P19, 1 punti, media Q 19,6, 4 ritiri/DNS.",
-      "gestioneGomme": "Quadro individuale neutro/variabile: i risultati non mostrano un limite gomme persistente. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Strategie più flessibili dopo l'upgrade; affidabilità e finestra restano da verificare.",
-      "considerazioniFinali": "OUTSIDER — ranking previsionale 18/22. Forma 2026: P19 con 1 punti; miglior risultato recente P2. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Ha avuto uno dei ritmi migliori della gara in tutte le condizioni, recuperando fino al secondo posto e mettendo pressione a Verstappen dopo l’ultima ripartenza.",
+        "2024": "L’Aston Martin non aveva il passo dei migliori e Alonso ha massimizzato ciò che la vettura offriva, chiudendo al limite della zona punti.",
+        "2025": "Ha mostrato un buon ritmo, ma il traffico e il momento delle neutralizzazioni hanno limitato la possibilità di avanzare oltre l’ottavo posto."
+      },
+      "gestioneGomme": {
+        "2023": "Ha letto immediatamente la necessità delle intermedie e ha poi mantenuto le gomme efficaci a ogni cambio di condizione. La gestione è stata parte decisiva del podio.",
+        "2024": "Ha completato una gara ordinata senza riuscire a creare un vantaggio strategico. Le gomme sono rimaste gestibili, ma il limite era il passo della vettura.",
+        "2025": "Nel traffico ha dovuto chiedere molto alle gomme e le neutralizzazioni non sono arrivate nel momento più favorevole. Ha comunque mantenuto ritmo fino al traguardo."
+      },
+      "considerazioniFinali": "MOLTO COMPETITIVO — il podio del 2023 resta uno dei riferimenti più forti dello storico recente e nel 2025 ha confermato punti solidi. Gli aggiornamenti Aston Martin possono riportarlo verso la parte alta.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Aston Martin ha confermato per Zandvoort una power unit Honda rivista e ulteriori passi aerodinamici. La risposta più regolare del motore può aiutare in uscita dalle curve lente, mentre maggiore stabilità e carico sarebbero direttamente utili nei lunghi appoggi; la portata del guadagno resta da verificare nelle prove.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/how-hungary-showed-aston-martin-is-back-racing-after-upgrades-work.2FxnUtTxAbc3dARczm3lfW.2FxnUtTxAbc3dARczm3lfW",
+        "https://www.formula1.com/en/latest/article/official-grid-who-starts-where-for-the-belgian-grand-prix-2026.2Pyth6t2ZEYNSqVWC295C7"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Fernando Alonso a Zandvoort. Ha già scontato a Spa una penalità legata a nuovi elementi della power unit: quella sanzione non si trasferisce automaticamente, ma un’ulteriore sostituzione fuori quota potrebbe generarne un’altra."
     },
     {
       "pilotaSlug": "stroll",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "aston_martin",
       "risultatiGara": "2023: P11 (Aston Martin)\n2024: P13 (Aston Martin)\n2025: P7 (Aston Martin)",
-      "notaBene": "2025: rimonta di 12 posizioni; Tre Safety Car; il ritiro di Norris dal P2 promosse Hadjar sul podio, comunque qualificato P4 e molto solido.",
+      "notaBene": {
+        "2023": "",
+        "2024": "Il tredicesimo posto è stato aggravato da cinque secondi di penalità per eccesso di velocità in pit lane, che lo hanno fatto arretrare dietro Ricciardo.",
+        "2025": "Il settimo posto dalla ventesima posizione è stato favorito dalla sosta anticipata, dall’undercut e dal momento delle neutralizzazioni, oltre che da una gara senza errori."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q11 (Aston Martin)\n2024: Q8 (Aston Martin)\n2025: Q20 (Aston Martin)",
-      "passoGara": "Storico: 3 partenze, 3 arrivi; media griglia 12,7, media arrivo 10,3, Δ medio +2,3; miglior P7. Lettura: ritmo gara migliore della posizione di partenza. 2026: P20, 0 punti, media Q 21,0, 6 ritiri/DNS.",
-      "gestioneGomme": "Tenuta della posizione e recupero suggeriscono una gestione complessivamente efficace, senza attribuire tutto alle gomme. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Strategie più flessibili dopo l'upgrade; affidabilità e finestra restano da verificare.",
-      "considerazioniFinali": "DIFFICILE — ranking previsionale 20/22. Forma 2026: P20 con 0 punti; miglior risultato recente P7. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Ha corso nel centrocampo senza il ritmo mostrato da Alonso e ha chiuso appena fuori dai punti, in una gara resa complessa dal meteo.",
+        "2024": "L’Aston Martin mancava di passo e Stroll non è riuscito a risalire; la penalità ai box ha poi peggiorato il risultato finale.",
+        "2025": "Dal fondo ha recuperato con un ritmo più convincente di quello visto in qualifica. Strategia e neutralizzazioni lo hanno aiutato, ma ha saputo mantenere la posizione nei punti."
+      },
+      "gestioneGomme": {
+        "2023": "Ha gestito le mescole senza episodi decisivi, ma non ha trovato il margine necessario per entrare nei punti.",
+        "2024": "Le gomme non hanno offerto un vantaggio sufficiente a compensare il passo limitato. L’errore di velocità in pit lane ha inciso più della loro usura.",
+        "2025": "La sosta anticipata ha messo le gomme nella finestra giusta per l’undercut e le neutralizzazioni hanno protetto lo stint. La gestione è stata efficace e pragmatica."
+      },
+      "considerazioniFinali": "OUTSIDER — il settimo posto del 2025 mostra che può sfruttare bene una strategia favorevole. Il nuovo pacchetto Aston Martin aumenta l’interesse, ma il suo passo storico resta meno costante di quello di Alonso.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Aston Martin ha confermato per Zandvoort una power unit Honda rivista e ulteriori passi aerodinamici. La risposta più regolare del motore può aiutare in uscita dalle curve lente, mentre maggiore stabilità e carico sarebbero direttamente utili nei lunghi appoggi; la portata del guadagno resta da verificare nelle prove.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/how-hungary-showed-aston-martin-is-back-racing-after-upgrades-work.2FxnUtTxAbc3dARczm3lfW.2FxnUtTxAbc3dARczm3lfW",
+        "https://www.formula1.com/en/latest/article/official-grid-who-starts-where-for-the-belgian-grand-prix-2026.2Pyth6t2ZEYNSqVWC295C7"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Lance Stroll a Zandvoort. Ha già scontato a Spa una penalità legata a nuovi elementi della power unit: quella sanzione non si trasferisce automaticamente, ma un’ulteriore sostituzione fuori quota potrebbe generarne un’altra."
     },
     {
       "pilotaSlug": "bottas",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "cadillac",
       "risultatiGara": "2023: P14 (Alfa Romeo)\n2024: P19 (Sauber)\n2025: NON CORSO — pilota di riserva Mercedes",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "Il recupero dal diciannovesimo al quattordicesimo posto è stato favorito dalla gara caotica e dal meteo variabile, pur senza portarlo vicino ai punti.",
+        "2024": "",
+        "2025": ""
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q19 (Alfa Romeo)\n2024: Q17 (Sauber)\n2025: NON CORSO — pilota di riserva Mercedes",
-      "passoGara": "Storico: 2 partenze, 2 arrivi; media griglia 17,0, media arrivo 16,5, Δ medio +0,5; miglior P14. Lettura: rendimento variabile o difficile. 2026: P21, 0 punti, media Q 19,8, 5 ritiri/DNS.",
-      "gestioneGomme": "Quadro individuale neutro/variabile: i risultati non mostrano un limite gomme persistente. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Prestazione gomme non separabile dall'affidabilità; esperienza dei piloti è il principale aiuto.",
-      "considerazioniFinali": "DIFFICILE — ranking previsionale 22/22. Forma 2026: P21 con 0 punti; miglior risultato recente P14. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Con l’Alfa Romeo ha mantenuto un ritmo sufficiente per avanzare nelle fasi caotiche, ma non abbastanza per lottare per i punti.",
+        "2024": "La Sauber mancava di aderenza e soffriva un degrado elevato. Bottas è rimasto nel fondo del gruppo senza possibilità concreta di rimonta.",
+        "2025": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara."
+      },
+      "gestioneGomme": {
+        "2023": "Ha attraversato correttamente i cambi di mescola e ha guadagnato posizioni soprattutto evitando problemi, più che grazie a un vantaggio di passo.",
+        "2024": "Le gomme perdevano efficacia rapidamente sulla Sauber e le due soste non hanno cambiato il quadro. La gestione era limitata dal comportamento della vettura.",
+        "2025": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito."
+      },
+      "considerazioniFinali": "DA VALUTARE — torna a Zandvoort con Cadillac dopo un anno senza gare e senza riferimenti recenti competitivi sul circuito. L’esperienza aiuta, ma la nuova vettura rende la previsione prudente.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Cadillac non ha comunicato un pacchetto specifico per Zandvoort. Essendo la prima stagione della squadra sul circuito, sarebbero particolarmente utili aggiornamenti che aumentino stabilità aerodinamica e prevedibilità con il vento, ma non ci sono ancora componenti confermati da valutare.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Valtteri Bottas a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "perez",
       "garaSlug": "olanda-zandvoort",
       "scuderiaSlug": "cadillac",
       "risultatiGara": "2023: P4 (Red Bull)\n2024: P6 (Red Bull)\n2025: NON CORSO — fuori dalla griglia F1",
-      "notaBene": "Nessuna anomalia marcata: i risultati disponibili sono generalmente coerenti con qualifica, affidabilità e passo della vettura.",
+      "notaBene": {
+        "2023": "Il quarto posto è legato a una gara molto movimentata: la sosta immediata per le intermedie lo aveva portato in zona podio, ma cinque secondi per eccesso di velocità in pit lane lo hanno fatto arretrare dietro Gasly.",
+        "2024": "",
+        "2025": ""
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: Q7 (Red Bull)\n2024: Q5 (Red Bull)\n2025: NON CORSO — fuori dalla griglia F1",
-      "passoGara": "Storico: 2 partenze, 2 arrivi; media griglia 6,0, media arrivo 5,0, Δ medio +1,0; miglior P4. Lettura: feeling storicamente molto positivo. 2026: P22, 0 punti, media Q 19,7, 4 ritiri/DNS.",
-      "gestioneGomme": "Quadro individuale neutro/variabile: i risultati non mostrano un limite gomme persistente. Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026 della scuderia: Prestazione gomme non separabile dall'affidabilità; esperienza dei piloti è il principale aiuto.",
-      "considerazioniFinali": "DIFFICILE — ranking previsionale 21/22. Forma 2026: P22 con 0 punti; miglior risultato recente P4. Il circuito richiede alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media-alta: regolamento e gomme 2026 riducono la trasferibilità dello storico.",
+      "passoGara": {
+        "2023": "Ha guadagnato molto con la lettura iniziale della pioggia e ha tenuto un passo da podio, poi perso per la penalità ai box.",
+        "2024": "Ha corso con un ritmo solido ma inferiore a quello di Verstappen e dei migliori. Il sesto posto riflette una gara senza il margine necessario per attaccare davanti.",
+        "2025": "Non ha disputato il Gran Premio di Formula 1, quindi non esiste un riferimento diretto sul suo passo gara."
+      },
+      "gestioneGomme": {
+        "2023": "La scelta tempestiva delle intermedie è stata molto efficace e ha costruito il risultato. La gestione sportiva è stata buona, mentre l’errore di velocità in pit lane ha cancellato il podio.",
+        "2024": "Ha completato la strategia a una sosta senza un degrado anomalo, ma non aveva abbastanza passo per trasformare la gestione in posizioni migliori.",
+        "2025": "Non avendo preso parte alla gara di Formula 1, non è possibile valutare la sua gestione delle gomme su questo circuito."
+      },
+      "considerazioniFinali": "OUTSIDER — ha già corso da podio a Zandvoort, ma rientra con Cadillac dopo un anno lontano dalla griglia. L’esperienza è un punto di forza, mentre il livello della nuova vettura resta il principale interrogativo.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Cadillac non ha comunicato un pacchetto specifico per Zandvoort. Essendo la prima stagione della squadra sul circuito, sarebbero particolarmente utili aggiornamenti che aumentino stabilità aerodinamica e prevedibilità con il vento, ma non ci sono ancora componenti confermati da valutare.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/drivers"
-      ]
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
+      ],
+      "penalita": "Al 7 agosto 2026 non è stata pubblicata alcuna penalità per Sergio Pérez a Zandvoort. La situazione andrà ricontrollata nei documenti FIA del weekend, perché una sostituzione fuori quota o una decisione dei commissari può modificarla."
     },
     {
       "pilotaSlug": "antonelli",
@@ -5936,216 +6307,402 @@
       ]
     }
   ],
-
-
   "analisiScuderie": [
     {
       "scuderiaSlug": "mercedes",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: HAM P6 / RUS P17\n2024: RUS P7 / HAM P8\n2025: RUS P4 / ANT P16",
-      "notaBene": "Nessuna anomalia marcata nelle due vetture; risultati soprattutto spiegati da qualifica, passo e strategia.",
+      "notaBene": {
+        "2023": "Il divario tra la terza posizione in qualifica di Russell e il suo diciassettesimo posto è dovuto alle scelte nel meteo variabile e alla foratura seguita al contatto con Norris. Hamilton ha invece rimontato dalla tredicesima alla sesta posizione.",
+        "2024": "Le due Mercedes hanno perso terreno rispetto alla qualifica perché la vettura scivolava e consumava le gomme più del previsto, rendendo necessarie strategie più aggressive.",
+        "2025": "Russell ha chiuso quarto nonostante il fondo danneggiato dal contatto con Leclerc. Antonelli è sceso al sedicesimo posto dopo il contatto con Leclerc, dieci secondi di penalità per la collisione e altri cinque per velocità in pit lane."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: RUS Q3 / HAM Q13\n2024: RUS Q4 / HAM Q11\n2025: RUS Q5 / ANT Q11",
-      "passoGara": "Storico: 6 partenze, media arrivo 9,7, 30 punti, 0 vittorie e 0 podi. Riferimento 2026: otto vittorie nelle prime undici gare e vettura equilibrata.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Gestione gomme, sospensioni e raffreddamento sono punti di forza; favorita quasi ovunque.",
-      "considerazioniFinali": "FAVORITA — ranking 1/11. Forma 2026: P1, 379 punti. Riferimento 2026: otto vittorie nelle prime undici gare e vettura equilibrata. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "passoGara": {
+        "2023": "La Mercedes aveva velocità sul giro secco, ma non ha trasformato il potenziale in una gara completa: Hamilton ha recuperato con buon ritmo, mentre la gara di Russell è stata spezzata da strategia e contatto.",
+        "2024": "La vettura era poco stabile e scivolava negli stint lunghi. Entrambi i piloti hanno recuperato parte del terreno, ma senza il passo necessario per lottare con McLaren e Ferrari.",
+        "2025": "Russell e Antonelli hanno mostrato un passo competitivo, anche quando il primo ha riportato danni e il secondo ha tentato l’undercut. Contatti e penalità hanno però ridotto nettamente il risultato di squadra."
+      },
+      "gestioneGomme": {
+        "2023": "I continui cambi fra asciutto e pioggia hanno reso decisive le chiamate ai box. Hamilton si è adattato bene, mentre per Russell la sequenza strategica non ha prodotto lo stesso vantaggio.",
+        "2024": "Lo scivolamento della vettura aumentava l’usura e ha spinto la squadra verso due soste. La gestione non è stata abbastanza efficiente per difendere le posizioni della qualifica.",
+        "2025": "Le gomme hanno permesso a entrambe le vetture di mantenere un buon ritmo e ad Antonelli di cercare l’undercut. Il bilancio è stato rovinato dagli incidenti, non da un crollo generalizzato delle mescole."
+      },
+      "considerazioniFinali": "FAVORITA — Mercedes ha mostrato velocità in qualifica in tutte le ultime edizioni e nel 2025 aveva passo anche con vetture danneggiate. Il pacchetto annunciato per la ripresa può renderla ancora più adatta al circuito, ma dovrà evitare errori ed episodi.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Mercedes ha annunciato un aggiornamento più consistente per la ripresa dopo la pausa estiva, con Zandvoort indicata come prima occasione utile. I componenti non sono ancora stati descritti ufficialmente: se miglioreranno stabilità aerodinamica e qualità del carico, saranno particolarmente utili nelle curve lunghe, veloci e sopraelevate del circuito; l’effetto reale dovrà però essere verificato in pista.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/something-more-sizeable-mercedes-target-major-upgrade-after-f1-summer-break.4dxqU3SkbY2BFaecTvbTsR.4dxqU3SkbY2BFaecTvbTsR"
       ]
     },
     {
       "scuderiaSlug": "ferrari",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: SAI P5 / LEC P19 (danno al fondo)\n2024: LEC P3 / SAI P5\n2025: LEC P19 (ritiro) / HAM P20 (ritiro)",
-      "notaBene": "2023: LEC danno al fondo.\n2024: LEC podio da P6; Gara asciutta a una sosta: Norris vinse con passo netto; Leclerc salì sul podio con undercut e difesa.\n2025: LEC ritiro, HAM ritiro.",
+      "notaBene": {
+        "2023": "Il diciannovesimo posto di Leclerc è stato causato dal contatto con Piastri, che ha danneggiato il fondo e portato al ritiro. Il quinto posto di Sainz rappresenta invece il potenziale reale della squadra.",
+        "2024": "Il terzo e il quinto posto sono nettamente migliori delle posizioni di qualifica: Ferrari ha trovato un passo gara più efficace e ha sfruttato strategia e gestione gomme.",
+        "2025": "Il doppio ritiro non descrive la prestazione: Hamilton è uscito alla curva 3 sulla parte ancora umida, mentre Leclerc è stato colpito da Antonelli quando stava mostrando un buon passo."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: SAI Q6 / LEC Q9\n2024: LEC Q6 / SAI Q10\n2025: LEC Q6 / HAM Q7",
-      "passoGara": "Storico: 6 partenze, media arrivo 4,3, 35 punti, 0 vittorie e 1 podi. Seconda forza 2026, forte in curva e spesso più vicina a Mercedes in gara.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Può soffrire degrado nelle condizioni molto calde; attenzione alle piste di potenza pura.",
-      "considerazioniFinali": "FAVORITA — ranking 2/11. Forma 2026: P2, 307 punti. Seconda forza 2026, forte in curva e spesso più vicina a Mercedes in gara. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "passoGara": {
+        "2023": "La gara di Leclerc non è valutabile a causa del fondo danneggiato. Sainz ha invece mantenuto un passo solido, pur senza riuscire a contenere la Alpine di Gasly.",
+        "2024": "Ferrari ha compiuto un netto passo avanti rispetto alla qualifica. Leclerc ha raggiunto il podio e Sainz ha rimontato grazie a un ritmo costante e competitivo.",
+        "2025": "Entrambe le vetture avevano passo per punti importanti prima degli incidenti. Il doppio ritiro è quindi molto più severo della prestazione espressa in pista."
+      },
+      "gestioneGomme": {
+        "2023": "Sainz ha protetto bene le mescole in condizioni variabili, mentre il danno di Leclerc impedisce una valutazione normale della sua gestione.",
+        "2024": "La squadra ha fatto funzionare bene la strategia a una sosta: Leclerc ha difeso a lungo il podio e Sainz è stato particolarmente efficace sulle gomme dure.",
+        "2025": "Prima dei ritiri le gomme erano sotto controllo e consentivano un ritmo competitivo. Gli incidenti, non l’usura, hanno deciso il risultato."
+      },
+      "considerazioniFinali": "MOLTO COMPETITIVA — il podio e il quinto posto del 2024, insieme al passo visto prima dei ritiri del 2025, mostrano un buon adattamento. Ferrari deve però completare una gara pulita per confermare quel potenziale.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Ferrari non ha annunciato un pacchetto specifico per Zandvoort. La vettura è ancora in sviluppo, ma senza una scheda tecnica ufficiale non è corretto attribuirle componenti precisi: su questa pista sarebbero soprattutto utili maggiore stabilità nei cambi di appoggio e carico efficiente nelle curve sopraelevate.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/why-the-2026-development-race-shows-f1-teams-are-operating-at-a-level-never-seen-before.3z4PkgtUazOWrJ8ESuzsmo.3z4PkgtUazOWrJ8ESuzsmo"
       ]
     },
     {
       "scuderiaSlug": "mclaren",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: NOR P7 / PIA P9\n2024: NOR P1 / PIA P4\n2025: PIA P1 / NOR P18 (ritiro)",
-      "notaBene": "2025: NOR ritiro.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": "Il ritiro di Norris è stato causato da un problema al telaio mentre correva secondo. Il risultato di squadra non riflette quindi una gara in cui McLaren occupava stabilmente le prime due posizioni."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: NOR Q2 / PIA Q8\n2024: NOR Q1 / PIA Q3\n2025: PIA Q1 / NOR Q2",
-      "passoGara": "Storico: 6 partenze, media arrivo 4,4, 71 punti, 2 vittorie e 2 podi. Norris è molto forte sul giro secco; il passo è cresciuto fino alla vittoria in Ungheria.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Buon degrado recente, ma restano sensibilità al vento e alla finestra di utilizzo.",
-      "considerazioniFinali": "PODIO — ranking 3/11. Forma 2026: P3, 220 punti. Norris è molto forte sul giro secco; il passo è cresciuto fino alla vittoria in Ungheria. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "passoGara": {
+        "2023": "La squadra era competitiva ma non ancora dominante: Norris e Piastri hanno portato entrambe le vetture a punti senza trasformare la buona qualifica in un podio.",
+        "2024": "Norris ha espresso il passo migliore della gara, mentre Piastri aveva velocità da podio ma ha perso tempo dopo l’undercut di Leclerc e nel traffico.",
+        "2025": "McLaren era il riferimento assoluto. Piastri ha controllato la gara e Norris lo ha seguito con ritmo molto simile fino al problema tecnico."
+      },
+      "gestioneGomme": {
+        "2023": "La gara spezzata dal meteo è stata gestita senza errori decisivi, anche se la squadra non ha sfruttato pienamente la posizione di partenza.",
+        "2024": "La vettura ha mantenuto le gomme efficaci nello stint lungo. Norris ha potuto aumentare il ritmo, mentre Piastri ha sofferto soprattutto l’aria sporca dietro Leclerc.",
+        "2025": "Entrambi i piloti hanno alternato conservazione e attacco senza mostrare un calo importante. La gestione ha consentito alla squadra di controllare il vertice fino al guasto di Norris."
+      },
+      "considerazioniFinali": "FAVORITA — una vittoria dominante nel 2024 e il controllo della gara nel 2025 fanno di McLaren il riferimento storico più recente a Zandvoort. L’affidabilità resta l’unico richiamo dopo il ritiro di Norris.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "McLaren ha già introdotto un pacchetto importante in Ungheria, ma al 7 agosto 2026 non ha confermato un secondo pacchetto specifico per Zandvoort. Il lavoro già portato sulla vettura può essere utile perché il circuito premia il carico stabile e una macchina prevedibile nelle curve in appoggio; eventuali ulteriori novità saranno confermabili solo durante il weekend.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.mclaren.com/racing/formula-1/2026/belgian-grand-prix/oscar-and-lando-reflect-on-upcoming-changes/",
+        "https://www.formula1.com/en/latest/article/official-grid-who-starts-where-for-the-belgian-grand-prix-2026.2Pyth6t2ZEYNSqVWC295C7"
       ]
     },
     {
       "scuderiaSlug": "red_bull",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: VER P1 / PER P4\n2024: VER P2 / PER P6\n2025: VER P2 / TSU P9",
-      "notaBene": "Nessuna anomalia marcata nelle due vetture; risultati soprattutto spiegati da qualifica, passo e strategia.",
+      "notaBene": {
+        "2023": "Perez aveva costruito un risultato da podio con la sosta immediata per le intermedie, ma cinque secondi per velocità in pit lane lo hanno fatto arretrare al quarto posto.",
+        "2024": "",
+        "2025": "Verstappen ha ereditato il secondo posto dopo il ritiro di Norris, pur essendo già stabilmente in zona podio. Tsunoda ha invece corso con un problema all’acceleratore che ha limitato la prestazione."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: VER Q1 / PER Q7\n2024: VER Q2 / PER Q5\n2025: VER Q3 / TSU Q12",
-      "passoGara": "Storico: 6 partenze, media arrivo 4,0, 83 punti, 1 vittorie e 3 podi. Verstappen estrae più del pacchetto; squadra quarta senza vittorie dopo undici gare.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Gestione del pilota buona, ma finestra di bilanciamento e affidabilità PU restano rischi.",
-      "considerazioniFinali": "PODIO — ranking 4/11. Forma 2026: P4, 177 punti. Verstappen estrae più del pacchetto; squadra quarta senza vittorie dopo undici gare. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "passoGara": {
+        "2023": "Verstappen ha controllato tutte le fasi della gara fino alla vittoria e Perez ha mantenuto un ritmo da podio. La squadra era efficace in condizioni molto diverse.",
+        "2024": "Verstappen non ha potuto contrastare il passo di Norris e Perez è rimasto più indietro. Red Bull era solida, ma non la vettura più veloce sullo stint lungo.",
+        "2025": "La partenza aggressiva di Verstappen ha creato un’opportunità, ma la vettura soffriva nelle curve lente e sui long run. Il problema di Tsunoda ha ulteriormente limitato il risultato complessivo."
+      },
+      "gestioneGomme": {
+        "2023": "La squadra ha reagito rapidamente alla pioggia e ha mantenuto le gomme efficaci nei continui cambi di condizione. La penalità di Perez è stata procedurale, non legata all’usura.",
+        "2024": "La strategia a una sosta è stata gestita senza crolli, ma non ha compensato il vantaggio di passo della McLaren.",
+        "2025": "Verstappen ha fatto funzionare una scelta iniziale aggressiva e poi ha amministrato il podio. Sull’altra vettura, il problema tecnico impedisce una lettura pulita delle gomme."
+      },
+      "considerazioniFinali": "FAVORITA — la vittoria del 2023 e i due secondi posti successivi mostrano una continuità eccezionale. Anche senza il miglior passo assoluto, Red Bull ha sempre trovato il modo di restare sul podio.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Red Bull non ha comunicato un pacchetto specifico per Zandvoort. Gli sviluppi aerodinamici introdotti nelle gare precedenti restano pertinenti a una pista che richiede precisione nei tratti veloci e buona trazione nelle curve lente, ma non è possibile promettere un vantaggio prima delle prove libere.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/why-the-2026-development-race-shows-f1-teams-are-operating-at-a-level-never-seen-before.3z4PkgtUazOWrJ8ESuzsmo.3z4PkgtUazOWrJ8ESuzsmo",
+        "https://www.formula1.com/en/latest/article/official-grid-who-starts-where-for-the-belgian-grand-prix-2026.2Pyth6t2ZEYNSqVWC295C7"
       ]
     },
     {
       "scuderiaSlug": "rb",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: LAW P13 / TSU P15\n2024: RIC P12 / TSU P17\n2025: HAD P3 / LAW P12",
-      "notaBene": "Nessuna anomalia marcata nelle due vetture; risultati soprattutto spiegati da qualifica, passo e strategia.",
+      "notaBene": {
+        "2023": "Lawson ha rimontato dal fondo al tredicesimo posto al debutto in Formula 1, in una gara molto variabile e dopo una penalità per impeding in pit lane.",
+        "2024": "",
+        "2025": "Il podio di Hadjar è arrivato anche dopo il ritiro di Norris, ma era sostenuto dalla quarta posizione in qualifica e da un passo autenticamente competitivo. Lawson ha perso la zona punti dopo il contatto con Sainz e la foratura."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: TSU Q14 / LAW Q20\n2024: TSU Q12 / RIC Q15\n2025: HAD Q4 / LAW Q8",
-      "passoGara": "Storico: 6 partenze, media arrivo 12,0, 15 punti, 0 vittorie e 1 podi. Quinta forza, buon giro secco e coppia competitiva nel centro gruppo.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Quadro neutro; partenza, affidabilità PU e posizione di qualifica incidono più del degrado.",
-      "considerazioniFinali": "PUNTI — ranking 5/11. Forma 2026: P5, 66 punti. Quinta forza, buon giro secco e coppia competitiva nel centro gruppo. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "passoGara": {
+        "2023": "Lawson ha aumentato il ritmo durante il suo debutto e Tsunoda ha lottato nel centrocampo. La squadra ha gestito il caos senza ottenere punti.",
+        "2024": "Il passo era sufficiente per restare vicino ai punti, ma traffico e strategie non hanno permesso alle due vetture di avanzare.",
+        "2025": "Hadjar ha tenuto il ritmo del vertice del centrocampo fino al podio. Lawson aveva a sua volta velocità da punti prima che il contatto cambiasse la sua gara."
+      },
+      "gestioneGomme": {
+        "2023": "I cambi di mescola sono stati complicati dalla necessità di gestire due vetture ravvicinate ai box. Lawson ha comunque completato la gara senza un calo decisivo.",
+        "2024": "La squadra non ha trovato una finestra strategica capace di liberare i piloti dal traffico. Le gomme sono rimaste gestibili, ma poco produttive.",
+        "2025": "Hadjar ha conservato le gomme abbastanza da difendere la posizione per tutta la gara. La foratura di Lawson è stata causata dal contatto e non da usura."
+      },
+      "considerazioniFinali": "OUTSIDER DI LUSSO — il podio del 2025 dimostra che la squadra può essere molto efficace su questo circuito. La nuova coppia di piloti riduce la continuità del confronto, ma il precedente tecnico resta positivo.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Racing Bulls non ha annunciato aggiornamenti specifici per Zandvoort. Un intervento che rendesse il carico più stabile sarebbe utile nelle curve sopraelevate e con il vento costiero, ma fino alla presentazione tecnica FIA del weekend non ci sono componenti nuovi da indicare come certi.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
       ]
     },
     {
       "scuderiaSlug": "alpine",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: GAS P3 / OCO P10\n2024: GAS P9 / OCO P15\n2025: COL P11 / GAS P17",
-      "notaBene": "2023: GAS podio da P12; Pioggia intermittente e bandiera rossa alterarono strategie e classifica; Gasly ereditò il podio anche per la penalità a Pérez.",
+      "notaBene": {
+        "2023": "Gasly è salito sul podio partendo dodicesimo grazie alla sosta immediata per le intermedie e alla successiva penalità di Perez. Ocon ha recuperato fino al decimo posto in una gara ricca di cambiamenti.",
+        "2024": "",
+        "2025": "Gasly è scivolato al diciassettesimo posto dopo aver prolungato uno stint sulle dure nella speranza di una neutralizzazione favorevole. Colapinto ha invece rimontato fino all’undicesimo posto."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: GAS Q12 / OCO Q17\n2024: GAS Q9 / OCO Q16\n2025: GAS Q14 / COL Q16",
-      "passoGara": "Storico: 6 partenze, media arrivo 10,8, 18 punti, 0 vittorie e 1 podi. Gasly porta spesso la vettura oltre il livello medio; sviluppo rallentato nelle gare recenti.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Nessun difetto gomme unico; la prestazione complessiva resta il limite principale.",
-      "considerazioniFinali": "PUNTI — ranking 6/11. Forma 2026: P6, 61 punti. Gasly porta spesso la vettura oltre il livello medio; sviluppo rallentato nelle gare recenti. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "passoGara": {
+        "2023": "Gasly aveva un ottimo ritmo sul bagnato e Ocon ha costruito una rimonta paziente. Alpine ha trasformato una qualifica modesta in un podio e un doppio risultato utile.",
+        "2024": "Gasly ha tenuto un passo solido da zona punti, mentre Ocon è rimasto bloccato nel traffico senza margine per attaccare.",
+        "2025": "La vettura mancava di passo. Colapinto ha recuperato fino alle porte dei punti, mentre la scommessa strategica di Gasly lo ha lasciato esposto nel finale."
+      },
+      "gestioneGomme": {
+        "2023": "La scelta immediata delle intermedie per Gasly è stata decisiva e la squadra si è adattata bene alle fasi successive. Ocon ha sfruttato la stessa gara variabile per entrare nei punti.",
+        "2024": "Gasly ha conservato le gomme con efficacia fino al nono posto. Ocon non ha trovato un vantaggio sufficiente per uscire dal traffico.",
+        "2025": "La strategia di Colapinto è rimasta aggressiva ma gestibile, mentre Gasly ha portato le dure oltre la finestra utile nella speranza di un’occasione che non è arrivata."
+      },
+      "considerazioniFinali": "OUTSIDER — Alpine ha già dimostrato di poter sfruttare meteo e strategia fino al podio, ma il passo del 2025 è stato debole. Le chance crescono soprattutto se la gara diventa imprevedibile.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Alpine non ha confermato ufficialmente un pacchetto dedicato a Zandvoort. La pista richiederebbe soprattutto più stabilità aerodinamica e fiducia nelle curve medio-veloci; qualsiasi novità e la sua reale utilità potranno essere valutate soltanto dopo le specifiche presentate nel weekend.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
       ]
     },
     {
       "scuderiaSlug": "haas",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: HUL P12 / MAG P16\n2024: HUL P11 / MAG P18\n2025: BEA P6 / OCO P10",
-      "notaBene": "Nessuna anomalia marcata nelle due vetture; risultati soprattutto spiegati da qualifica, passo e strategia.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": "Il sesto posto di Bearman e il decimo di Ocon sono molto migliori delle posizioni di qualifica. Bearman è partito dalla pit lane dopo modifiche alla power unit, ha allungato il primo stint e ha sfruttato neutralizzazioni e penalità altrui."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: HUL Q15 / MAG Q18\n2024: HUL Q13 / MAG Q14\n2025: OCO Q18 / BEA Q19",
-      "passoGara": "Storico: 6 partenze, media arrivo 12,2, 9 punti, 0 vittorie e 0 podi. Bearman è il riferimento; ritmo valido quando la vettura entra nella finestra corretta.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Affidabilità, incidenti e sviluppo limitano la continuità più delle gomme.",
-      "considerazioniFinali": "PUNTI — ranking 7/11. Forma 2026: P7, 21 punti. Bearman è il riferimento; ritmo valido quando la vettura entra nella finestra corretta. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "passoGara": {
+        "2023": "Sul bagnato la squadra ha evitato errori, ma quando la pista si è stabilizzata il passo non era sufficiente per entrare nei punti.",
+        "2024": "Hulkenberg è rimasto a lungo vicino alla zona punti, mentre Magnussen non ha recuperato dal fondo. Il ritmo era discreto ma non abbastanza costante.",
+        "2025": "Entrambe le vetture hanno rimontato fino ai punti. Bearman ha costruito la gara dal fondo con passo regolare e Ocon ha sfruttato bene le opportunità."
+      },
+      "gestioneGomme": {
+        "2023": "Le mescole sono state gestite senza cedimenti evidenti, ma il limite principale era il ritmo della vettura sull’asciutto.",
+        "2024": "La sosta anticipata ha lasciato Hulkenberg con gomme stanche nel finale, mentre il lungo stint di Magnussen non ha prodotto il recupero desiderato.",
+        "2025": "Il lunghissimo primo stint di Bearman è stato il fondamento del sesto posto. Le neutralizzazioni hanno aiutato, ma la squadra ha saputo mantenere le gomme nella finestra utile."
+      },
+      "considerazioniFinali": "OUTSIDER — il doppio risultato a punti del 2025 ha cambiato il giudizio sul circuito e mostra una buona capacità strategica. Per ripetersi serviranno però ritmo e circostanze favorevoli.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Haas non ha comunicato aggiornamenti specifici per Zandvoort. La squadra avrebbe beneficio da un comportamento più costante nelle curve lunghe e da una migliore protezione delle gomme anteriori, ma non va attribuito alla vettura un pacchetto non ancora annunciato.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
       ]
     },
     {
       "scuderiaSlug": "audi",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: BOT P14 / ZHO P18 (incidente)\n2024: BOT P19 / ZHO P20\n2025: HUL P14 / BOR P15",
-      "notaBene": "2023: ZHO incidente.",
+      "notaBene": {
+        "2023": "Il risultato di Zhou è stato condizionato dall’incidente nella fase di pioggia intensa, mentre Bottas ha recuperato posizioni soprattutto evitando problemi.",
+        "2024": "",
+        "2025": "Bortoleto ha perso terreno per un problema alla frizione in partenza e ha corso con danni alla vettura. Hulkenberg è stato penalizzato dal traffico e dal momento delle neutralizzazioni."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: ZHO Q16 / BOT Q19\n2024: BOT Q17 / ZHO Q18\n2025: BOR Q13 / HUL Q17",
-      "passoGara": "Storico: 6 partenze, media arrivo 16,4, 0 punti, 0 vittorie e 0 podi. Coppia equilibrata nel midfield, ma pochi punti e conversione gara irregolare.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Partenze e affidabilità sono aree critiche; comportamento gomme senza trend netto.",
-      "considerazioniFinali": "DIFFICILE — ranking 8/11. Forma 2026: P8, 12 punti. Coppia equilibrata nel midfield, ma pochi punti e conversione gara irregolare. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "passoGara": {
+        "2023": "La vettura non aveva ritmo da punti e l’incidente di Zhou ha ridotto ulteriormente il risultato. Bottas ha completato la gara con un passo prudente.",
+        "2024": "Sauber è rimasta in fondo al gruppo con poca aderenza e un degrado elevato. Nessuna delle due vetture aveva una reale possibilità di rimonta.",
+        "2025": "Il passo è rimasto limitato e gli episodi non hanno offerto una finestra favorevole. Bortoleto era danneggiato, mentre Hulkenberg non è riuscito a liberarsi dal traffico."
+      },
+      "gestioneGomme": {
+        "2023": "I continui cambi di condizioni hanno reso difficile costruire uno stint regolare. Bottas ha gestito con prudenza, mentre la gara di Zhou è terminata con l’incidente.",
+        "2024": "Le gomme perdevano efficacia rapidamente e le soste aggiuntive non hanno risolto il problema di equilibrio della vettura.",
+        "2025": "Le strategie non hanno prodotto un vantaggio: il danno sulla vettura di Bortoleto e il traffico di Hulkenberg hanno reso difficile mantenere le gomme nella condizione migliore."
+      },
+      "considerazioniFinali": "DA VALUTARE — lo storico recente della struttura Sauber è debole a Zandvoort e non offre un precedente convincente. Audi deve dimostrare in pista che la nuova fase tecnica ha corretto quei limiti.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Audi non ha annunciato un pacchetto specifico per Zandvoort. Su questo tracciato sarebbero utili più carico utilizzabile nelle curve in appoggio e una vettura meno sensibile al vento; l’eventuale presenza di novità sarà verificabile con la documentazione tecnica del weekend.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
       ]
     },
     {
       "scuderiaSlug": "williams",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: ALB P8 / SAR P20 (incidente)\n2024: ALB P14 / SAR P16\n2025: ALB P5 / SAI P13",
-      "notaBene": "2023: SAR incidente.",
+      "notaBene": {
+        "2023": "Albon ha qualificato quarto e chiuso ottavo dopo aver perso terreno nel momento delle soste sotto la pioggia. Sargeant è invece uscito per un problema idraulico che ha compromesso il controllo della vettura.",
+        "2024": "Albon aveva ottenuto l’ottavo tempo, ma è stato squalificato dalla qualifica perché il fondo aggiornato non rispettava il volume regolamentare ed è partito dal fondo. Sargeant non ha disputato la qualifica dopo il grave incidente nelle prove.",
+        "2025": "Albon ha rimontato dal quindicesimo al quinto posto grazie a partenza e strategia. Sainz, partito nono, è sceso al tredicesimo dopo il contatto con Lawson e una penalità di dieci secondi; la decisione è stata poi annullata in revisione, ma il tempo già scontato non poteva essere recuperato."
+      },
       "andamentoPerAnno": "",
-      "risultatiQualifica": "2023: ALB Q4 / SAR Q10\n2024: ALB Q10 / SAR Q20\n2025: SAI Q9 / ALB Q15",
-      "passoGara": "Storico: 6 partenze, media arrivo 11,2, 14 punti, 0 vittorie e 0 podi. Sainz è molto forte in qualifica, ma peso e ritardo di sviluppo limitano il passo gara.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Soffre curve lunghe e cambi di direzione; il problema è soprattutto aerodinamico.",
-      "considerazioniFinali": "DIFFICILE — ranking 9/11. Forma 2026: P9, 11 punti. Sainz è molto forte in qualifica, ma peso e ritardo di sviluppo limitano il passo gara. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "risultatiQualifica": "2023: ALB Q4 / SAR Q10\n2024: ALB DSQ (tempo da Q8) / SAR DNS\n2025: SAI Q9 / ALB Q15",
+      "passoGara": {
+        "2023": "Albon ha confermato che la vettura era efficace sul circuito e ha tenuto un passo da punti. Le decisioni nel meteo variabile hanno impedito un risultato ancora migliore.",
+        "2024": "Il pacchetto aggiornato mostrava potenziale, ma la squalifica ha costretto Albon a rimontare dal fondo e il fine settimana di Sargeant è stato compromesso dall’incidente.",
+        "2025": "La squadra aveva un passo forte nel centrocampo. Albon lo ha trasformato nel quinto posto, mentre il risultato di Sainz è stato cancellato dal contatto."
+      },
+      "gestioneGomme": {
+        "2023": "Le gomme di Albon sono rimaste competitive, ma il momento delle soste ha inciso più dell’usura. La gara di Sargeant è terminata prima di offrire un confronto utile.",
+        "2024": "La rimonta di Albon ha richiesto una strategia su due soste e molta guida nel traffico. Le gomme hanno perso efficacia nel finale, senza un crollo improvviso.",
+        "2025": "Albon ha mantenuto una gestione ordinata durante la rimonta. Sainz aveva le gomme sotto controllo fino al contatto, che ha reso secondaria la strategia restante."
+      },
+      "considerazioniFinali": "MOLTO COMPETITIVA — Zandvoort ha già valorizzato il carico e la precisione della Williams. Il quinto posto del 2025 conferma il potenziale, mentre la squadra deve evitare irregolarità tecniche e incidenti.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Williams ha anticipato cambiamenti importanti nella parte finale della stagione, senza però confermare componenti e data esatta per Zandvoort. Se il pacchetto debuttasse qui, un miglior equilibrio aerodinamico sarebbe utile nelle curve lunghe e sopraelevate, mentre il circuito offre meno spazio per sfruttare soltanto la velocità massima.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/youll-see-quite-a-major-change-vowles-gives-update-on-planned-williams-upgrades-for-rest-of-2026.JrsALnnCpdhssdGf0SybD.JrsALnnCpdhssdGf0SybD",
+        "https://www.formula1.com/en/latest/article/official-grid-who-starts-where-for-the-belgian-grand-prix-2026.2Pyth6t2ZEYNSqVWC295C7",
+        "https://www.formula1.com/en/latest/article/breaking-albon-disqualified-from-dutch-gp-qualifying-over-illegal-williams.5vOsTexc4Nsdw38EQO98sr",
+        "https://www.formula1.com/en/latest/article/williams-right-of-review-over-sainzs-dutch-gp-penalty-successful.4hYP7mRN2miF9flHjYfiDw"
       ]
     },
     {
       "scuderiaSlug": "aston_martin",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: ALO P2 / STR P11\n2024: ALO P10 / STR P13\n2025: STR P7 / ALO P8",
-      "notaBene": "Nessuna anomalia marcata nelle due vetture; risultati soprattutto spiegati da qualifica, passo e strategia.",
+      "notaBene": {
+        "2023": "Il secondo posto di Alonso dalla quinta posizione è nato dalla sosta molto rapida per le intermedie e da un passo eccellente in tutte le condizioni.",
+        "2024": "Stroll è arretrato al tredicesimo posto dopo cinque secondi di penalità per eccesso di velocità in pit lane.",
+        "2025": "Stroll ha recuperato dal ventesimo al settimo posto grazie alla sosta anticipata, all’undercut e alle neutralizzazioni. Alonso ha chiuso ottavo dopo una gara condizionata da traffico e tempi delle safety car."
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: ALO Q5 / STR Q11\n2024: ALO Q7 / STR Q8\n2025: ALO Q10 / STR Q20",
-      "passoGara": "Storico: 6 partenze, media arrivo 8,5, 30 punti, 0 vittorie e 1 podi. Upgrade ungherese incoraggiante, ma solo un punto nelle prime undici gare.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Strategie più flessibili dopo l'upgrade; affidabilità e finestra restano da verificare.",
-      "considerazioniFinali": "DIFFICILE — ranking 10/11. Forma 2026: P10, 1 punti. Upgrade ungherese incoraggiante, ma solo un punto nelle prime undici gare. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "passoGara": {
+        "2023": "Alonso aveva ritmo da vertice sia sul bagnato sia sull’asciutto, mentre Stroll è rimasto nel centrocampo. La squadra ha mostrato un potenziale molto alto con una delle due vetture.",
+        "2024": "Entrambe le vetture mancavano del passo necessario per risalire. Alonso ha massimizzato il risultato, mentre Stroll è stato ulteriormente penalizzato dall’errore ai box.",
+        "2025": "La vettura aveva un buon passo e ha portato entrambe le monoposto nei punti. Strategia e neutralizzazioni hanno favorito Stroll, mentre Alonso è rimasto più esposto al traffico."
+      },
+      "gestioneGomme": {
+        "2023": "La lettura immediata delle intermedie per Alonso è stata decisiva e la squadra ha gestito bene ogni successivo cambio di condizione.",
+        "2024": "Le gomme sono rimaste utilizzabili, ma non hanno creato un vantaggio capace di compensare il passo limitato della vettura.",
+        "2025": "La sosta anticipata di Stroll ha aperto un undercut efficace e le neutralizzazioni hanno protetto lo stint. Alonso ha dovuto chiedere di più alle gomme nel traffico."
+      },
+      "considerazioniFinali": "MOLTO COMPETITIVA — il podio del 2023 e il doppio piazzamento a punti del 2025 sono basi solide. La power unit rivista e gli ulteriori sviluppi annunciati per Zandvoort possono essere utili, ma il guadagno va verificato.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Aston Martin ha confermato per Zandvoort una power unit Honda rivista e ulteriori passi aerodinamici. La risposta più regolare del motore può aiutare in uscita dalle curve lente, mentre maggiore stabilità e carico sarebbero direttamente utili nei lunghi appoggi; la portata del guadagno resta da verificare nelle prove.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh",
+        "https://www.formula1.com/en/latest/article/how-hungary-showed-aston-martin-is-back-racing-after-upgrades-work.2FxnUtTxAbc3dARczm3lfW.2FxnUtTxAbc3dARczm3lfW",
+        "https://www.formula1.com/en/latest/article/official-grid-who-starts-where-for-the-belgian-grand-prix-2026.2Pyth6t2ZEYNSqVWC295C7"
       ]
     },
     {
       "scuderiaSlug": "cadillac",
       "garaSlug": "olanda-zandvoort",
       "risultatiGara": "2023: NON CORSA — debutto previsto nel 2026\n2024: NON CORSA — debutto previsto nel 2026\n2025: NON CORSA — debutto previsto nel 2026",
-      "notaBene": "Nessuna anomalia marcata nelle due vetture; risultati soprattutto spiegati da qualifica, passo e strategia.",
+      "notaBene": {
+        "2023": "",
+        "2024": "",
+        "2025": ""
+      },
       "andamentoPerAnno": "",
       "risultatiQualifica": "2023: NON CORSA\n2024: NON CORSA\n2025: NON CORSA",
-      "passoGara": "Scuderia nuova nel 2026; nessun dato F1 2023-25 comparabile sul circuito. Ultima forza 2026, zero punti e molti ritiri: poco dato pulito per giudicare il ritmo.",
-      "gestioneGomme": "Carichi laterali e verticali elevati. La Hard ha mostrato buona durata; warm-up, vento e meteo rendono delicata la finestra di utilizzo. Contesto 2026: Prestazione gomme non separabile dall'affidabilità; esperienza dei piloti è il principale aiuto.",
-      "considerazioniFinali": "DIFFICILE — ranking 11/11. Forma 2026: P11, 0 punti. Ultima forza 2026, zero punti e molti ritiri: poco dato pulito per giudicare il ritmo. Fit pista: Alto carico, pista stretta e curve sopraelevate: contano precisione, qualifica e fiducia nel veloce; vento, sabbia e pioggia possono cambiare rapidamente il grip. Confidenza media.",
+      "passoGara": {
+        "2023": "La scuderia non era iscritta al Mondiale di Formula 1, quindi non esiste un riferimento diretto sul passo gara a Zandvoort.",
+        "2024": "La scuderia non era iscritta al Mondiale di Formula 1, quindi non esiste un riferimento diretto sul passo gara a Zandvoort.",
+        "2025": "La scuderia non era iscritta al Mondiale di Formula 1, quindi non esiste un riferimento diretto sul passo gara a Zandvoort."
+      },
+      "gestioneGomme": {
+        "2023": "Non avendo partecipato al Gran Premio, la scuderia non dispone di uno storico sulla gestione delle gomme in questa edizione.",
+        "2024": "Non avendo partecipato al Gran Premio, la scuderia non dispone di uno storico sulla gestione delle gomme in questa edizione.",
+        "2025": "Non avendo partecipato al Gran Premio, la scuderia non dispone di uno storico sulla gestione delle gomme in questa edizione."
+      },
+      "considerazioniFinali": "DA VALUTARE — Cadillac affronta Zandvoort per la prima volta e non dispone di uno storico di squadra. Esperienza dei piloti e capacità di adattare rapidamente l’assetto saranno più importanti di confronti che oggi non esistono.",
       "affidabilita": "",
-      "aggiornamentiInArrivo": "",
+      "aggiornamentiInArrivo": "Al 7 agosto 2026 Cadillac non ha comunicato un pacchetto specifico per Zandvoort. Essendo la prima stagione della squadra sul circuito, sarebbero particolarmente utili aggiornamenti che aumentino stabilità aerodinamica e prevedibilità con il vento, ma non ci sono ancora componenti confermati da valutare.",
       "fonti": [
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/results.json",
         "https://api.jolpi.ca/ergast/f1/circuits/zandvoort/qualifying.json",
         "https://www.formula1.com/en/latest/article/verstappen-overcomes-wet-weather-chaos-to-make-it-a-hat-trick-of-dutch-gp.4VJ0ULOqjodSSN1zC6kWui",
-        "https://www.formula1.com/en/results/2026/team"
+        "https://www.formula1.com/en/results/2026/team",
+        "https://www.formula1.com/en/results/2026/drivers",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2023.1n4Iu0bEwLVOfKYDoTBMoX",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2024.r3lsMQExazpZeNk8w13yU.r3lsMQExazpZeNk8w13yU",
+        "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-the-netherlands-2025.5lnMFc71420dXz9jT4Lgyh"
       ]
     },
     {

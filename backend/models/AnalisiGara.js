@@ -37,6 +37,7 @@ const analisiGaraSchema = new mongoose.Schema(
     passoGara: { type: String, required: true },
     gomme: { type: String, required: true },
     considerazioni: { type: String, required: true },
+    penalita: { type: String, default: "" },
     affidabilita: { type: String, default: "" },
     aggiornamentiInArrivo: { type: String, default: "" },
     storicoEdizioni: { type: [edizioneStoricaSchema], default: [] },
