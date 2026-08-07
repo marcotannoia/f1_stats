@@ -95,6 +95,34 @@ test("l'analisi raggruppa le prestazioni senza perdere i contenuti", () => {
   assert.equal(analisi.gara.stato, "attuale");
 });
 
+test("la penalita appartiene solo all'analisi del pilota", () => {
+  const { presentaAnalisiScuderia } = require("../presenters/apiV1");
+  const base = {
+    gara: { slug: "olanda-zandvoort", nome: "GP Olanda" },
+    posizioniStoriche: "2025: P1",
+    spiegazionePosizioni: "2025: Nota",
+    qualificheStoriche: "2025: Q1",
+    passoGara: "2025: Competitivo",
+    gomme: "2025: Regolare",
+    considerazioni: "Favorita",
+    penalita: "Nessuna penalita confermata.",
+    fonti: [],
+  };
+
+  const pilota = presentaAnalisiPilota({
+    ...base,
+    pilota: { slug: "leclerc", nome: "Charles Leclerc" },
+    scuderia: { slug: "ferrari", nome: "Ferrari" },
+  });
+  const scuderia = presentaAnalisiScuderia({
+    ...base,
+    scuderia: { slug: "ferrari", nome: "Ferrari" },
+  });
+
+  assert.equal(pilota.penalita, "Nessuna penalita confermata.");
+  assert.equal("penalita" in scuderia, false);
+});
+
 test("l'andamento espone la provenienza dei risultati", () => {
   const { presentaAndamento } = require("../presenters/apiV1");
   const andamento = presentaAndamento({

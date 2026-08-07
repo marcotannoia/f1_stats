@@ -371,9 +371,25 @@ const documentoOpenApi = {
         type: "object",
         required: ["passoGara", "gestioneGomme", "affidabilita"],
         properties: {
-          passoGara: { type: "string" },
-          gestioneGomme: { type: "string" },
-          affidabilita: { type: "string" },
+          passoGara: {
+            type: "string",
+            description:
+              "Analisi editoriale del passo gara divisa per anno nel formato `AAAA: testo`, con un anno per riga.",
+            example:
+              "2023: Passo competitivo nelle condizioni variabili.\n2024: Ritmo meno costante durante gli stint.\n2025: Prestazione solida prima degli episodi di gara.",
+          },
+          gestioneGomme: {
+            type: "string",
+            description:
+              "Analisi editoriale della gestione gomme divisa per anno nel formato `AAAA: testo`, con un anno per riga.",
+            example:
+              "2023: Buon adattamento ai cambi di mescola.\n2024: La vettura scivolava e rendeva più difficile conservare le gomme.\n2025: Gestione regolare durante gli stint.",
+          },
+          affidabilita: {
+            type: "string",
+            description:
+              "Valutazione editoriale degli eventuali problemi di affidabilità rilevanti.",
+          },
         },
       },
       StoricoEdizione: {
@@ -404,7 +420,13 @@ const documentoOpenApi = {
         properties: {
           gara: { $ref: "#/components/schemas/GaraBreve" },
           risultatiGara: { type: "string" },
-          notaBene: { type: "string" },
+          notaBene: {
+            type: "string",
+            description:
+              "Spiegazione delle posizioni atipiche divisa per anno nel formato `AAAA: testo`. Quando non esistono episodi rilevanti viene restituito `Nessun evento particolare da trattare`.",
+            example:
+              "2023: Nessun evento particolare da trattare\n2024: Nessun evento particolare da trattare\n2025: Il risultato è stato condizionato da un contatto e dalla successiva penalità.",
+          },
           risultatiQualifica: { type: "string" },
           andamentoPerAnno: {
             type: "string",
@@ -412,13 +434,16 @@ const documentoOpenApi = {
               "Testo editoriale opzionale nel formato 2023: ... 2024: ...; se vuoto viene calcolato dai risultati.",
           },
           prestazioni: { $ref: "#/components/schemas/Prestazioni" },
-          considerazioniFinali: { type: "string" },
-          penalita: {
+          considerazioniFinali: {
             type: "string",
             description:
-              "Situazione editoriale delle eventuali penalità del pilota per il Gran Premio attuale.",
+              "Valutazione editoriale conclusiva sull'adattamento al circuito e sulle prospettive per il Gran Premio attuale.",
           },
-          aggiornamentiInArrivo: { type: "string" },
+          aggiornamentiInArrivo: {
+            type: "string",
+            description:
+              "Aggiornamenti tecnici confermati o stato delle informazioni disponibili, con una valutazione della loro utilità per le caratteristiche del circuito.",
+          },
           storicoEdizioni: {
             type: "array",
             items: { $ref: "#/components/schemas/StoricoEdizione" },
@@ -432,9 +457,17 @@ const documentoOpenApi = {
           { $ref: "#/components/schemas/AnalisiBase" },
           {
             type: "object",
+            required: ["pilota", "scuderia", "penalita"],
             properties: {
               pilota: { $ref: "#/components/schemas/PilotaBreve" },
               scuderia: { $ref: "#/components/schemas/ScuderiaBreve" },
+              penalita: {
+                type: "string",
+                description:
+                  "Situazione delle eventuali penalità del pilota per il Gran Premio attuale, aggiornata alla data indicata nel testo.",
+                example:
+                  "Al momento non è stata pubblicata alcuna penalità per il pilota a Zandvoort. La situazione sarà ricontrollata nei documenti FIA del weekend.",
+              },
             },
           },
         ],

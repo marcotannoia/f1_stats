@@ -120,7 +120,6 @@ function presentaAnalisiBase(analisi) {
       affidabilita: analisi.affidabilita || "",
     },
     considerazioniFinali: analisi.considerazioni,
-    penalita: analisi.penalita || "",
     aggiornamentiInArrivo: analisi.aggiornamentiInArrivo || "",
     storicoEdizioni: presentaStoricoEdizioni(analisi.storicoEdizioni),
     fonti: [...(analisi.fonti || [])],
@@ -135,6 +134,7 @@ function presentaAnalisiPilota(analisi) {
     pilota: presentaPilotaBreve(analisi.pilota),
     scuderia: presentaScuderiaBreve(analisi.scuderia),
     ...presentaAnalisiBase(analisi),
+    penalita: analisi.penalita || "",
   };
 }
 
