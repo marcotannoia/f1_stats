@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: f1-stats
+    runtime: node
+    region: frankfurt
+    plan: free
+    buildCommand: npm ci --prefix frontend && npm run build --prefix frontend && npm ci --omit=dev --prefix backend
+    startCommand: npm --prefix backend start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_NAME
+        value: f1_stats
+      - key: SERVE_FRONTEND
+        value: "true"
+      - key: TRUST_PROXY
+        value: "1"
+      - key: RATE_LIMIT_MAX
+        value: "300"
+      - key: MONGO_URL
+        sync: false

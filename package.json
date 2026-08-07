@@ -2,6 +2,9 @@
   "name": "f1-stats",
   "private": true,
   "version": "1.0.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "gp": "node backend/scripts/registraGpConcluso.js",
     "set-current": "npm --prefix backend run set-current --",

@@ -78,3 +78,26 @@ npm run set-current -- slug-del-gran-premio
 
 Le impostazioni per il collegamento a MongoDB e per la porta del server si
 trovano nel file `.env`, da creare prendendo come riferimento `.env.example`.
+
+## Pubblicazione su Render
+
+Il progetto è configurato per essere pubblicato come un solo Web Service:
+durante la build Render compila il frontend React, poi il backend Express serve
+sia le API sia i file presenti in `frontend/dist`.
+
+1. Pubblicare il repository su GitHub, GitLab o Bitbucket.
+2. In Render selezionare **New → Blueprint** e collegare il repository.
+3. Render leggerà automaticamente il file `render.yaml`.
+4. Inserire `MONGO_URL` come variabile segreta usando la stringa di connessione
+   del database MongoDB Atlas.
+5. Avviare il deploy e controllare `/api/health` e `/api/docs` sull'indirizzo
+   assegnato da Render.
+
+Non bisogna inserire credenziali MongoDB nel repository. Render assegna
+automaticamente `PORT`, mentre in produzione il server usa `0.0.0.0` e serve il
+frontend compilato.
+
+Docker non è necessario per questo deploy: il runtime Node nativo di Render è
+sufficiente e riduce i file e i passaggi da mantenere. Un Dockerfile avrebbe
+senso in seguito soltanto se servissero dipendenze di sistema particolari o la
+stessa immagine dovesse essere distribuita anche su altre piattaforme.
