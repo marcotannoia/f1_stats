@@ -7,17 +7,23 @@ const {
 } = require("../utils/normalizzaNotaBene");
 
 test("mantiene compatibili le vecchie note testuali", () => {
-  assert.equal(normalizzaNotaBene("2025: Nota esistente"), "2025: Nota esistente");
+  assert.deepEqual(normalizzaNotaBene("2025: Nota esistente"), {
+    2025: "Nota esistente",
+  });
 });
 
-test("converte le note separate per anno nel formato usato dal database", () => {
-  assert.equal(
+test("mantiene le note separate per anno nel formato usato dal database", () => {
+  assert.deepEqual(
     normalizzaNotaBene({
       2025: "Nota del 2025",
       2023: "Nota del 2023",
       2024: "",
     }),
-    `2023: Nota del 2023\n2024: ${NOTA_PREDEFINITA}\n2025: Nota del 2025`,
+    {
+      2023: "Nota del 2023",
+      2024: NOTA_PREDEFINITA,
+      2025: "Nota del 2025",
+    },
   );
 });
 
@@ -28,12 +34,21 @@ test("rifiuta chiavi che non rappresentano un anno", () => {
   );
 });
 
-test("converte anche passo gara e gestione gomme separati per anno", () => {
-  assert.equal(
+test("converte anche le vecchie stringhe annuali in oggetti", () => {
+  assert.deepEqual(
     normalizzaTestiAnnuali({
       2025: "Testo recente",
       2023: "Testo storico",
     }),
-    "2023: Testo storico\n2025: Testo recente",
+    {
+      2023: "Testo storico",
+      2025: "Testo recente",
+    },
   );
+});
+
+test("conserva come generale un testo non attribuibile a un anno", () => {
+  assert.deepEqual(normalizzaTestiAnnuali("Testo senza anno"), {
+    generale: "Testo senza anno",
+  });
 });

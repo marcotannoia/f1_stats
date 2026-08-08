@@ -14,6 +14,9 @@ const nomiBreviCircuiti = {
 };
 
 function rigaDellaStagione(testo, stagione) {
+  if (testo instanceof Map) return testo.get(String(stagione));
+  if (testo && typeof testo === "object") return testo[String(stagione)];
+
   return String(testo || "")
     .split(/\r?\n/)
     .find((riga) => riga.trim().startsWith(`${stagione}:`));

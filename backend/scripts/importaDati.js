@@ -119,10 +119,14 @@ async function importaDati() {
         pilota: pilotaPerSlug.get(analisi.pilotaSlug)._id,
         gara: garaPerSlug.get(analisi.garaSlug)._id,
         scuderia: scuderiaPerSlug.get(analisi.scuderiaSlug)._id,
-        posizioniStoriche: analisi.risultatiGara,
+        posizioniStoriche: normalizzaTestiAnnuali(analisi.risultatiGara),
         spiegazionePosizioni: normalizzaNotaBene(analisi.notaBene),
-        qualificheStoriche: analisi.risultatiQualifica,
-        andamentoPerAnno: analisi.andamentoPerAnno || "",
+        qualificheStoriche: normalizzaTestiAnnuali(
+          analisi.risultatiQualifica,
+        ),
+        andamentoPerAnno: normalizzaTestiAnnuali(
+          analisi.andamentoPerAnno || "",
+        ),
         passoGara: normalizzaTestiAnnuali(analisi.passoGara),
         gomme: normalizzaTestiAnnuali(analisi.gestioneGomme),
         considerazioni: analisi.considerazioniFinali,
@@ -152,10 +156,16 @@ async function importaDati() {
             $set: {
               scuderia: scuderiaId,
               gara: garaId,
-              posizioniStoriche: analisi.risultatiGara,
+              posizioniStoriche: normalizzaTestiAnnuali(
+                analisi.risultatiGara,
+              ),
               spiegazionePosizioni: normalizzaNotaBene(analisi.notaBene),
-              qualificheStoriche: analisi.risultatiQualifica,
-              andamentoPerAnno: analisi.andamentoPerAnno || "",
+              qualificheStoriche: normalizzaTestiAnnuali(
+                analisi.risultatiQualifica,
+              ),
+              andamentoPerAnno: normalizzaTestiAnnuali(
+                analisi.andamentoPerAnno || "",
+              ),
               passoGara: normalizzaTestiAnnuali(analisi.passoGara),
               gomme: normalizzaTestiAnnuali(analisi.gestioneGomme),
               considerazioni: analisi.considerazioniFinali,

@@ -1,5 +1,10 @@
 const mongoose = require("mongoose");
 
+const testiAnnuali = {
+  type: mongoose.Schema.Types.Mixed,
+  required: true,
+};
+
 const edizioneStoricaSchema = new mongoose.Schema(
   {
     stagione: { type: Number, required: true },
@@ -25,12 +30,12 @@ const analisiScuderiaSchema = new mongoose.Schema(
       ref: "Gara",
       required: true,
     },
-    posizioniStoriche: { type: String, required: true },
-    spiegazionePosizioni: { type: String, required: true },
-    qualificheStoriche: { type: String, required: true },
-    andamentoPerAnno: { type: String, default: "" },
-    passoGara: { type: String, required: true },
-    gomme: { type: String, required: true },
+    posizioniStoriche: testiAnnuali,
+    spiegazionePosizioni: testiAnnuali,
+    qualificheStoriche: testiAnnuali,
+    andamentoPerAnno: { type: mongoose.Schema.Types.Mixed, default: () => ({}) },
+    passoGara: testiAnnuali,
+    gomme: testiAnnuali,
     considerazioni: { type: String, required: true },
     affidabilita: { type: String, default: "" },
     aggiornamentiInArrivo: { type: String, default: "" },

@@ -53,7 +53,7 @@ async function eseguiRichiesta(percorso) {
   const risposta = await fetch(`${BASE_URL}${percorso}`, {
     headers: {
       Accept: "application/json",
-      "User-Agent": "F1Stats/1.0.0",
+      "User-Agent": "F1Stats/1.1.0",
     },
     signal: AbortSignal.timeout(TIMEOUT_MS),
   });

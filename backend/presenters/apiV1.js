@@ -1,3 +1,8 @@
+const {
+  normalizzaNotaBene,
+  normalizzaTestiAnnuali,
+} = require("../utils/normalizzaNotaBene");
+
 function dataIso(valore) {
   if (!valore) return null;
 
@@ -125,13 +130,15 @@ function presentaAnalisiBase(analisi) {
 
   return {
     gara: presentaGaraBreve(analisi.gara),
-    risultatiGara: analisi.posizioniStoriche,
-    notaBene: analisi.spiegazionePosizioni,
-    risultatiQualifica: analisi.qualificheStoriche,
-    andamentoPerAnno: analisi.andamentoPerAnno || "",
+    risultatiGara: normalizzaTestiAnnuali(analisi.posizioniStoriche),
+    notaBene: normalizzaNotaBene(analisi.spiegazionePosizioni),
+    risultatiQualifica: normalizzaTestiAnnuali(analisi.qualificheStoriche),
+    andamentoPerAnno: normalizzaTestiAnnuali(
+      analisi.andamentoPerAnno || "",
+    ),
     prestazioni: {
-      passoGara: analisi.passoGara,
-      gestioneGomme: analisi.gomme,
+      passoGara: normalizzaTestiAnnuali(analisi.passoGara),
+      gestioneGomme: normalizzaTestiAnnuali(analisi.gomme),
       affidabilita: analisi.affidabilita || "",
     },
     considerazioniFinali: analisi.considerazioni,

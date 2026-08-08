@@ -1,7 +1,21 @@
 const NOTA_PREDEFINITA = "Nessun evento particolare da trattare";
 
 function normalizzaTestiAnnuali(valore, testoPredefinito = "") {
-  if (typeof valore === "string") return valore;
+  if (valore instanceof Map) valore = Object.fromEntries(valore);
+
+  if (typeof valore === "string") {
+    const contenuti = {};
+    const espressione = /(?:^|\r?\n)(\d{4})\s*:\s*([\s\S]*?)(?=\r?\n\d{4}\s*:|$)/g;
+
+    for (const corrispondenza of valore.matchAll(espressione)) {
+      contenuti[corrispondenza[1]] =
+        corrispondenza[2].trim() || testoPredefinito;
+    }
+
+    if (Object.keys(contenuti).length || !valore.trim()) return contenuti;
+
+    return { generale: valore.trim() };
+  }
 
   if (!valore || Array.isArray(valore) || typeof valore !== "object") {
     throw new TypeError(
@@ -9,17 +23,21 @@ function normalizzaTestiAnnuali(valore, testoPredefinito = "") {
     );
   }
 
-  return Object.entries(valore)
-    .map(([anno, testo]) => {
-      if (!/^\d{4}$/.test(anno)) {
-        throw new TypeError(`Anno non valido: ${anno}`);
-      }
+  return Object.fromEntries(
+    Object.entries(valore)
+      .map(([anno, testo]) => {
+        if (!/^\d{4}$/.test(anno) && anno !== "generale") {
+          throw new TypeError(`Anno non valido: ${anno}`);
+        }
 
-      return [Number(anno), String(testo || "").trim() || testoPredefinito];
-    })
-    .sort(([primoAnno], [secondoAnno]) => primoAnno - secondoAnno)
-    .map(([anno, testo]) => `${anno}: ${testo}`)
-    .join("\n");
+        return [anno, String(testo || "").trim() || testoPredefinito];
+      })
+      .sort(([primoAnno], [secondoAnno]) => {
+        if (primoAnno === "generale") return 1;
+        if (secondoAnno === "generale") return -1;
+        return Number(primoAnno) - Number(secondoAnno);
+      }),
+  );
 }
 
 function normalizzaNotaBene(notaBene) {

@@ -27,20 +27,12 @@ function estraiPosizione(contenuto, tipo) {
 }
 
 function leggiStorico(testo, tipo, edizioni = []) {
-  const righe = String(testo || '')
-    .split(/\r?\n/)
-    .map((riga) => riga.trim())
-    .filter(Boolean)
-    .map((riga) => {
-      const corrispondenza = riga.match(/^(\d{4})\s*:\s*(.*)$/)
-      if (!corrispondenza) return null
-
-      return {
-        anno: Number(corrispondenza[1]),
-        posizione: estraiPosizione(corrispondenza[2], tipo),
-      }
-    })
-    .filter(Boolean)
+  const righe = [...leggiTestiAnnuali(testo)]
+    .filter(([anno]) => Number.isInteger(anno))
+    .map(([anno, contenuto]) => ({
+      anno,
+      posizione: estraiPosizione(contenuto, tipo),
+    }))
 
   edizioni.forEach((edizione) => {
     const campo = tipo === 'gara' ? 'posizioneGara' : 'posizioneQualifica'
@@ -61,10 +53,27 @@ function leggiStorico(testo, tipo, edizioni = []) {
 
 function leggiTestiAnnuali(testo) {
   const testi = new Map()
+
+  if (testo && typeof testo === 'object' && !Array.isArray(testo)) {
+    Object.entries(testo).forEach(([anno, contenuto]) => {
+      if (/^\d{4}$/.test(anno)) {
+        testi.set(Number(anno), pulisciProsa(contenuto))
+      } else if (anno === 'generale') {
+        testi.set('generale', pulisciProsa(contenuto))
+      }
+    })
+
+    return testi
+  }
+
   const espressione = /(?:^|\s)(\d{4})\s*:\s*([\s\S]*?)(?=\s+\d{4}\s*:|$)/g
 
   for (const corrispondenza of String(testo || '').matchAll(espressione)) {
     testi.set(Number(corrispondenza[1]), pulisciProsa(corrispondenza[2]))
+  }
+
+  if (!testi.size && String(testo || '').trim()) {
+    testi.set('generale', pulisciProsa(testo))
   }
 
   return testi
@@ -80,10 +89,16 @@ function creaNoteAnnuali(analisi, anni) {
     }
   })
 
-  return anni.map((anno) => ({
+  const note = anni.map((anno) => ({
     etichetta: String(anno),
     testo: notePerAnno.get(anno) || 'Nessun evento particolare da trattare',
   }))
+
+  if (notePerAnno.has('generale')) {
+    note.push({ etichetta: 'Generale', testo: notePerAnno.get('generale') })
+  }
+
+  return note
 }
 
 function creaAndamentoAnnuale(storicoGara, storicoQualifica, noteAnnuali) {
@@ -113,7 +128,7 @@ function creaAndamentoVisualizzato(analisi, storicoGara, storicoQualifica, noteA
 
   if (andamentoPersonalizzato.size) {
     return [...andamentoPersonalizzato].map(([anno, testo]) => ({
-      etichetta: String(anno),
+      etichetta: anno === 'generale' ? 'Generale' : String(anno),
       testo,
     }))
   }
@@ -144,9 +159,13 @@ function creaRighePrestazioneAnnuali(testo, edizioni = [], campoEdizione) {
   })
 
   return [...testiPerAnno]
-    .sort(([primoAnno], [secondoAnno]) => primoAnno - secondoAnno)
+    .sort(([primoAnno], [secondoAnno]) => {
+      if (primoAnno === 'generale') return 1
+      if (secondoAnno === 'generale') return -1
+      return primoAnno - secondoAnno
+    })
     .map(([anno, contenuto]) => ({
-      etichetta: String(anno),
+      etichetta: anno === 'generale' ? 'Generale' : String(anno),
       testo: contenuto,
     }))
 }
@@ -160,13 +179,19 @@ function trovaAffidabilita(analisi) {
 
   if (ultimaAffidabilita) return pulisciProsa(ultimaAffidabilita)
 
-  const ritiri = String(analisi.passoGara || '').match(/(\d+)\s+ritiri?\/DNS/i)
+  const testoPassoGara = [...leggiTestiAnnuali(analisi.passoGara).values()].join(
+    ' ',
+  )
+  const testoNotaBene = [...leggiTestiAnnuali(analisi.notaBene).values()].join(
+    ' ',
+  )
+  const ritiri = testoPassoGara.match(/(\d+)\s+ritiri?\/DNS/i)
 
   if (ritiri && Number(ritiri[1]) > 0) {
     return `I dati della stagione indicano ${ritiri[1]} ritiri o mancate partenze, quindi l'affidabilità resta un fattore da considerare.`
   }
 
-  if (/\britir(?:o|i|ato|ata)\b|\bDNS\b/i.test(analisi.notaBene || '')) {
+  if (/\britir(?:o|i|ato|ata)\b|\bDNS\b/i.test(testoNotaBene)) {
     return 'Lo storico del circuito comprende ritiri o gare non completate; questi episodi devono essere separati dal passo prestazionale puro.'
   }
 

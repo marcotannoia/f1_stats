@@ -22,7 +22,7 @@ const documentoOpenApi = {
   openapi: "3.1.0",
   info: {
     title: "F1 Stats API",
-    version: "1.0.0",
+    version: "1.1.0",
     description:
       "API pubblica, di sola lettura. Le analisi sono disponibili esclusivamente per il Gran Premio attuale; gare future e relative analisi non sono esposte.",
   },
@@ -372,18 +372,14 @@ const documentoOpenApi = {
         required: ["passoGara", "gestioneGomme", "affidabilita"],
         properties: {
           passoGara: {
-            type: "string",
+            $ref: "#/components/schemas/TestiAnnuali",
             description:
-              "Analisi editoriale del passo gara divisa per anno nel formato `AAAA: testo`, con un anno per riga.",
-            example:
-              "2023: Passo competitivo nelle condizioni variabili.\n2024: Ritmo meno costante durante gli stint.\n2025: Prestazione solida prima degli episodi di gara.",
+              "Analisi editoriale del passo gara, indicizzata per stagione.",
           },
           gestioneGomme: {
-            type: "string",
+            $ref: "#/components/schemas/TestiAnnuali",
             description:
-              "Analisi editoriale della gestione gomme divisa per anno nel formato `AAAA: testo`, con un anno per riga.",
-            example:
-              "2023: Buon adattamento ai cambi di mescola.\n2024: La vettura scivolava e rendeva più difficile conservare le gomme.\n2025: Gestione regolare durante gli stint.",
+              "Analisi editoriale della gestione gomme, indicizzata per stagione.",
           },
           affidabilita: {
             type: "string",
@@ -392,8 +388,31 @@ const documentoOpenApi = {
           },
         },
       },
+      TestiAnnuali: {
+        type: "object",
+        description:
+          "Contenuti separati per stagione. Le proprietà usano l'anno nel formato AAAA; `generale` conserva una sintesi non attribuibile a una singola stagione.",
+        propertyNames: { pattern: "^(?:\\d{4}|generale)$" },
+        additionalProperties: { type: "string" },
+        example: {
+          2023: "Contenuto relativo alla stagione 2023.",
+          2024: "Contenuto relativo alla stagione 2024.",
+          2025: "Contenuto relativo alla stagione 2025.",
+        },
+      },
       StoricoEdizione: {
         type: "object",
+        required: [
+          "stagione",
+          "posizioneGara",
+          "posizioneQualifica",
+          "notaRisultato",
+          "passoGara",
+          "gestioneGomme",
+          "affidabilita",
+        ],
+        description:
+          "Risultato registrato al termine di un GP della stagione corrente.",
         properties: {
           stagione: { type: "integer" },
           posizioneGara: { type: "string" },
@@ -419,19 +438,23 @@ const documentoOpenApi = {
         ],
         properties: {
           gara: { $ref: "#/components/schemas/GaraBreve" },
-          risultatiGara: { type: "string" },
-          notaBene: {
-            type: "string",
-            description:
-              "Spiegazione delle posizioni atipiche divisa per anno nel formato `AAAA: testo`. Quando non esistono episodi rilevanti viene restituito `Nessun evento particolare da trattare`.",
-            example:
-              "2023: Nessun evento particolare da trattare\n2024: Nessun evento particolare da trattare\n2025: Il risultato è stato condizionato da un contatto e dalla successiva penalità.",
+          risultatiGara: {
+            $ref: "#/components/schemas/TestiAnnuali",
+            description: "Risultati di gara separati per stagione.",
           },
-          risultatiQualifica: { type: "string" },
-          andamentoPerAnno: {
-            type: "string",
+          notaBene: {
+            $ref: "#/components/schemas/TestiAnnuali",
             description:
-              "Testo editoriale opzionale nel formato 2023: ... 2024: ...; se vuoto viene calcolato dai risultati.",
+              "N.B. separati per stagione. Se non esistono episodi rilevanti, il valore dell'anno è `Nessun evento particolare da trattare`; `generale` indica una nota valida per l'intero storico.",
+          },
+          risultatiQualifica: {
+            $ref: "#/components/schemas/TestiAnnuali",
+            description: "Risultati di qualifica separati per stagione.",
+          },
+          andamentoPerAnno: {
+            $ref: "#/components/schemas/TestiAnnuali",
+            description:
+              "Testo editoriale opzionale separato per stagione; se l'oggetto è vuoto, l'andamento viene calcolato dai risultati.",
           },
           prestazioni: { $ref: "#/components/schemas/Prestazioni" },
           considerazioniFinali: {

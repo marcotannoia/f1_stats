@@ -28,7 +28,7 @@ test("l'indice v1 espone versione, documentazione e header di sicurezza", async 
     const corpo = await risposta.json();
 
     assert.equal(risposta.status, 200);
-    assert.equal(corpo.versione, "1.0.0");
+    assert.equal(corpo.versione, "1.1.0");
     assert.equal(corpo.documentazione, "/api/docs");
     assert.equal(risposta.headers.get("access-control-allow-origin"), "*");
     assert.match(risposta.headers.get("x-request-id"), /^[0-9a-f-]{36}$/);
@@ -80,7 +80,12 @@ test("specifica OpenAPI e documentazione Swagger sono pubbliche", async () => {
     const corpo = await specifica.json();
     assert.equal(specifica.status, 200);
     assert.equal(corpo.openapi, "3.1.0");
+    assert.equal(corpo.info.version, "1.1.0");
     assert.ok(corpo.paths["/gare/attuale"]);
+    assert.equal(
+      corpo.components.schemas.AnalisiBase.properties.notaBene.$ref,
+      "#/components/schemas/TestiAnnuali",
+    );
 
     const documentazione = await fetch(`${baseUrl}/api/docs/`);
     assert.equal(documentazione.status, 200);
