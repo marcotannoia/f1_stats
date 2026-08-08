@@ -73,16 +73,37 @@ function adattaScuderia(scuderia) {
 function adattaAnalisi(analisi) {
   if (!analisi) return null
 
+  const datiPerAnno = analisi.datiPerAnno || {}
+
   return {
     ...analisi,
-    risultatiGara: analisi.risultatiGara ?? analisi.posizioniStoriche ?? '',
-    notaBene: analisi.notaBene ?? analisi.spiegazionePosizioni ?? '',
+    risultatiGara:
+      datiPerAnno.risultatiGara ??
+      analisi.risultatiGara ??
+      analisi.posizioniStoriche ??
+      '',
+    notaBene:
+      datiPerAnno.notaBene ??
+      analisi.notaBene ??
+      analisi.spiegazionePosizioni ??
+      '',
     risultatiQualifica:
-      analisi.risultatiQualifica ?? analisi.qualificheStoriche ?? '',
-    andamentoPerAnno: analisi.andamentoPerAnno ?? '',
-    passoGara: analisi.prestazioni?.passoGara ?? analisi.passoGara ?? '',
+      datiPerAnno.risultatiQualifica ??
+      analisi.risultatiQualifica ??
+      analisi.qualificheStoriche ??
+      '',
+    andamentoPerAnno:
+      datiPerAnno.andamento ?? analisi.andamentoPerAnno ?? '',
+    passoGara:
+      datiPerAnno.prestazioni?.passoGara ??
+      analisi.prestazioni?.passoGara ??
+      analisi.passoGara ??
+      '',
     gestioneGomme:
-      analisi.prestazioni?.gestioneGomme ?? analisi.gomme ?? '',
+      datiPerAnno.prestazioni?.gestioneGomme ??
+      analisi.prestazioni?.gestioneGomme ??
+      analisi.gomme ??
+      '',
     affidabilita:
       analisi.prestazioni?.affidabilita ?? analisi.affidabilita ?? '',
     considerazioniFinali:

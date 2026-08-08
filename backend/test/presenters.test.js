@@ -82,15 +82,23 @@ test("l'analisi raggruppa le prestazioni senza perdere i contenuti", () => {
   });
 
   assert.deepEqual(analisi.prestazioni, {
-    passoGara: { 2025: "Competitivo" },
-    gestioneGomme: { 2025: "Buona gestione" },
+    passoGara: "2025: Competitivo",
+    gestioneGomme: "2025: Buona gestione",
     affidabilita: "Alta",
   });
-  assert.deepEqual(analisi.risultatiGara, { 2025: "P3" });
-  assert.deepEqual(analisi.notaBene, { 2025: "Nota" });
-  assert.deepEqual(analisi.risultatiQualifica, { 2025: "Q2" });
-  assert.deepEqual(analisi.andamentoPerAnno, {
-    2025: "Prestazione solida.",
+  assert.equal(analisi.risultatiGara, "2025: P3");
+  assert.equal(analisi.notaBene, "2025: Nota");
+  assert.equal(analisi.risultatiQualifica, "2025: Q2");
+  assert.equal(analisi.andamentoPerAnno, "2025: Prestazione solida.");
+  assert.deepEqual(analisi.datiPerAnno, {
+    risultatiGara: { 2025: "P3" },
+    notaBene: { 2025: "Nota" },
+    risultatiQualifica: { 2025: "Q2" },
+    andamento: { 2025: "Prestazione solida." },
+    prestazioni: {
+      passoGara: { 2025: "Competitivo" },
+      gestioneGomme: { 2025: "Buona gestione" },
+    },
   });
   assert.equal(analisi.considerazioniFinali, "Favorito");
   assert.equal(analisi.penalita, "Nessuna penalita confermata.");

@@ -125,21 +125,48 @@ function presentaStoricoEdizioni(storicoEdizioni) {
   }));
 }
 
+function serializzaTestiAnnuali(contenuti) {
+  return Object.entries(contenuti)
+    .map(([anno, testo]) => (anno === "generale" ? testo : `${anno}: ${testo}`))
+    .join("\n");
+}
+
 function presentaAnalisiBase(analisi) {
   if (!analisi) return null;
 
+  const risultatiGaraPerAnno = normalizzaTestiAnnuali(
+    analisi.posizioniStoriche,
+  );
+  const notaBenePerAnno = normalizzaNotaBene(analisi.spiegazionePosizioni);
+  const risultatiQualificaPerAnno = normalizzaTestiAnnuali(
+    analisi.qualificheStoriche,
+  );
+  const andamentoPerAnno = normalizzaTestiAnnuali(
+    analisi.andamentoPerAnno || "",
+  );
+  const passoGaraPerAnno = normalizzaTestiAnnuali(analisi.passoGara);
+  const gestioneGommePerAnno = normalizzaTestiAnnuali(analisi.gomme);
+
   return {
     gara: presentaGaraBreve(analisi.gara),
-    risultatiGara: normalizzaTestiAnnuali(analisi.posizioniStoriche),
-    notaBene: normalizzaNotaBene(analisi.spiegazionePosizioni),
-    risultatiQualifica: normalizzaTestiAnnuali(analisi.qualificheStoriche),
-    andamentoPerAnno: normalizzaTestiAnnuali(
-      analisi.andamentoPerAnno || "",
-    ),
+    risultatiGara: serializzaTestiAnnuali(risultatiGaraPerAnno),
+    notaBene: serializzaTestiAnnuali(notaBenePerAnno),
+    risultatiQualifica: serializzaTestiAnnuali(risultatiQualificaPerAnno),
+    andamentoPerAnno: serializzaTestiAnnuali(andamentoPerAnno),
     prestazioni: {
-      passoGara: normalizzaTestiAnnuali(analisi.passoGara),
-      gestioneGomme: normalizzaTestiAnnuali(analisi.gomme),
+      passoGara: serializzaTestiAnnuali(passoGaraPerAnno),
+      gestioneGomme: serializzaTestiAnnuali(gestioneGommePerAnno),
       affidabilita: analisi.affidabilita || "",
+    },
+    datiPerAnno: {
+      risultatiGara: risultatiGaraPerAnno,
+      notaBene: notaBenePerAnno,
+      risultatiQualifica: risultatiQualificaPerAnno,
+      andamento: andamentoPerAnno,
+      prestazioni: {
+        passoGara: passoGaraPerAnno,
+        gestioneGomme: gestioneGommePerAnno,
+      },
     },
     considerazioniFinali: analisi.considerazioni,
     aggiornamentiInArrivo: analisi.aggiornamentiInArrivo || "",

@@ -37,11 +37,11 @@ https://f1-stats-5v93.onrender.com/api/docs
 https://f1-stats-5v93.onrender.com/api/v1/openapi.json
 ```
 
-Dalla versione `1.1.0`, i contenuti storici delle analisi (`risultatiGara`,
-`risultatiQualifica`, `notaBene`, `passoGara` e `gestioneGomme`) sono oggetti
-separati per stagione, con chiavi come `2023`, `2024` e `2025`. La chiave
-`generale` viene usata soltanto quando una sintesi non appartiene a un singolo
-anno.
+Dalla versione `1.1.1`, `datiPerAnno` espone i contenuti storici delle analisi
+come oggetti separati per stagione, con chiavi come `2023`, `2024` e `2025`.
+La chiave `generale` viene usata soltanto quando una sintesi non appartiene a un
+singolo anno. I precedenti campi testuali restano disponibili per compatibilità
+con i client già pubblicati.
 
 ## Avvio del backend
 

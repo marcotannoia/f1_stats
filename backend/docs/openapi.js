@@ -22,7 +22,7 @@ const documentoOpenApi = {
   openapi: "3.1.0",
   info: {
     title: "F1 Stats API",
-    version: "1.1.0",
+    version: "1.1.1",
     description:
       "API pubblica, di sola lettura. Le analisi sono disponibili esclusivamente per il Gran Premio attuale; gare future e relative analisi non sono esposte.",
   },
@@ -372,20 +372,49 @@ const documentoOpenApi = {
         required: ["passoGara", "gestioneGomme", "affidabilita"],
         properties: {
           passoGara: {
-            $ref: "#/components/schemas/TestiAnnuali",
+            type: "string",
+            deprecated: true,
             description:
-              "Analisi editoriale del passo gara, indicizzata per stagione.",
+              "Formato testuale mantenuto per compatibilità. Usare `datiPerAnno.prestazioni.passoGara`.",
           },
           gestioneGomme: {
-            $ref: "#/components/schemas/TestiAnnuali",
+            type: "string",
+            deprecated: true,
             description:
-              "Analisi editoriale della gestione gomme, indicizzata per stagione.",
+              "Formato testuale mantenuto per compatibilità. Usare `datiPerAnno.prestazioni.gestioneGomme`.",
           },
           affidabilita: {
             type: "string",
             description:
               "Valutazione editoriale degli eventuali problemi di affidabilità rilevanti.",
           },
+        },
+      },
+      PrestazioniPerAnno: {
+        type: "object",
+        required: ["passoGara", "gestioneGomme"],
+        properties: {
+          passoGara: { $ref: "#/components/schemas/TestiAnnuali" },
+          gestioneGomme: { $ref: "#/components/schemas/TestiAnnuali" },
+        },
+      },
+      DatiAnalisiPerAnno: {
+        type: "object",
+        description:
+          "Versione strutturata e aggiornata dei risultati e dei contenuti editoriali storici.",
+        required: [
+          "risultatiGara",
+          "notaBene",
+          "risultatiQualifica",
+          "andamento",
+          "prestazioni",
+        ],
+        properties: {
+          risultatiGara: { $ref: "#/components/schemas/TestiAnnuali" },
+          notaBene: { $ref: "#/components/schemas/TestiAnnuali" },
+          risultatiQualifica: { $ref: "#/components/schemas/TestiAnnuali" },
+          andamento: { $ref: "#/components/schemas/TestiAnnuali" },
+          prestazioni: { $ref: "#/components/schemas/PrestazioniPerAnno" },
         },
       },
       TestiAnnuali: {
@@ -432,6 +461,7 @@ const documentoOpenApi = {
           "risultatiQualifica",
           "andamentoPerAnno",
           "prestazioni",
+          "datiPerAnno",
           "considerazioniFinali",
           "storicoEdizioni",
           "fonti",
@@ -439,24 +469,33 @@ const documentoOpenApi = {
         properties: {
           gara: { $ref: "#/components/schemas/GaraBreve" },
           risultatiGara: {
-            $ref: "#/components/schemas/TestiAnnuali",
-            description: "Risultati di gara separati per stagione.",
+            type: "string",
+            deprecated: true,
+            description:
+              "Formato testuale mantenuto per compatibilità. Usare `datiPerAnno.risultatiGara`.",
           },
           notaBene: {
-            $ref: "#/components/schemas/TestiAnnuali",
+            type: "string",
+            deprecated: true,
             description:
-              "N.B. separati per stagione. Se non esistono episodi rilevanti, il valore dell'anno è `Nessun evento particolare da trattare`; `generale` indica una nota valida per l'intero storico.",
+              "Formato testuale mantenuto per compatibilità. Usare `datiPerAnno.notaBene` per gli N.B. separati per stagione.",
           },
           risultatiQualifica: {
-            $ref: "#/components/schemas/TestiAnnuali",
-            description: "Risultati di qualifica separati per stagione.",
+            type: "string",
+            deprecated: true,
+            description:
+              "Formato testuale mantenuto per compatibilità. Usare `datiPerAnno.risultatiQualifica`.",
           },
           andamentoPerAnno: {
-            $ref: "#/components/schemas/TestiAnnuali",
+            type: "string",
+            deprecated: true,
             description:
-              "Testo editoriale opzionale separato per stagione; se l'oggetto è vuoto, l'andamento viene calcolato dai risultati.",
+              "Formato testuale mantenuto per compatibilità. Usare `datiPerAnno.andamento`.",
           },
           prestazioni: { $ref: "#/components/schemas/Prestazioni" },
+          datiPerAnno: {
+            $ref: "#/components/schemas/DatiAnalisiPerAnno",
+          },
           considerazioniFinali: {
             type: "string",
             description:

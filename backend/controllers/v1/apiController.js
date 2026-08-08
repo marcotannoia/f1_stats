@@ -114,7 +114,7 @@ async function richiediGaraAttuale(risposta) {
 function descrizioneApi(richiesta, risposta) {
   risposta.json({
     nome: "F1 Stats API",
-    versione: "1.1.0",
+    versione: "1.1.1",
     descrizione:
       "API pubblica di sola lettura per il Gran Premio attuale, i piloti e le scuderie",
     documentazione: "/api/docs",
@@ -146,7 +146,7 @@ function statoServizio(richiesta, risposta) {
     .json({
       stato: databaseConnesso ? "ok" : "non_disponibile",
       servizio: "f1-stats-api",
-      versione: "1.1.0",
+      versione: "1.1.1",
       requestId: risposta.locals.requestId,
     });
 }
