@@ -43,6 +43,12 @@ La chiave `generale` viene usata soltanto quando una sintesi non appartiene a un
 singolo anno. I precedenti campi testuali restano disponibili per compatibilità
 con i client già pubblicati.
 
+Le API sono pubbliche, anonime e di sola lettura: non richiedono autenticazione
+e accettano esclusivamente `GET`, `HEAD` e `OPTIONS`. In produzione il limite è
+di 300 richieste ogni 15 minuti per indirizzo IP e le risposte pubbliche possono
+essere mantenute in cache per 60 secondi. Il referente tecnico è Marco Tannoi
+(`marco.tannoia@gmail.com`).
+
 ## Avvio del backend
 
 Dalla cartella `backend`:
@@ -60,6 +66,12 @@ Eseguire i test del backend:
 
 ```bash
 npm test
+```
+
+Validare la specifica OpenAPI con le regole raccomandate di Redocly:
+
+```bash
+npm run lint:api
 ```
 
 Controllare i dati presenti nel database:

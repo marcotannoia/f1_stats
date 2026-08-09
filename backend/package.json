@@ -14,6 +14,7 @@
     "aggiorna-gp": "node scripts/registraGpConcluso.js",
     "set-current": "node scripts/impostaGaraAttuale.js",
     "test": "node --test test/*.test.js",
+    "lint:api": "node scripts/verificaOpenApi.js",
     "verify-db": "node scripts/verificaDatabase.js"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "@redocly/cli": "^2.46.0",
     "nodemon": "^3.1.14"
   }
 }

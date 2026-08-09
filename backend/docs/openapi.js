@@ -1,22 +1,26 @@
-const rispostaErrore = {
-  description: "Richiesta non completata",
-  content: {
-    "application/json": {
-      schema: { $ref: "#/components/schemas/Errore" },
-    },
-  },
+const intestazioneRequestId = {
+  "X-Request-ID": { $ref: "#/components/headers/RequestId" },
 };
 
-function rispostaJson(descrizione, riferimentoSchema) {
+function rispostaJson(descrizione, riferimentoSchema, esempio) {
+  const contenuto = {
+    schema: { $ref: riferimentoSchema },
+  };
+
+  if (esempio) contenuto.example = esempio;
+
   return {
     description: descrizione,
-    content: {
-      "application/json": {
-        schema: { $ref: riferimentoSchema },
-      },
-    },
+    headers: intestazioneRequestId,
+    content: { "application/json": contenuto },
   };
 }
+
+const risposteComuni = {
+  400: { $ref: "#/components/responses/RichiestaNonValida" },
+  429: { $ref: "#/components/responses/LimiteRichiesteSuperato" },
+  500: { $ref: "#/components/responses/ErroreInterno" },
+};
 
 const documentoOpenApi = {
   openapi: "3.1.0",
@@ -24,49 +28,115 @@ const documentoOpenApi = {
     title: "F1 Stats API",
     version: "1.1.1",
     description:
-      "API pubblica, di sola lettura. Le analisi sono disponibili esclusivamente per il Gran Premio attuale; gare future e relative analisi non sono esposte.",
+      "API REST pubblica, anonima e di sola lettura. Non richiede autenticazione e " +
+      "consente esclusivamente GET, HEAD e OPTIONS. Le analisi editoriali sono " +
+      "pubblicate soltanto per il Gran Premio attuale; gare future e relative " +
+      "analisi non vengono esposte. In produzione si applicano una cache pubblica " +
+      "di 60 secondi e un limite di 300 richieste ogni 15 minuti per indirizzo IP.",
+    contact: {
+      name: "Marco Tannoi",
+      email: "marco.tannoia@gmail.com",
+    },
+    license: {
+      name: "Tutti i diritti riservati",
+      identifier: "LicenseRef-F1-Stats-All-Rights-Reserved",
+    },
   },
-  servers: [{ url: "/api/v1", description: "Server corrente" }],
+  externalDocs: {
+    description: "Repository e guida operativa di F1 Stats",
+    url: "https://github.com/marcotannoia/f1_stats",
+  },
+  servers: [
+    {
+      url: "https://f1-stats-5v93.onrender.com/api/v1",
+      description: "Produzione",
+    },
+  ],
+  security: [],
   tags: [
-    { name: "Servizio" },
-    { name: "Piloti" },
-    { name: "Scuderie" },
-    { name: "Gare" },
-    { name: "Classifiche" },
-    { name: "Analisi" },
+    {
+      name: "Servizio",
+      description: "Informazioni generali, stato del servizio e dati per la home.",
+    },
+    {
+      name: "Piloti",
+      description: "Elenco pubblico e schede complete dei piloti.",
+    },
+    {
+      name: "Scuderie",
+      description: "Elenco pubblico e schede complete delle scuderie.",
+    },
+    {
+      name: "Gare",
+      description: "Gran Premio attualmente pubblicato e relativo dettaglio.",
+    },
+    {
+      name: "Classifiche",
+      description: "Classifiche piloti e scuderie della stagione attuale.",
+    },
+    {
+      name: "Analisi",
+      description: "Analisi editoriali del Gran Premio attuale.",
+    },
   ],
   paths: {
     "/": {
       get: {
+        operationId: "descriviApi",
         tags: ["Servizio"],
         summary: "Descrizione e indice dell'API",
-        responses: { 200: { description: "Indice degli endpoint" } },
+        description:
+          "Restituisce versione, collegamenti alla documentazione e indice degli endpoint pubblici.",
+        responses: {
+          200: rispostaJson(
+            "Indice degli endpoint",
+            "#/components/schemas/IndiceApi",
+          ),
+          ...risposteComuni,
+        },
       },
     },
     "/health": {
       get: {
+        operationId: "verificaStatoServizio",
         tags: ["Servizio"],
         summary: "Stato del servizio e del database",
+        description:
+          "Endpoint non memorizzato in cache e non conteggiato nel rate limit.",
         responses: {
-          200: { description: "Servizio disponibile" },
-          503: { description: "Database non disponibile" },
+          200: rispostaJson(
+            "Servizio e database disponibili",
+            "#/components/schemas/StatoServizio",
+            {
+              stato: "ok",
+              servizio: "f1-stats-api",
+              versione: "1.1.1",
+              requestId: "2f1c7e5f-7f55-4f16-a29c-45f3f667ae21",
+            },
+          ),
+          400: { $ref: "#/components/responses/RichiestaNonValida" },
+          500: { $ref: "#/components/responses/ErroreInterno" },
+          503: { $ref: "#/components/responses/ServizioNonDisponibile" },
         },
       },
     },
     "/home": {
       get: {
+        operationId: "recuperaHome",
         tags: ["Servizio"],
         summary: "Dati aggregati per la home",
         description:
           "Restituisce il Gran Premio attuale, l'elenco dei piloti e l'elenco delle scuderie.",
         responses: {
           200: rispostaJson("Contenuto della home", "#/components/schemas/Home"),
-          404: rispostaErrore,
+          404: { $ref: "#/components/responses/RisorsaNonTrovata" },
+          ...risposteComuni,
         },
       },
     },
     "/piloti": {
       get: {
+        operationId: "elencaPiloti",
         tags: ["Piloti"],
         summary: "Elenco dei piloti",
         responses: {
@@ -74,11 +144,13 @@ const documentoOpenApi = {
             "Piloti ordinati per posizione in classifica",
             "#/components/schemas/ElencoPiloti",
           ),
+          ...risposteComuni,
         },
       },
     },
     "/piloti/{pilotaSlug}": {
       get: {
+        operationId: "recuperaPilota",
         tags: ["Piloti"],
         summary: "Scheda completa di un pilota",
         description:
@@ -89,13 +161,14 @@ const documentoOpenApi = {
             "Scheda del pilota",
             "#/components/schemas/DettaglioPilota",
           ),
-          400: rispostaErrore,
-          404: rispostaErrore,
+          404: { $ref: "#/components/responses/RisorsaNonTrovata" },
+          ...risposteComuni,
         },
       },
     },
     "/scuderie": {
       get: {
+        operationId: "elencaScuderie",
         tags: ["Scuderie"],
         summary: "Elenco delle scuderie",
         responses: {
@@ -103,28 +176,31 @@ const documentoOpenApi = {
             "Scuderie ordinate per posizione in classifica",
             "#/components/schemas/ElencoScuderie",
           ),
+          ...risposteComuni,
         },
       },
     },
     "/scuderie/{scuderiaSlug}": {
       get: {
+        operationId: "recuperaScuderia",
         tags: ["Scuderie"],
         summary: "Scheda completa di una scuderia",
         description:
-          "Restituisce profilo, piloti, analisi del Gran Premio attuale e andamento.",
+          "Restituisce profilo, piloti, analisi del Gran Premio attuale e andamento della stagione corrente.",
         parameters: [{ $ref: "#/components/parameters/ScuderiaSlug" }],
         responses: {
           200: rispostaJson(
             "Scheda della scuderia",
             "#/components/schemas/DettaglioScuderia",
           ),
-          400: rispostaErrore,
-          404: rispostaErrore,
+          404: { $ref: "#/components/responses/RisorsaNonTrovata" },
+          ...risposteComuni,
         },
       },
     },
     "/gare": {
       get: {
+        operationId: "elencaGarePubbliche",
         tags: ["Gare"],
         summary: "Elenco delle gare pubblicamente disponibili",
         description:
@@ -134,12 +210,14 @@ const documentoOpenApi = {
             "Elenco contenente la gara attuale",
             "#/components/schemas/ElencoGare",
           ),
-          404: rispostaErrore,
+          404: { $ref: "#/components/responses/RisorsaNonTrovata" },
+          ...risposteComuni,
         },
       },
     },
     "/gare/attuale": {
       get: {
+        operationId: "recuperaGaraAttuale",
         tags: ["Gare"],
         summary: "Gran Premio attuale",
         responses: {
@@ -147,12 +225,14 @@ const documentoOpenApi = {
             "Contenuto completo della gara attuale",
             "#/components/schemas/RispostaGara",
           ),
-          404: rispostaErrore,
+          404: { $ref: "#/components/responses/RisorsaNonTrovata" },
+          ...risposteComuni,
         },
       },
     },
     "/gare/{garaSlug}": {
       get: {
+        operationId: "recuperaDettaglioGara",
         tags: ["Gare"],
         summary: "Dettaglio della gara attuale",
         description:
@@ -163,13 +243,14 @@ const documentoOpenApi = {
             "Gara con analisi dei piloti e delle scuderie",
             "#/components/schemas/DettaglioGara",
           ),
-          400: rispostaErrore,
-          404: rispostaErrore,
+          404: { $ref: "#/components/responses/RisorsaNonTrovata" },
+          ...risposteComuni,
         },
       },
     },
     "/classifiche/piloti": {
       get: {
+        operationId: "recuperaClassificaPiloti",
         tags: ["Classifiche"],
         summary: "Classifica piloti della stagione attuale",
         responses: {
@@ -177,12 +258,14 @@ const documentoOpenApi = {
             "Classifica piloti",
             "#/components/schemas/ClassificaPiloti",
           ),
-          404: rispostaErrore,
+          404: { $ref: "#/components/responses/RisorsaNonTrovata" },
+          ...risposteComuni,
         },
       },
     },
     "/classifiche/scuderie": {
       get: {
+        operationId: "recuperaClassificaScuderie",
         tags: ["Classifiche"],
         summary: "Classifica scuderie della stagione attuale",
         responses: {
@@ -190,12 +273,14 @@ const documentoOpenApi = {
             "Classifica scuderie",
             "#/components/schemas/ClassificaScuderie",
           ),
-          404: rispostaErrore,
+          404: { $ref: "#/components/responses/RisorsaNonTrovata" },
+          ...risposteComuni,
         },
       },
     },
     "/gare/{garaSlug}/piloti/{pilotaSlug}/analisi": {
       get: {
+        operationId: "recuperaAnalisiPilota",
         tags: ["Analisi"],
         summary: "Analisi di un pilota per il Gran Premio attuale",
         parameters: [
@@ -207,13 +292,14 @@ const documentoOpenApi = {
             "Analisi completa del pilota",
             "#/components/schemas/RispostaAnalisiPilota",
           ),
-          400: rispostaErrore,
-          404: rispostaErrore,
+          404: { $ref: "#/components/responses/RisorsaNonTrovata" },
+          ...risposteComuni,
         },
       },
     },
     "/gare/{garaSlug}/scuderie/{scuderiaSlug}/analisi": {
       get: {
+        operationId: "recuperaAnalisiScuderia",
         tags: ["Analisi"],
         summary: "Analisi di una scuderia per il Gran Premio attuale",
         parameters: [
@@ -225,37 +311,227 @@ const documentoOpenApi = {
             "Analisi completa della scuderia",
             "#/components/schemas/RispostaAnalisiScuderia",
           ),
-          400: rispostaErrore,
-          404: rispostaErrore,
+          404: { $ref: "#/components/responses/RisorsaNonTrovata" },
+          ...risposteComuni,
         },
       },
     },
   },
   components: {
+    headers: {
+      RequestId: {
+        description:
+          "Identificatore univoco della richiesta, utile per assistenza e analisi dei log.",
+        schema: { type: "string", format: "uuid" },
+      },
+    },
     parameters: {
       GaraSlug: {
         name: "garaSlug",
         in: "path",
         required: true,
-        schema: { type: "string", pattern: "^[a-z0-9]+(?:[-_][a-z0-9]+)*$" },
+        description: "Identificatore pubblico del Gran Premio attuale.",
+        schema: {
+          type: "string",
+          minLength: 1,
+          maxLength: 80,
+          pattern: "^[a-z0-9]+(?:[-_][a-z0-9]+)*$",
+        },
         example: "olanda-zandvoort",
       },
       PilotaSlug: {
         name: "pilotaSlug",
         in: "path",
         required: true,
-        schema: { type: "string", pattern: "^[a-z0-9]+(?:[-_][a-z0-9]+)*$" },
+        description: "Identificatore pubblico del pilota.",
+        schema: {
+          type: "string",
+          minLength: 1,
+          maxLength: 80,
+          pattern: "^[a-z0-9]+(?:[-_][a-z0-9]+)*$",
+        },
         example: "leclerc",
       },
       ScuderiaSlug: {
         name: "scuderiaSlug",
         in: "path",
         required: true,
-        schema: { type: "string", pattern: "^[a-z0-9]+(?:[-_][a-z0-9]+)*$" },
+        description: "Identificatore pubblico della scuderia.",
+        schema: {
+          type: "string",
+          minLength: 1,
+          maxLength: 80,
+          pattern: "^[a-z0-9]+(?:[-_][a-z0-9]+)*$",
+        },
         example: "ferrari",
       },
     },
+    responses: {
+      RichiestaNonValida: {
+        description: "Parametri, query o identificatori non validi",
+        headers: intestazioneRequestId,
+        content: {
+          "application/json": {
+            schema: { $ref: "#/components/schemas/Errore" },
+            example: {
+              errore: {
+                codice: "PARAMETRO_QUERY_NON_VALIDO",
+                messaggio: "Parametri non supportati: pagina",
+                requestId: "2f1c7e5f-7f55-4f16-a29c-45f3f667ae21",
+              },
+            },
+          },
+        },
+      },
+      RisorsaNonTrovata: {
+        description: "Risorsa inesistente o non pubblicamente disponibile",
+        headers: intestazioneRequestId,
+        content: {
+          "application/json": {
+            schema: { $ref: "#/components/schemas/Errore" },
+            example: {
+              errore: {
+                codice: "GARA_ATTUALE_NON_DISPONIBILE",
+                messaggio: "Il Gran Premio attuale non e ancora stato pubblicato",
+                requestId: "2f1c7e5f-7f55-4f16-a29c-45f3f667ae21",
+              },
+            },
+          },
+        },
+      },
+      LimiteRichiesteSuperato: {
+        description: "Limite di richieste superato",
+        headers: intestazioneRequestId,
+        content: {
+          "application/json": {
+            schema: { $ref: "#/components/schemas/Errore" },
+            example: {
+              errore: {
+                codice: "LIMITE_RICHIESTE_SUPERATO",
+                messaggio: "Troppe richieste. Riprova tra qualche minuto",
+                requestId: "2f1c7e5f-7f55-4f16-a29c-45f3f667ae21",
+              },
+            },
+          },
+        },
+      },
+      ErroreInterno: {
+        description: "Errore interno non previsto",
+        headers: intestazioneRequestId,
+        content: {
+          "application/json": {
+            schema: { $ref: "#/components/schemas/Errore" },
+            example: {
+              errore: {
+                codice: "ERRORE_INTERNO",
+                messaggio: "Si è verificato un errore interno al server",
+                requestId: "2f1c7e5f-7f55-4f16-a29c-45f3f667ae21",
+              },
+            },
+          },
+        },
+      },
+      ServizioNonDisponibile: rispostaJson(
+        "Database non disponibile",
+        "#/components/schemas/StatoServizio",
+        {
+          stato: "non_disponibile",
+          servizio: "f1-stats-api",
+          versione: "1.1.1",
+          requestId: "2f1c7e5f-7f55-4f16-a29c-45f3f667ae21",
+        },
+      ),
+    },
     schemas: {
+      IndiceEndpoint: {
+        type: "object",
+        required: [
+          "home",
+          "piloti",
+          "dettaglioPilota",
+          "scuderie",
+          "dettaglioScuderia",
+          "garaAttuale",
+          "dettaglioGaraAttuale",
+          "classificaPiloti",
+          "classificaScuderie",
+          "analisiPilota",
+          "analisiScuderia",
+        ],
+        properties: {
+          home: { type: "string", example: "/api/v1/home" },
+          piloti: { type: "string", example: "/api/v1/piloti" },
+          dettaglioPilota: {
+            type: "string",
+            example: "/api/v1/piloti/:pilotaSlug",
+          },
+          scuderie: { type: "string", example: "/api/v1/scuderie" },
+          dettaglioScuderia: {
+            type: "string",
+            example: "/api/v1/scuderie/:scuderiaSlug",
+          },
+          garaAttuale: {
+            type: "string",
+            example: "/api/v1/gare/attuale",
+          },
+          dettaglioGaraAttuale: {
+            type: "string",
+            example: "/api/v1/gare/:garaSlug",
+          },
+          classificaPiloti: {
+            type: "string",
+            example: "/api/v1/classifiche/piloti",
+          },
+          classificaScuderie: {
+            type: "string",
+            example: "/api/v1/classifiche/scuderie",
+          },
+          analisiPilota: {
+            type: "string",
+            example: "/api/v1/gare/:garaSlug/piloti/:pilotaSlug/analisi",
+          },
+          analisiScuderia: {
+            type: "string",
+            example:
+              "/api/v1/gare/:garaSlug/scuderie/:scuderiaSlug/analisi",
+          },
+        },
+      },
+      IndiceApi: {
+        type: "object",
+        required: [
+          "nome",
+          "versione",
+          "descrizione",
+          "documentazione",
+          "specificaOpenApi",
+          "endpoint",
+        ],
+        properties: {
+          nome: { type: "string", const: "F1 Stats API" },
+          versione: { type: "string", example: "1.1.1" },
+          descrizione: { type: "string" },
+          documentazione: { type: "string", example: "/api/docs" },
+          specificaOpenApi: {
+            type: "string",
+            example: "/api/v1/openapi.json",
+          },
+          endpoint: { $ref: "#/components/schemas/IndiceEndpoint" },
+        },
+      },
+      StatoServizio: {
+        type: "object",
+        required: ["stato", "servizio", "versione", "requestId"],
+        properties: {
+          stato: {
+            type: "string",
+            enum: ["ok", "non_disponibile"],
+          },
+          servizio: { type: "string", const: "f1-stats-api" },
+          versione: { type: "string", example: "1.1.1" },
+          requestId: { type: "string", format: "uuid" },
+        },
+      },
       Classifica: {
         type: "object",
         required: ["posizione", "punti", "vittorie"],
@@ -288,7 +564,12 @@ const documentoOpenApi = {
           { $ref: "#/components/schemas/PilotaBreve" },
           {
             type: "object",
-            required: ["nazionalita", "scuderia", "classifica"],
+            required: [
+              "nazionalita",
+              "scuderia",
+              "classifica",
+              "aggiornatoIl",
+            ],
             properties: {
               nazionalita: { type: "string", example: "Monegasca" },
               scuderia: { $ref: "#/components/schemas/ScuderiaBreve" },
@@ -306,12 +587,19 @@ const documentoOpenApi = {
           { $ref: "#/components/schemas/ScuderiaBreve" },
           {
             type: "object",
-            required: ["nomeClassifica", "nazionalita", "classifica"],
+            required: [
+              "nomeClassifica",
+              "nazionalita",
+              "denominazioniStoriche",
+              "classifica",
+              "aggiornatoIl",
+            ],
             properties: {
-              nomeClassifica: { type: "string" },
-              nazionalita: { type: "string" },
+              nomeClassifica: { type: "string", example: "Ferrari" },
+              nazionalita: { type: "string", example: "Italiana" },
               denominazioniStoriche: {
                 type: "object",
+                propertyNames: { pattern: "^\\d{4}$" },
                 additionalProperties: { type: ["string", "null"] },
               },
               classifica: { $ref: "#/components/schemas/Classifica" },
@@ -339,7 +627,7 @@ const documentoOpenApi = {
           nome: { type: "string", example: "Gran Premio d'Olanda" },
           circuito: { type: "string", example: "Circuit Zandvoort" },
           paese: { type: "string", example: "Olanda" },
-          stagione: { type: "integer", example: 2026 },
+          stagione: { type: "integer", minimum: 2026, example: 2026 },
           ordineAnalisi: { type: "integer", minimum: 1 },
           stato: { type: "string", const: "attuale" },
         },
@@ -349,6 +637,18 @@ const documentoOpenApi = {
           { $ref: "#/components/schemas/GaraBreve" },
           {
             type: "object",
+            required: [
+              "contestoStorico",
+              "pilotiFavoriti",
+              "scuderieFavorite",
+              "outsider",
+              "potenzialiDifficolta",
+              "gommeStrategia",
+              "rischi",
+              "confidenza",
+              "fonti",
+              "aggiornatoIl",
+            ],
             properties: {
               contestoStorico: { type: "string" },
               pilotiFavoriti: { type: "string" },
@@ -358,7 +658,10 @@ const documentoOpenApi = {
               gommeStrategia: { type: "string" },
               rischi: { type: "string" },
               confidenza: { type: "string" },
-              fonti: { type: "array", items: { type: "string", format: "uri" } },
+              fonti: {
+                type: "array",
+                items: { type: "string", format: "uri", pattern: "^https://" },
+              },
               aggiornatoIl: {
                 type: ["string", "null"],
                 format: "date-time",
@@ -444,8 +747,8 @@ const documentoOpenApi = {
           "Risultato registrato al termine di un GP della stagione corrente.",
         properties: {
           stagione: { type: "integer" },
-          posizioneGara: { type: "string" },
-          posizioneQualifica: { type: "string" },
+          posizioneGara: { type: "string", example: "P3" },
+          posizioneQualifica: { type: "string", example: "Q2" },
           notaRisultato: { type: "string" },
           passoGara: { type: "string" },
           gestioneGomme: { type: "string" },
@@ -463,8 +766,10 @@ const documentoOpenApi = {
           "prestazioni",
           "datiPerAnno",
           "considerazioniFinali",
+          "aggiornamentiInArrivo",
           "storicoEdizioni",
           "fonti",
+          "aggiornatoIl",
         ],
         properties: {
           gara: { $ref: "#/components/schemas/GaraBreve" },
@@ -493,9 +798,7 @@ const documentoOpenApi = {
               "Formato testuale mantenuto per compatibilità. Usare `datiPerAnno.andamento`.",
           },
           prestazioni: { $ref: "#/components/schemas/Prestazioni" },
-          datiPerAnno: {
-            $ref: "#/components/schemas/DatiAnalisiPerAnno",
-          },
+          datiPerAnno: { $ref: "#/components/schemas/DatiAnalisiPerAnno" },
           considerazioniFinali: {
             type: "string",
             description:
@@ -504,13 +807,16 @@ const documentoOpenApi = {
           aggiornamentiInArrivo: {
             type: "string",
             description:
-              "Aggiornamenti tecnici confermati o stato delle informazioni disponibili, con una valutazione della loro utilità per le caratteristiche del circuito.",
+              "Aggiornamenti tecnici confermati o stato delle informazioni disponibili.",
           },
           storicoEdizioni: {
             type: "array",
             items: { $ref: "#/components/schemas/StoricoEdizione" },
           },
-          fonti: { type: "array", items: { type: "string", format: "uri" } },
+          fonti: {
+            type: "array",
+            items: { type: "string", format: "uri", pattern: "^https://" },
+          },
           aggiornatoIl: { type: ["string", "null"], format: "date-time" },
         },
       },
@@ -526,9 +832,7 @@ const documentoOpenApi = {
               penalita: {
                 type: "string",
                 description:
-                  "Situazione delle eventuali penalità del pilota per il Gran Premio attuale, aggiornata alla data indicata nel testo.",
-                example:
-                  "Al momento non è stata pubblicata alcuna penalità per il pilota a Zandvoort. La situazione sarà ricontrollata nei documenti FIA del weekend.",
+                  "Situazione delle eventuali penalità del pilota per il Gran Premio attuale.",
               },
             },
           },
@@ -539,42 +843,86 @@ const documentoOpenApi = {
           { $ref: "#/components/schemas/AnalisiBase" },
           {
             type: "object",
+            required: ["scuderia"],
             properties: {
               scuderia: { $ref: "#/components/schemas/ScuderiaBreve" },
             },
           },
         ],
       },
+      SerieAndamento: {
+        type: "object",
+        required: ["nome", "valori"],
+        properties: {
+          nome: {
+            type: "string",
+            description: "Codice del pilota rappresentato dalla serie.",
+            example: "LEC",
+          },
+          valori: {
+            type: "array",
+            description:
+              "Posizione per ciascuna etichetta; null indica un risultato non disponibile.",
+            items: { type: ["integer", "null"], minimum: 1 },
+          },
+        },
+      },
+      FonteAndamento: {
+        type: "object",
+        required: ["nome", "url"],
+        properties: {
+          nome: { type: "string", example: "Jolpica F1 API" },
+          url: { type: ["string", "null"], format: "uri" },
+        },
+      },
       Andamento: {
         type: "object",
         description:
-          "Posizioni della stagione corrente fino all'ultimo GP disponibile. Jolpica e la fonte primaria; il database locale e usato come ripiego.",
+          "Posizioni della stagione corrente fino all'ultimo GP disponibile. Jolpica è la fonte primaria; il database locale è usato come ripiego.",
+        required: [
+          "stagione",
+          "etichette",
+          "qualifica",
+          "gara",
+          "fonte",
+          "aggiornatoIl",
+        ],
         properties: {
-          stagione: { type: "integer" },
+          stagione: { type: "integer", minimum: 2026 },
           etichette: { type: "array", items: { type: "string" } },
-          qualifica: { type: "array", items: { type: "object" } },
-          gara: { type: "array", items: { type: "object" } },
+          qualifica: {
+            type: "array",
+            items: { $ref: "#/components/schemas/SerieAndamento" },
+          },
+          gara: {
+            type: "array",
+            items: { $ref: "#/components/schemas/SerieAndamento" },
+          },
           fonte: {
-            type: ["object", "null"],
-            properties: {
-              nome: { type: "string" },
-              url: { type: ["string", "null"], format: "uri" },
-            },
+            oneOf: [
+              { $ref: "#/components/schemas/FonteAndamento" },
+              { type: "null" },
+            ],
           },
           aggiornatoIl: { type: ["string", "null"], format: "date-time" },
         },
       },
       ElencoPiloti: {
         type: "object",
+        required: ["totale", "piloti"],
         properties: {
-          totale: { type: "integer" },
-          piloti: { type: "array", items: { $ref: "#/components/schemas/Pilota" } },
+          totale: { type: "integer", minimum: 0 },
+          piloti: {
+            type: "array",
+            items: { $ref: "#/components/schemas/Pilota" },
+          },
         },
       },
       ElencoScuderie: {
         type: "object",
+        required: ["totale", "scuderie"],
         properties: {
-          totale: { type: "integer" },
+          totale: { type: "integer", minimum: 0 },
           scuderie: {
             type: "array",
             items: { $ref: "#/components/schemas/Scuderia" },
@@ -583,17 +931,25 @@ const documentoOpenApi = {
       },
       ElencoGare: {
         type: "object",
+        required: ["totale", "gare"],
         properties: {
           totale: { type: "integer", const: 1 },
-          gare: { type: "array", items: { $ref: "#/components/schemas/GaraBreve" } },
+          gare: {
+            type: "array",
+            minItems: 1,
+            maxItems: 1,
+            items: { $ref: "#/components/schemas/GaraBreve" },
+          },
         },
       },
       RispostaGara: {
         type: "object",
+        required: ["gara"],
         properties: { gara: { $ref: "#/components/schemas/Gara" } },
       },
       DettaglioPilota: {
         type: "object",
+        required: ["pilota", "analisi", "andamentoStagioneCorrente"],
         properties: {
           pilota: { $ref: "#/components/schemas/Pilota" },
           analisi: {
@@ -609,9 +965,18 @@ const documentoOpenApi = {
       },
       DettaglioScuderia: {
         type: "object",
+        required: [
+          "scuderia",
+          "piloti",
+          "analisi",
+          "andamentoStagioneCorrente",
+        ],
         properties: {
           scuderia: { $ref: "#/components/schemas/Scuderia" },
-          piloti: { type: "array", items: { $ref: "#/components/schemas/Pilota" } },
+          piloti: {
+            type: "array",
+            items: { $ref: "#/components/schemas/Pilota" },
+          },
           analisi: {
             oneOf: [
               { $ref: "#/components/schemas/AnalisiScuderia" },
@@ -623,20 +988,34 @@ const documentoOpenApi = {
           },
         },
       },
+      MetadatiHome: {
+        type: "object",
+        required: ["stagione", "totalePiloti", "totaleScuderie"],
+        properties: {
+          stagione: { type: "integer", minimum: 2026 },
+          totalePiloti: { type: "integer", minimum: 0 },
+          totaleScuderie: { type: "integer", minimum: 0 },
+        },
+      },
       Home: {
         type: "object",
+        required: ["garaAttuale", "piloti", "scuderie", "metadati"],
         properties: {
           garaAttuale: { $ref: "#/components/schemas/GaraBreve" },
-          piloti: { type: "array", items: { $ref: "#/components/schemas/Pilota" } },
+          piloti: {
+            type: "array",
+            items: { $ref: "#/components/schemas/Pilota" },
+          },
           scuderie: {
             type: "array",
             items: { $ref: "#/components/schemas/Scuderia" },
           },
-          metadati: { type: "object" },
+          metadati: { $ref: "#/components/schemas/MetadatiHome" },
         },
       },
       DettaglioGara: {
         type: "object",
+        required: ["gara", "analisiPiloti", "analisiScuderie"],
         properties: {
           gara: { $ref: "#/components/schemas/Gara" },
           analisiPiloti: {
@@ -649,16 +1028,73 @@ const documentoOpenApi = {
           },
         },
       },
-      ClassificaPiloti: { type: "object" },
-      ClassificaScuderie: { type: "object" },
+      PosizioneClassificaPilota: {
+        type: "object",
+        required: [
+          "posizione",
+          "pilota",
+          "scuderia",
+          "punti",
+          "vittorie",
+        ],
+        properties: {
+          posizione: { type: "integer", minimum: 1 },
+          pilota: { $ref: "#/components/schemas/PilotaBreve" },
+          scuderia: { $ref: "#/components/schemas/ScuderiaBreve" },
+          punti: { type: "number", minimum: 0 },
+          vittorie: { type: "integer", minimum: 0 },
+        },
+      },
+      PosizioneClassificaScuderia: {
+        type: "object",
+        required: ["posizione", "scuderia", "punti", "vittorie"],
+        properties: {
+          posizione: { type: "integer", minimum: 1 },
+          scuderia: { $ref: "#/components/schemas/ScuderiaBreve" },
+          punti: { type: "number", minimum: 0 },
+          vittorie: { type: "integer", minimum: 0 },
+        },
+      },
+      ClassificaPiloti: {
+        type: "object",
+        required: ["stagione", "tipo", "totale", "classifica"],
+        properties: {
+          stagione: { type: "integer", minimum: 2026 },
+          tipo: { type: "string", const: "piloti" },
+          totale: { type: "integer", minimum: 0 },
+          classifica: {
+            type: "array",
+            items: {
+              $ref: "#/components/schemas/PosizioneClassificaPilota",
+            },
+          },
+        },
+      },
+      ClassificaScuderie: {
+        type: "object",
+        required: ["stagione", "tipo", "totale", "classifica"],
+        properties: {
+          stagione: { type: "integer", minimum: 2026 },
+          tipo: { type: "string", const: "scuderie" },
+          totale: { type: "integer", minimum: 0 },
+          classifica: {
+            type: "array",
+            items: {
+              $ref: "#/components/schemas/PosizioneClassificaScuderia",
+            },
+          },
+        },
+      },
       RispostaAnalisiPilota: {
         type: "object",
+        required: ["analisi"],
         properties: {
           analisi: { $ref: "#/components/schemas/AnalisiPilota" },
         },
       },
       RispostaAnalisiScuderia: {
         type: "object",
+        required: ["analisi"],
         properties: {
           analisi: { $ref: "#/components/schemas/AnalisiScuderia" },
         },

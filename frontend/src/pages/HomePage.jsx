@@ -77,7 +77,7 @@ function HomePage() {
         <Marchio />
 
         <div className="introduzione-home">
-          <span className="sovratitolo">Analisi del Gran Premio attuale</span>
+          <span className="sovratitolo">Analisi del Gran Premio in Arrivo</span>
           <h1>Cerca il pilota o la scuderia</h1>
         </div>
 

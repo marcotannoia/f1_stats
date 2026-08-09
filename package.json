@@ -11,6 +11,7 @@
     "verify-db": "npm --prefix backend run verify-db",
     "build": "npm --prefix frontend run build",
     "lint": "npm --prefix frontend run lint",
+    "lint:api": "npm --prefix backend run lint:api",
     "test": "npm --prefix backend test"
   }
 }
